@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7271cef-5e62-43ff-9285-9410b3e4cacb" name="Default Changelist" comment="setup project">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookShop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/line-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/css/vendor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/fonts/la-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/banner/bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/card/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/category/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/compare-product/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/compare-product/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/footer/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/footer/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/footer/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/footer/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/footer/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/gadget/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/gadget/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/gadget/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/author.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/chair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/gift.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/headphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/monitor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/truck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/icon/us-flag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/01w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/02w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/03w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/04w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/05w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/06w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/07w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/08w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/09w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/10w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/11w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/listed/12w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/offer/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/offer/bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/offer/bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/offer/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-2/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-3/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-4/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/home-5/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/000010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/000011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/000012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/00009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/0012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/shop-details/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/product/shop/shop-details/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/subscribe/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/wishlist/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/wishlist/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/wishlist/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/wishlist/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/img/wishlist/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/js/countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/assets/js/vendor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/card-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/card-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/compare-product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/home-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/home-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/home-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/home-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shipping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-details-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/wishlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moban4398/说明.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/ContextFinalizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/JdbcUnregisterListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/BaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/CartDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/CartItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/OrderItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/impl/BaseDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/OrderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/CartItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/CartMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/fuck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-redis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/line-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/nice-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/css/vendor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/fonts/la-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/banner/bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/card/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/category/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/compare-product/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/compare-product/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/footer/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/footer/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/footer/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/footer/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/footer/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/gadget/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/gadget/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/gadget/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/author.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/chair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/gift.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/headphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/monitor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/truck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/icon/us-flag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/01w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/02w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/03w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/04w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/05w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/06w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/07w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/08w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/09w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/10w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/11w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/listed/12w.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/offer/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/offer/bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/offer/bg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/offer/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-2/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-3/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-4/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/home-5/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/000010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/000011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/000012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/00009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/0012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/shop-details/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/product/shop/shop-details/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/subscribe/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/wishlist/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/wishlist/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/wishlist/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/wishlist/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/img/wishlist/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/assets/js/vendor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/card-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/card-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/compare-product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shipping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-details-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/wishlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/模板.zip" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\1Code\BookShop\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="E:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZItFYmwce7SExJYhwly83Lxoj8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bookshop.controller" />
+      <recent name="com.bookshop.interceptor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\1Code\BookShop\src\main\webapp" />
+      <recent name="E:\1Code\BookShop\src\main\java" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF" />
+      <recent name="E:\1Code\BookShop\src\main\java\com\bookshop" />
+      <recent name="E:\1Code\BookShop\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/BookShop_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="BookShop:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/BookShop_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_BookShop" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50138" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BookShop:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7271cef-5e62-43ff-9285-9410b3e4cacb" name="Default Changelist" comment="" />
+      <created>1584538332191</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584538332191</updated>
+      <workItem from="1584538337214" duration="1719000" />
+      <workItem from="1585147640532" duration="8063000" />
+      <workItem from="1585191134349" duration="8186000" />
+      <workItem from="1585211071000" duration="16897000" />
+      <workItem from="1585292203315" duration="280000" />
+      <workItem from="1585292495671" duration="29296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setup project" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup project" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="-1009" key="#Auto_Import" timestamp="1585224249074">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="361" y="-1009" key="#Auto_Import/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585224249074" />
+    <state x="361" y="71" key="#Project_Structure" timestamp="1584538461111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584538461111" />
+    <state x="582" y="-814" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1585330783178">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="582" y="-814" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585330783178" />
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585147886489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585147886489" />
+    <state x="510" y="-865" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585331834040">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="510" y="-865" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585331834040" />
+    <state x="574" y="-992" key="#com.intellij.ide.util.MemberChooser" timestamp="1585299782451">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="574" y="-992" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585299782451" />
+    <state x="548" y="-783" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585331567426">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="548" y="-783" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585331567426" />
+    <state x="548" y="297" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585148802504" />
+    <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585301136561">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585301136561" />
+    <state x="372" y="-1075" key="CommitChangelistDialog2" timestamp="1585333022090">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="372" y="-1075" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333022090" />
+    <state x="549" y="-912" key="FileChooserDialogImpl" timestamp="1585332713255">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="549" y="-912" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585332713255" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585207969257" />
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1584540438710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1584540438710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1584540438710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1584540438710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
+    <state x="270" y="-1025" width="1189" height="714" key="SettingsEditor" timestamp="1585332701715">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="270" y="-1025" width="1189" height="714" key="SettingsEditor/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585332701715" />
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584539025470" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1585238224445">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585238224445" />
+    <state x="372" y="-1065" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585302419621">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="372" y="-1065" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585302419621" />
+    <state x="-294" y="-805" width="1262" height="768" key="dock-window-1" timestamp="1585292729198">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="-294" y="-805" width="1262" height="768" key="dock-window-1/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585292729198" />
+    <state x="508" y="0" width="646" height="768" maximized="true" key="dock-window-2" timestamp="1585299583892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="508" y="0" width="646" height="768" maximized="true" key="dock-window-2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585299583892" />
+    <state x="612" y="37" width="807" height="768" key="dock-window-3" timestamp="1585301069885">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="612" y="37" width="807" height="768" key="dock-window-3/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585301069885" />
+    <state x="178" y="107" key="new project wizard" timestamp="1585207972237">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="107" key="new project wizard/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585207972237" />
+    <state x="426" y="-893" key="run.anything.popup" timestamp="1585235287128">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="426" y="-893" key="run.anything.popup/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585235287128" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585206957329" />
+    <state x="802" y="-935" width="672" height="678" key="search.everywhere.popup" timestamp="1585313639921">
+      <screen x="0" y="-1080" width="1536" height="824" />
+    </state>
+    <state x="802" y="-935" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585313639921" />
+  </component>
+</project>
