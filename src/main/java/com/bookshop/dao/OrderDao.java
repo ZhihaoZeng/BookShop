@@ -12,18 +12,18 @@ import java.util.Map;
  * @Date: 2020/3/28 1:52
  */
 public interface OrderDao {
-    public Order getOrder(Long orderId);
-    public List<Order> getOrdersByUserId(Long userId);
+    Order getOrder(Long orderId);
+    List<Order> getOrdersByUserId(Long userId);
 
-    public List<Order> searchOrders(Map map);
+    List<Order> searchOrders(Map map);
 
-    public void insertOrder(Order order);
-    public void insertOrders(List<Order> orders);
+    void insertOrder(Order order);
+    void insertOrders(List<Order> orders);
 
-    public void updateOrder(Order order);
-    public void updateOrders(List<Order> orders);
+    void updateOrder(Order order);
+    void updateOrders(List<Order> orders);
 
-    public void deleteOrderById(Long orderId);
-    public void deleteOrder(Order order);
-    public void deleteOrders(List<Long> orderIds);
+    void deleteOrderById(Long orderId);
+    void deleteOrder(Order order);
+    void deleteOrders(List<Long> orderIds);
 }

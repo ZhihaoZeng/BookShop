@@ -13,16 +13,16 @@ import java.util.Map;
  */
 public interface OrderItemDao {
 
-    public List<OrderItem> getOrderItems(Long orderId);
-    public List<OrderItem> getOrderItemsPage(Long orderId, Map map);
+    List<OrderItem> getOrderItems(Long orderId);
+    List<OrderItem> getOrderItemsPage(Long orderId, Map map);
 
-    public void insertOrderItem(OrderItem orderItem);
-    public void insertOrderItems(List<OrderItem> orderItems);
+    void insertOrderItem(OrderItem orderItem);
+    void insertOrderItems(List<OrderItem> orderItems);
 
-    public void updateOrderItem(OrderItem orderItem);
-    public void updateOrderItems(List<OrderItem> orderItems);
+    void updateOrderItem(OrderItem orderItem);
+    void updateOrderItems(List<OrderItem> orderItems);
 
-    public void deleteOrderItem(OrderItem orderItem);
-    public void deleteOrderItems(List<OrderItem> orderItems);
+    void deleteOrderItem(OrderItem orderItem);
+    void deleteOrderItems(List<OrderItem> orderItems);
 
 }

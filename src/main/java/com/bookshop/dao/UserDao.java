@@ -12,19 +12,22 @@ import java.util.Map;
  * @Date: 2020/3/28 1:53
  */
 public interface UserDao {
-    public User getUser(Long userId);
-    public List<User> getAllUsersPage(Map map);
-    public List<User> getAllUsers();
+    User getUser(Long userId);
+    List<User> getAllUsersPage(Map map);
+    List<User> getAllUsers();
 
-    public List<User> searchUsers(Map map);
+    List<User> searchUsers(Map map);
 
-    public void insertUser(User user);
-    public void insertUsers(List<User> users);//插入，用实体作为参数
+    Integer count(Map map);
 
-    public void updateUser(User user);
-    public void updateUsers(List<User> users);
+    void insertUser(User user);
+    void insertUsers(List<User> users);//插入，用实体作为参数
 
-    public void deleteUser(User userId);
-    public void deleteUsers(List<User> userIds);
+    Integer updateUser(User user);
+    Integer updateUsers(List<User> users);
+
+    Integer deleteUser(User user);
+    Integer deleteUserById(Long userId);
+    Integer deleteUsers(List<User> userIds);
 
 }

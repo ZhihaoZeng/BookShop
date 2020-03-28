@@ -1,5 +1,10 @@
 package com.bookshop.entity;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.bookshop.util.Util.checkStringIsEmpty;
+
 /*用户*/
 public class User {
     private Integer userId;
@@ -8,6 +13,18 @@ public class User {
     private String userAddress;
     private String userPassword;
     private String userStatus;
+
+    public HashMap<String,Object> toMap(){
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("userId",userId==null?null:userId+"");
+        map.put("userName",checkStringIsEmpty(userName));
+        map.put("gender",checkStringIsEmpty(gender));
+        map.put("userAddress",checkStringIsEmpty(userAddress));
+        map.put("userPassword",checkStringIsEmpty(userPassword));
+        map.put("userStatus",checkStringIsEmpty(userStatus));
+        return map;
+    }
+
 
     public User(Integer userId, String userName, String gender, String userAddress, String userPassword, String userStatus) {
         this.userId = userId;

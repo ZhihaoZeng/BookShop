@@ -9,15 +9,15 @@ import com.bookshop.entity.Cart;
  * @Date: 2020/3/28 1:50
  */
 public interface CartDao {
-    public Cart getCart(Long userId);
+    Cart getCart(Long userId);
 
  /* 这些都在CartItemDao中实现了
-    public void addBook(CartItem cartItem,Long userId);//购物车增加一本书
-    public void addBooks(List<CartItem> cartItems,Long userId);//购物车增加多个书籍
+    addBook(CartItem cartItem,Long userId);//购物车增加一本书
+    void addBooks(List<CartItem> cartItems,Long userId);//购物车增加多个书籍
 
-    public void deleteCartItem(CartItem cartItem,Long userId);
-    public void deleteCartItems(List<CartItem> cartItems,Long userId);
+    void deleteCartItem(CartItem cartItem,Long userId);
+    void deleteCartItems(List<CartItem> cartItems,Long userId);
 
-    public void updateCartItem(CartItem cartItem);//修改，用实体作为参数
-    public void updateCartItems(List<CartItem> cartItems);*/
+    void updateCartItem(CartItem cartItem);//修改，用实体作为参数
+    void updateCartItems(List<CartItem> cartItems);*/
 }

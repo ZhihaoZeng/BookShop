@@ -15,6 +15,7 @@
         <result column="book_type" jdbcType="VARCHAR" property="bookType" />
         <result column="image" jdbcType="VARCHAR" property="image" />
         <result column="publish_time" jdbcType="VARCHAR" property="publishTime" />
+        <result column="book_status" jdbcType="VARCHAR" property="bookStatus" />
     </resultMap>
 
     <sql id="search_where">
@@ -22,6 +23,7 @@
         <if test="price != null">and price like #{price}</if>
         <if test="bookName != null">and book_name like #{bookName}</if>
         <if test="bookType!=null">and book_type = #{bookType}</if>
+        <if test="bookStatus!=null">and book_status = #{bookStatus}</if>
         <if test="startTime!=null"><![CDATA[ and publish_time >= #{startTime}]]></if>
         <if test="endTime!=null"><![CDATA[ and publish_time <= #{endTime}]]></if>
         <if test="startPrice!=null"><![CDATA[ and price>=startPrice]]></if>
@@ -31,7 +33,7 @@
 
     <!--sql代码块-->
     <sql id="table_column">
-        (price,book_name,detail,book_type,image,publish_time)
+        (price,book_name,detail,book_type,image,publish_time,book_status)
     </sql>
 
     <select id="getAllBooks"  resultMap="bookResultMap">
@@ -57,7 +59,7 @@
         insert into book <include refid="table_column"/>
         values
         (
-            #{bookId},#{price},#{bookName},#{detail},#{bookType},#{image},#{publishTime}
+            #{bookId},#{price},#{bookName},#{detail},#{bookType},#{image},#{publishTime},#{bookStatus}
         )
     </insert>
 
@@ -72,7 +74,8 @@
                 #{item.detail},
                 #{item.bookType},
                 #{item.image},
-                #{=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d %H:%i:s')}
+                #{=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d %H:%i:s')},
+                #{bookStatus}
             )
         </foreach>
     </insert>
@@ -86,6 +89,7 @@
             <if test="bookType!=null">book_type=#{bookType}</if>
             <if test="image!=null">image=#{image}</if>
             <if test="publishTime!=null">publish_time=DATE_FORMATE(#{publishTime},'%Y-%m-%d %H:%i:s')</if>
+            <if test="bookStatus!=null">book_status=#{bookStatus}</if>
         </set>
         where book_id=#{bookId}
     </update>
@@ -100,6 +104,7 @@
                 <if test="item.bookType!=null">book_type=#{item.bookType}</if>
                 <if test="item.image!=null">image=#{item.image}</if>
                 <if test="item.publishTime!=null">publish_time=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d %H:%i:s')</if>
+                <if test="bookStatus!=null">book_status=#{bookStatus}</if>
             </set>
             where book_id=#{item.bookId}
         </foreach>
@@ -120,5 +125,10 @@
             #{bookId}
         </foreach>
     </delete>
+
+    <select id="count" parameterType="java.util.HashMapMap" resultType="Integer">
+        select count(*) from book
+        <include refid="search_where"/>
+    </select>
 
 </mapper>

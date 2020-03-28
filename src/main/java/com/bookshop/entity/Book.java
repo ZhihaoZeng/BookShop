@@ -1,5 +1,9 @@
 package com.bookshop.entity;
 
+import java.util.HashMap;
+
+import static com.bookshop.util.Util.checkStringIsEmpty;
+
 /**
  * @ClassName: Book
  * @Description: TODO
@@ -14,17 +18,40 @@ public class Book {
     private String bookType;
     private String image;
     private String publishTime;
+    private String bookStatus;
 
-    public Book(Integer bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime) {
+    public HashMap<String,Object> toMap(){
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("bookId",bookId==null?null:bookId+"");
+        map.put("price",price==null?null:price+"");
+        map.put("bookName",checkStringIsEmpty(bookName));
+        map.put("detail",checkStringIsEmpty(detail));
+        map.put("bookType",checkStringIsEmpty(bookType));
+        map.put("image",checkStringIsEmpty(image));
+        map.put("publishTime",checkStringIsEmpty(publishTime));
+        map.put("bookStatus",checkStringIsEmpty(bookStatus));
+        return map;
+    }
+
+    public Book(Integer bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime,String bookStatus) {
         this.bookId = bookId;
         this.price = price;
         this.bookName = bookName;
         this.detail = detail;
         this.bookType = bookType;
         this.image = image;
+        this.bookStatus = bookStatus;
     }
 
     public Book() {
+    }
+
+    public String getBookStatus() {
+        return bookStatus;
+    }
+
+    public void setBookStatus(String bookStatus) {
+        this.bookStatus = bookStatus;
     }
 
     public String getPublishTime() {

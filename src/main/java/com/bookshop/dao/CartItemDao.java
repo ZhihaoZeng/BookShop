@@ -11,14 +11,14 @@ import java.util.List;
  * @Date: 2020/3/28 1:52
  */
 public interface CartItemDao {
-    public List<CartItem> getCartItems(Long userId);
+    List<CartItem> getCartItems(Long userId);
 
-    public void insertCartItem(CartItem cartItem);
+    void insertCartItem(CartItem cartItem);
 
-    public void updateCartItem(CartItem cartItem);
-    public void updateCartItems(List<CartItem> cartItems);
+    void updateCartItem(CartItem cartItem);
+    void updateCartItems(List<CartItem> cartItems);
 
-    public void deleteCartItem(CartItem cartItem);
-    public void deleteCartItems(List<CartItem> cartItems);
+    void deleteCartItem(CartItem cartItem);
+    void deleteCartItems(List<CartItem> cartItems);
 
 }
