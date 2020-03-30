@@ -11,5 +11,5 @@
 </body>
 </html>
 <%--
-<jsp:forward page="/WEB-INF/pages/login.jsp"/>
+<jsp:forward page="/WEB-INF/pages/login2.jsp"/>
 --%>

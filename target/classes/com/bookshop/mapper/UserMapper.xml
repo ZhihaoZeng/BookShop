@@ -17,7 +17,7 @@
 
     <sql id="search_where">
         <if test="userId != null">and book_id=#{userId}</if>
-        <if test="userName != null">and price=#{userName}</if>
+        <if test="userName != null">and user_name=#{userName}</if>
         <if test="gender != null">and book_name=#{gender}</if>
         <if test="userAddress!=null">and user_address like #{userAddress}</if>
         <if test="userStatus!=null">and user_status=#{userStatus}</if>
@@ -27,7 +27,7 @@
         (user_name,gender,user_address,user_password,user_status)
     </sql>
 
-    <select id="getAllUsersPage" parameterType="java.util.HashMap" resultMap="userResultMap">
+    <select id="getAllUsersPage" parameterType="map" resultMap="userResultMap">
         select * from user
         <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
@@ -40,10 +40,10 @@
         select * from user where user_id=#{userId}
     </select>
 
-    <select id="searchUsersPage" parameterType="java.util.HashMap" resultMap="userResultMap">
+    <select id="searchUsers" parameterType="map" resultMap="userResultMap">
         select * from user where 1=1
         <include refid="search_where"/>
-        <if test="startPage!=null and pageSize != null">and LIMIT #{startPage},#{pageSize}</if>
+        <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
     <insert id="insertUser" parameterType="com.bookshop.entity.User" useGeneratedKeys="true" keyProperty="userId">
@@ -107,8 +107,8 @@
         </foreach>
     </delete>
 
-    <select id="count" parameterType="java.util.HashMap" resultType="Integer">
-        select count(*) from user
+    <select id="count" parameterType="map" resultType="Integer">
+        select count(*) from user where 1=1
         <include refid="search_where"/>
     </select>
 </mapper>

@@ -1,8 +1,6 @@
 package com.bookshop.entity;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @ClassName: Cart
@@ -13,10 +11,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Cart {
     //购物车书本
     private List<CartItem> books;
-    private Integer userId;
+    private Long userId;
     private Integer totalPrice;
 
-    public Cart(List<CartItem> books, Integer userId, Integer totalPrice) {
+    public Cart(List<CartItem> books, Long userId, Integer totalPrice) {
         this.books = books;
         this.userId = userId;
         this.totalPrice = totalPrice;
@@ -33,11 +31,11 @@ public class Cart {
         this.books = books;
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

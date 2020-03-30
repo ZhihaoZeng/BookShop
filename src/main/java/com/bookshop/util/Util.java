@@ -8,6 +8,6 @@ package com.bookshop.util;
  */
 public class Util {
     public static String checkStringIsEmpty(String param){
-        return param==null?null:(param.equals("")?null:"%"+param+"%");
+        return param==null?null:(param.equals("")?null:""+param);
     }
 }

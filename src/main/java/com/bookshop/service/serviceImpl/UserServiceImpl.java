@@ -1,8 +1,8 @@
 package com.bookshop.service.serviceImpl;
 
+import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.UserDao;
 import com.bookshop.entity.User;
-import com.bookshop.exception.UserNameIsUsedException;
 import com.bookshop.service.UserService;
 import com.bookshop.util.Page;
 import com.bookshop.util.configs;
@@ -26,34 +26,49 @@ public class UserServiceImpl implements UserService {
 
     /*find list of users by query of username
     * 通过用户名来查找用户*/
-    public List<User> getUserByUserName(String userName){
+    public responseFromServer getUserByUserName(String userName){
         Map<String,Object> map = new HashMap<>();
         map.put("userName",userName);
         List<User> users = userDao.searchUsers(map);
-        return users;
+//        return users;
+        return responseFromServer.success(users);
     }
 
     /*check if user with a certain name exists
     * 查找是否存在特定用户名的用户*/
-    public boolean checkUserExistedByUserName(String userName){
-        List<User> users = getUserByUserName(userName);
+    public responseFromServer checkUserExistedByUserName(String userName){
+        Map<String,Object> map = new HashMap<>();
+        map.put("userName",userName);
+        List<User> users = userDao.searchUsers(map);
+        if(users!=null && users.size()>0)return responseFromServer.success();
+        return responseFromServer.error("不存在该名称的用户");
+    }
+
+    public boolean checkUserExistedByUserNameBoolean(String userName){
+        Map<String,Object> map = new HashMap<>();
+        map.put("userName",userName);
+        List<User> users = userDao.searchUsers(map);
         if(users!=null && users.size()>0)return true;
         return false;
     }
 
-    public boolean checkUserExistedByUserId(Long userId){
-        User user = getUser(userId);
-        if(user!=null)return true;
-        return false;
+    public responseFromServer checkUserExistedByUserId(Long userId){
+        User user = userDao.getUser(userId);
+        if(user!=null)return responseFromServer.success(user);
+        return responseFromServer.error("不存在该id用户");
     }
 
     /*insert user
     * 插入用户*/
     @Transactional(rollbackOn = Exception.class)
-    public  User insertUser (User user) throws Exception {
-        if(checkUserExistedByUserName(user.getUserName())){
-            /*存在同名用户 注册失败*/
-            throw new UserNameIsUsedException(user);
+    public responseFromServer insertUser (User user) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("userName",user.getUserName());
+        List<User> users = userDao.searchUsers(map);
+        if(users!=null && users.size()>0){
+//            /*存在同名用户 注册失败*/
+//            throw new UserNameIsUsedException(user);
+            return responseFromServer.error("用户名已被注册");
         }else{
             try{
                 /*the generated key has been assigned to the property "userId" of object "user" now
@@ -61,27 +76,53 @@ public class UserServiceImpl implements UserService {
                 userDao.insertUser(user);
             }catch (Exception e){
                 e.printStackTrace();
-                throw new Exception();
+//                throw new Exception();
             }
         }
-        return user;
+        if(user.getUserId()!=null){
+            return responseFromServer.success("注册成功",user);
+        }else{
+            return responseFromServer.error("注册失败");
+        }
+//        return user;
     }
+
+    public responseFromServer insertUsers (List<User> users){
+        int rows = 0;
+        for(int i =0;i<users.size();i++){
+            userDao.insertUser(users.get(i));
+            if(users.get(i).getUserId()!=null){
+                rows ++;
+            }
+        }
+        if(rows<users.size()){
+            return responseFromServer.error("成功插入("+rows+"/"+users.size()+")个用户");
+        }else{
+            return responseFromServer.success("所有用户全部成功插入");
+        }
+    }
+
 
     /*delete an user (close an account)
     * 删除用户（注销账号）*/
-    public Boolean deleteUser(User user){
-        if(userDao.deleteUser(user)!=1)return false;
-        if(checkUserExistedByUserName(user.getUserName())){
-            userDao.deleteUser(user);
-            return true;
-        }else{
-            return false;
+    public responseFromServer deleteUser(User user){
+        if(user!=null){
+            Map<String,Object> map = new HashMap<>();
+            map.put("userId",user.getUserId());
+            List<User> users = userDao.searchUsers(map);
+            if(users!=null && users.size()==1){
+                userDao.deleteUserById(user.getUserId());
+                return responseFromServer.success("删除账号成功");
+            }
         }
+        return responseFromServer.error("删除账号失败");
+//            return false;
+
     }
 
     /*user login
     * 用户登录*/
-    public User login(User user){
+    public responseFromServer login(User user){
         if(user!=null){
             Map<String,String> map = new HashMap<>();
             /*查询用户名*/
@@ -91,34 +132,38 @@ public class UserServiceImpl implements UserService {
             if(loginUser!=null||loginUser.size()==1){
                 User verifiedUser = loginUser.get(0);
                 verifiedUser.setUserPassword("");
-                return verifiedUser;
+                return responseFromServer.success("登录成功",user);
+//                return verifiedUser;
             }else{
-                throw new RuntimeException("密码或用户名错误");
+                return responseFromServer.error("密码或用户名错误");
+//                throw new RuntimeException("密码或用户名错误");
             }
         }else{
-            throw new RuntimeException("登录错误（user为空）");
+            return responseFromServer.error("登录错误");
+//            throw new RuntimeException("登录错误（user为空）");
         }
+
     }
 
 
-    public Page<User> searchUsersPage(Map<String,Object> queryMap){
+    public responseFromServer searchUsersPage(Map<String,Object> queryMap){
         Page<User> page = new Page<User>(configs.pageSize);
         queryMap.put("pageSize",configs.pageSize);
         page.setTotalCount(userDao.count(queryMap));
-        page.setCurrPage((Integer)queryMap.get("startPage"));
+        page.setCurrPage((Integer)queryMap.get("startPage")+1);
         page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
         page.setLists(userDao.searchUsers(queryMap));
-        return page;
+        return responseFromServer.success(page);
+//        return page;
     }
 
     @Override
-    public User getUser(Long userId) {
-        return userDao.getUser(userId);
+    public responseFromServer getUser(Long userId) {
+        return responseFromServer.success(userDao.getUser(userId));
     }
 
-
     @Override
-    public Page<User> getAllUsersPage(Integer startPage) {
+    public responseFromServer getAllUsersPage(Integer startPage) {
         HashMap<String,Object> map = new HashMap<>();
         Page<User> page = new Page<User>(configs.pageSize);
         page.setTotalCount(userDao.count(map));
@@ -127,53 +172,60 @@ public class UserServiceImpl implements UserService {
         map.put("pageSize",configs.pageSize);
         map.put("startPage",startPage);
         page.setLists(userDao.getAllUsersPage(map));
-        return page;
+        return responseFromServer.success(page);
     }
 
     @Override
-    public List<User> getAllUsers() {
-        return userDao.getAllUsers();
+    public responseFromServer getAllUsers() {
+        return responseFromServer.success(userDao.getAllUsers());
     }
 
 
     /*更新后重新查询查看是否更新成功*/
     @Override
     @Transactional
-    public Boolean updateUser(User user) {
+    public responseFromServer updateUser(User user) {
         int rows = userDao.updateUser(user);
         if(rows!=1){
-            return false;
+            return responseFromServer.error("更新用户失败");
         }
-        return true;
+        return responseFromServer.success("更新用户成功",user);
     }
 
     @Override
-    public Integer updateUsers(List<User> users) {
-        return userDao.updateUsers(users);
+    public responseFromServer updateUsers(List<User> users) {
+        if(users == null||users.size()==0)return responseFromServer.error("待删除用户表为空");
+        return responseFromServer.success(userDao.updateUsers(users));
     }
 
 
 
     @Override
-    public Integer deleteUsers(List<User> users) {
+    public responseFromServer deleteUsers(List<User> users) {
         /*当影响行数小于用户个数时返回错误*/
-        return userDao.deleteUsers(users);
+        int rows = userDao.deleteUsers(users);
+        if(rows<users.size()){
+            return responseFromServer.error(rows+"(/"+users.size()+")个用户删除成功");
+        }else return responseFromServer.success("所有用户删除成功");
     }
 
     /*通过id删除user*/
     @Override
-    public Boolean deleteUserBytId(Long userId) {
-        if(checkUserExistedByUserId(userId)){
-            userDao.deleteUserById(userId);
-            return true;
+    public responseFromServer deleteUserBytId(Long userId) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("userId",userId);
+        List<User> users = userDao.searchUsers(map);
+        if(users!=null && users.size()==1){
+            return responseFromServer.success("删除用户成功",userDao.deleteUserById(userId));
         }else{
-            return false;
+            return responseFromServer.error("删除用户失败");
         }
     }
 
     /*依据map查询个数*/
-    public Integer count(Map map){
-        return userDao.count(map);
+    public responseFromServer count(Map map){
+        return responseFromServer.success(userDao.count(map));
+//        return userDao.count(map);
     }
 
     @Autowired

@@ -52,7 +52,7 @@
     <select id="searchBooks" parameterType="java.util.HashMap" resultMap="bookResultMap">
         select * from book where 1=1
         <include refid="search_where"></include>
-        <if test="startPage!=null and pageSize != null">and LIMIT #{startPage},#{pageSize}</if>
+        <if test="startPage!=null and pageSize != null">LIMIT #{startPage},#{pageSize}</if>
     </select>
 
     <insert id="insertBook" parameterType="com.bookshop.entity.Book" keyColumn="book_id" useGeneratedKeys="true">

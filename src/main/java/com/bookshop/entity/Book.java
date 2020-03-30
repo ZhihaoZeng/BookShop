@@ -11,7 +11,7 @@ import static com.bookshop.util.Util.checkStringIsEmpty;
  * @Date: 2020/3/28 1:55
  */
 public class Book {
-    private Integer bookId;
+    private Long bookId;
     private Double price;
     private String bookName;
     private String detail;
@@ -33,7 +33,7 @@ public class Book {
         return map;
     }
 
-    public Book(Integer bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime,String bookStatus) {
+    public Book(Long bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime, String bookStatus) {
         this.bookId = bookId;
         this.price = price;
         this.bookName = bookName;
@@ -62,11 +62,11 @@ public class Book {
         this.publishTime = publishTime;
     }
 
-    public Integer getBookId() {
+    public Long getBookId() {
         return bookId;
     }
 
-    public void setBookId(Integer bookId) {
+    public void setBookId(Long bookId) {
         this.bookId = bookId;
     }
 

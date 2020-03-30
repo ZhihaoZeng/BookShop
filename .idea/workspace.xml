@@ -7,1150 +7,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7271cef-5e62-43ff-9285-9410b3e4cacb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/BookServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/line-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/vendor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/fonts/la-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/compare-product/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/compare-product/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/ball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/chair.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/gift.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/headphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/laptop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/truck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/us-flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/01w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/02w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/03w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/04w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/05w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/06w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/07w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/08w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/09w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/10w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/11w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/12w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/logo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/shop-details/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/shop-details/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/subscribe/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/card-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/card-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/SqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/ContextFinalizer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/JdbcUnregisterListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/BaseDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/BookDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/CartDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/CartItemDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderItemDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/UserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Cart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/CartItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/OrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Review.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/exception/MyException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/exception/UserNameIsUsedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/interceptor/LoginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/CartItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/CartMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/CartService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Page.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/configs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/redis.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/spring-redis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/springmvc-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/compare-product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/home-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/home-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/home-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/home-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/activation-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ant-1.9.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ant-launcher-1.9.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aopalliance-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/asm-5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjrt-1.6.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjtools-1.8.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjweaver-1.7.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/cglib-3.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/classmate-1.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-codec-1.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-dbcp-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-io-2.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-lang3-3.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-pool-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-pool2-2.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/fastjson-1.1.41.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/freemarker-2.3.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-annotations-2.9.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-core-2.9.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-databind-2.9.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-module-jaxb-annotations-2.9.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javaee-api-7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javassist-3.21.0-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javax.mail-1.5.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javax.mail-api-1.5.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jboss-logging-3.2.1.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jedis-2.7.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-api-2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-core-2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mybatis-3.2.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mybatis-spring-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ognl-3.1.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/slf4j-api-1.7.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-aop-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-aspects-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-beans-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-context-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-context-support-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-core-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-data-redis-1.6.0.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-expression-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-instrument-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-jcl-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-jdbc-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-orm-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-oxm-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-test-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-tx-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-web-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-webmvc-5.1.7.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-details-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/wishlist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/css/regcss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/js/jquery-1.4.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/ContextFinalizer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/JdbcUnregisterListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/BookController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/BaseDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/BookDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/CartDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/CartItemDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderItemDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/UserDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/impl/BaseDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Cart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/CartItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Order.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/OrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Review.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/exception/MyException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/exception/UserNameIsUsedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/interceptor/LoginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/CartItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/CartMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/BookService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/CartService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImplementation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/util/Page.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/util/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bookshop/util/configs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/redis.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/spring-redis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/springmvc-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/实验报告.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/960.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/nivo-slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/orman.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/pascal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/css/text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/PTSansNarrowRegular-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/generator_config.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/ptn57f-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/ptn57f-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/ptn57f-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/font/ptn57f-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/img/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/jq/jquery-1.3.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/jq/jquery-1.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/jq/jquery.nivo.slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/jq/jquery.nivo.slider.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/js/PIE.htc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/js/html5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/scripts/jquery-1.3.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/scripts/jquery-1.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/scripts/jquery.nivo.slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/scripts/jquery.nivo.slider.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/scripts/tabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/specimen_files/easytabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/specimen_files/grid_12-825-55-15.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/specimen_files/jquery-1.6.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/specimen_files/specimen_stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/chahua2613/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/1024_768.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/pad.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/pad_heng.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/tel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Css/tel_heng.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/banner_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/book_12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/bt_buy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/icon_bird.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/icon_hg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/icon_tel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/img_inp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/img_lives.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/img_men.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/menu_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/top_logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/top_shop_cur.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Images/top_title_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/Js/css3-mediaqueries.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/ftmp8_3_dm/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/fonts/Amble-Light-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/arrows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/bg-body.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/blog-icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/blog-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/blog-icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/blog-icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/blog-icon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/btn_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/bullets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/but.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/car1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/car2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/car3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/car4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/cart.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/info-box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/lightbox-btn-close.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/lightbox-btn-next.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/lightbox-btn-prev.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/lightbox-ico-loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/list_marker.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/logo.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/menu_line.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/pic9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/spacer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/tail-menu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/tail-prod.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/tail.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/images/tail_footer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/js/superfish.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/specials.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban1129/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/css/easy-responsive-tabs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/css/slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/delivery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/font/Amble-Regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/about_img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/arrow-next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/arrow-prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/arrow_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/compare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/delivery-img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/delivery-img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/delivery-img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/dribbble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/drop_arrow-hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/drop_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/feature-pic1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/feature-pic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/feature-pic3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/feature-pic4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/list-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/new-pic1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/new-pic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/new-pic3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/new-pic4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/newsimg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/newsimg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/newsimg3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/price-rating.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/productslide-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/quality-rating.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/skype.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/slide-1-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/slide-2-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/slide-3-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/tag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/thumbnailslide-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/value-rating.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/images/wishlist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/easyResponsiveTabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/jquery-1.7.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/jquery.accordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/jquery.easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/move-top.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/slides.min.jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/js/startstop-slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/preview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban129/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/animation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/bicon.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/fakeloader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/fancybox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/fotorama.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/mainmenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/material-design-iconic-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/nivo-preview-2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/nivo-slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/pe-icon-7-stroke.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/css/plugins/slick.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/bicon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/bicon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/bicon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/slick.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/slick.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/fonts/slick.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/best-sell-product/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/bg/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/books/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/brand/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/fancybox_loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/fancybox_loading@2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/fancybox_overlay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/fancybox_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/fancybox/fancybox_sprite@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/button-compare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/button-email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/button-wishlist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/button-wishlist_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/cart2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/cart3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/cart4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/cart_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/compare.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/compare2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/fotorama.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/fotorama@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/icon_setting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/icon_setting_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/icon_title3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/links_static.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/links_static8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/product-info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/search2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/search_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/wishlist.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/icons/wishlist2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/logo/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/logo/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/others/banner_left.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/others/toggle_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/others/toggle_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/png-img/headphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/png-img/payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/png-img/shipping.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/big-img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/sm-img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/sm-img/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/images/product/sm-img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/active.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/vendor/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/js/vendor/modernizr-3.5.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/shop-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/single-product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban3113/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/line-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/css/vendor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/fonts/la-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/bg-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/bg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/banner/bg-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/card/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/category/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/compare-product/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/compare-product/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/footer/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/footer/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/footer/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/footer/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/footer/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/gadget/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/gadget/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/gadget/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/author.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/ball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/chair.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/gift.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/headphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/laptop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/phone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/truck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/icon/us-flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/01w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/02w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/03w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/04w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/05w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/06w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/07w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/08w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/09w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/10w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/11w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/listed/12w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/logo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/offer/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/offer/bg-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/offer/bg-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/offer/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-2/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-3/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-4/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/home-5/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/000010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/000011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/000012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/00009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/0012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/shop-details/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/product/shop/shop-details/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/subscribe/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/wishlist/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/wishlist/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/wishlist/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/wishlist/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/img/wishlist/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/js/countdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/assets/js/vendor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/card-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/card-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/compare-product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/home-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/home-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/home-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/home-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-details-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/wishlist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/moban4398/说明.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/blank-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/charts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/compose.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/clndr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/jqvmap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/forms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/general.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/grids.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/i1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/i2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/i3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/i4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/img1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/tick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/inbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/classie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/clndr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery-1.11.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery.circlechart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery.vmap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery.vmap.sampledata.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/jquery.vmap.world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/metisMenu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/modernizr.custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/moment-2.2.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/skycons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/underscore-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/validator.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/media.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/tables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/typography.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/validation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/widgets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/模板/后台/moban2078/说明.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/common/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/common/responseFromServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/util/HtmlResourceView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/util/ReponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/myHtml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$实验报告.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceimpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/util/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/util/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/util/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/springmvc-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/util/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/util/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验报告.docx" beforeDir="false" afterPath="$PROJECT_DIR$/实验报告.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1164,7 +92,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -1209,11 +140,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../样例/HungryCMS-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -1227,11 +159,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\1Code\BookShop\src\main\webapp" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF\views" />
       <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF" />
+      <recent name="E:\1Code\BookShop\src\main\webapp" />
       <recent name="E:\1Code\BookShop\src\main\java" />
       <recent name="E:\1Code\BookShop\src\main\java\com\bookshop" />
-      <recent name="E:\1Code\BookShop\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bookshop.controller" />
@@ -1239,6 +171,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF\pages" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF\views" />
       <recent name="E:\1Code\BookShop\src\main\webapp\static" />
     </key>
   </component>
@@ -1358,7 +292,7 @@
       <workItem from="1585292495671" duration="29750000" />
       <workItem from="1585365320110" duration="35486000" />
       <workItem from="1585416792372" duration="1078000" />
-      <workItem from="1585547430580" duration="12022000" />
+      <workItem from="1585547430580" duration="39431000" />
     </task>
     <task id="LOCAL-00001" summary="setup project">
       <created>1585333238366</created>
@@ -1381,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585417531202</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="只可以扫描到webapp下的html文件">
+      <created>1585559700381</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585559700381</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1437,22 +378,27 @@
     </state>
     <state x="548" y="-783" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585331567426" />
     <state x="548" y="297" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585148802504" />
-    <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585301136561">
+    <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585588893643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585301136561" />
+    <state x="230" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585588893643" />
     <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1585559666585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="372" y="-1075" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333284000" />
     <state x="372" y="5" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585559666585" />
     <state x="372" y="1085" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585417519061" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1585553061072">
+    <state width="442" height="466" key="DebuggerActiveHint" timestamp="1585594877176">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="442" height="466" key="DebuggerActiveHint/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594877176" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1585578886213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="-912" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585332713255" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585207969257" />
-    <state x="549" y="168" key="FileChooserDialogImpl/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585553061072" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585578886213" />
     <state width="1024" height="216" key="GridCell.Tab.-1.bottom" timestamp="1585388393567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -1469,58 +415,74 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="216" key="GridCell.Tab.-1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585388393567" />
-    <state width="1445" height="250" key="GridCell.Tab.0.bottom" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.0.bottom" timestamp="1585594992294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1445" height="250" key="GridCell.Tab.0.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.0.center" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.0.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992294" />
+    <state width="1313" height="200" key="GridCell.Tab.0.center" timestamp="1585594992293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1445" height="250" key="GridCell.Tab.0.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.0.left" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.0.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992293" />
+    <state width="1313" height="200" key="GridCell.Tab.0.left" timestamp="1585594992293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1445" height="250" key="GridCell.Tab.0.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.0.right" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.0.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992293" />
+    <state width="1313" height="200" key="GridCell.Tab.0.right" timestamp="1585594992294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1445" height="250" key="GridCell.Tab.0.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.1.bottom" timestamp="1585557103196">
+    <state width="1313" height="200" key="GridCell.Tab.0.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992294" />
+    <state width="1313" height="200" key="GridCell.Tab.1.bottom" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.1.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103196" />
-    <state width="1445" height="250" key="GridCell.Tab.1.center" timestamp="1585557103196">
+    <state width="1313" height="200" key="GridCell.Tab.1.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.1.center" timestamp="1585594992294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.1.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103196" />
-    <state width="1445" height="250" key="GridCell.Tab.1.left" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.1.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992294" />
+    <state width="1313" height="200" key="GridCell.Tab.1.left" timestamp="1585594992294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.1.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.1.right" timestamp="1585557103196">
+    <state width="1313" height="200" key="GridCell.Tab.1.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992294" />
+    <state width="1313" height="200" key="GridCell.Tab.1.right" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103196" />
-    <state width="1445" height="250" key="GridCell.Tab.2.bottom" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.2.bottom" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.2.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.2.center" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.2.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.2.center" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.2.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.2.left" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.2.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.2.left" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.2.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
-    <state width="1445" height="250" key="GridCell.Tab.2.right" timestamp="1585557103195">
+    <state width="1313" height="200" key="GridCell.Tab.2.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.2.right" timestamp="1585594992295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1445" height="250" key="GridCell.Tab.2.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585557103195" />
+    <state width="1313" height="200" key="GridCell.Tab.2.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992295" />
+    <state width="1313" height="200" key="GridCell.Tab.3.bottom" timestamp="1585594992296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1313" height="200" key="GridCell.Tab.3.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992296" />
+    <state width="1313" height="200" key="GridCell.Tab.3.center" timestamp="1585594992296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1313" height="200" key="GridCell.Tab.3.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992296" />
+    <state width="1313" height="200" key="GridCell.Tab.3.left" timestamp="1585594992296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1313" height="200" key="GridCell.Tab.3.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992296" />
+    <state width="1313" height="200" key="GridCell.Tab.3.right" timestamp="1585594992296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1313" height="200" key="GridCell.Tab.3.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594992296" />
     <state x="270" y="-1025" width="1189" height="714" key="SettingsEditor" timestamp="1585332701715">
       <screen x="0" y="-1080" width="1536" height="824" />
     </state>
@@ -1530,29 +492,30 @@
       <screen x="0" y="-1080" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585238224445" />
-    <state x="361" y="1214" key="Vcs.Push.Dialog.v2" timestamp="1585417596366">
-      <screen x="0" y="1080" width="1536" height="824" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1585559707500">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="-946" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333341278" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585559707500" />
     <state x="361" y="1214" key="Vcs.Push.Dialog.v2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585417596366" />
     <state x="372" y="-1065" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585302419621">
       <screen x="0" y="-1080" width="1536" height="824" />
     </state>
     <state x="372" y="-1065" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585302419621" />
-    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585552625751">
+    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585579452340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585552625751" />
-    <state x="351" y="1267" width="840" height="590" maximized="true" key="dock-window-1" timestamp="1585389719694">
+    <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585579452340" />
+    <state x="381" y="1080" width="638" height="779" key="dock-window-1" timestamp="1585594125573">
       <screen x="0" y="1080" width="1536" height="824" />
     </state>
     <state x="-294" y="-805" width="1262" height="768" key="dock-window-1/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585292729198" />
-    <state x="351" y="1267" width="840" height="590" maximized="true" key="dock-window-1/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585389719694" />
-    <state x="446" y="1326" width="638" height="798" maximized="true" key="dock-window-2" timestamp="1585553336907">
-      <screen x="0" y="1080" width="1536" height="824" />
+    <state x="381" y="1080" width="638" height="779" key="dock-window-1/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585594125573" />
+    <state x="805" y="122" width="638" height="779" key="dock-window-2" timestamp="1585592251546">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="508" y="0" width="646" height="768" maximized="true" key="dock-window-2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585299583892" />
-    <state x="446" y="1326" width="638" height="798" maximized="true" key="dock-window-2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585553336907" />
+    <state x="805" y="122" width="638" height="779" key="dock-window-2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585592251546" />
     <state x="472" y="1213" width="638" height="809" maximized="true" key="dock-window-2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585547845678" />
     <state x="612" y="37" width="807" height="768" key="dock-window-3" timestamp="1585301069885">
       <screen x="0" y="0" width="1536" height="824" />
@@ -1573,5 +536,26 @@
     </state>
     <state x="802" y="-935" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585313639921" />
     <state x="802" y="145" width="672" height="678" key="search.everywhere.popup/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585404885168" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
+          <line>155</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

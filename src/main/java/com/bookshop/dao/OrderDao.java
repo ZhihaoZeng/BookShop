@@ -14,6 +14,7 @@ import java.util.Map;
 public interface OrderDao {
     Order getOrder(Long orderId);
     List<Order> getOrdersByUserId(Long userId);
+    List<Order> getOrdersPlusByUserId(Long userId);
 
     List<Order> searchOrders(Map map);
 

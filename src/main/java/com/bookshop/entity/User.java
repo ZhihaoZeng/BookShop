@@ -1,13 +1,12 @@
 package com.bookshop.entity;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import static com.bookshop.util.Util.checkStringIsEmpty;
 
 /*用户*/
 public class User {
-    private Integer userId;
+    private Long userId;
     private String userName;
     private String gender;
     private String userAddress;
@@ -26,7 +25,7 @@ public class User {
     }
 
 
-    public User(Integer userId, String userName, String gender, String userAddress, String userPassword, String userStatus) {
+    public User(Long userId, String userName, String gender, String userAddress, String userPassword, String userStatus) {
         this.userId = userId;
         this.userName = userName;
         this.gender = gender;
@@ -38,11 +37,11 @@ public class User {
     public User() {
     }
 
-    public Integer getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
