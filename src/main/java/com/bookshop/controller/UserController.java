@@ -119,7 +119,7 @@ public class UserController {
     }
 
 
-    @RequestMapping("/searchUsers")
+    @RequestMapping("/searchUsersPage")
     @ResponseBody
     public Page<User> searchUsersPage(@RequestBody Map<String,Object> requestMap
                                   /*User user,

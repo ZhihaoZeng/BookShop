@@ -17,7 +17,7 @@ public interface BookService {
     public Page<Book> getAllBooksPage(Integer startPage);
     public List<Book> getAllBooks();
 
-    public Page<Book> searchBooksPage(Map map);//根据条件查询多个结果
+    public Page<Book> searchBooksPage(Map<String,Object> queryMap);//根据条件查询多个结果
 
     public Book insertBook(Book book);//插入，用实体作为参数
     public Integer insertBooks(List<Book> books);//插入，用实体作为参数

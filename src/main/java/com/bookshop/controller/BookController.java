@@ -3,7 +3,7 @@ package com.bookshop.controller;
 import com.bookshop.entity.Book;
 import com.bookshop.service.BookService;
 import com.bookshop.util.Page;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +19,7 @@ import java.util.Map;
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:48
  */
+@Controller
 @RequestMapping("/book")
 public class BookController {
 
