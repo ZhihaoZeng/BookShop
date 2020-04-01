@@ -2,7 +2,7 @@ package com.bookshop.util;
 
 /**
  * @ClassName: configs
- * @Description: TODO
+ * @Description:
  * @Author: 曾志昊
  * @Date: 2020/3/28 16:04
  */

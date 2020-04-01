@@ -2,7 +2,7 @@ package com.bookshop.entity;
 
 /**
  * @ClassName: User
- * @Description: TODO
+ * @Description:
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:56
  */

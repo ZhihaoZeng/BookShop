@@ -6,7 +6,7 @@ import static com.bookshop.util.Util.checkStringIsEmpty;
 
 /**
  * @ClassName: Book
- * @Description: TODO
+ * @Description:
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:55
  */

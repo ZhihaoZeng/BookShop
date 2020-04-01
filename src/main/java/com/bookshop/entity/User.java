@@ -5,6 +5,12 @@ import java.util.HashMap;
 import static com.bookshop.util.Util.checkStringIsEmpty;
 
 /*用户*/
+/**
+ * @ClassName: OrderItem
+ * @Description:
+ * @Author: 曾志昊
+ * @Date: 2020/3/28 2:00
+ */
 public class User {
     private Long userId;
     private String userName;

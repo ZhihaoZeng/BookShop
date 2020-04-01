@@ -1,115 +1,163 @@
 package com.bookshop.service.serviceImpl;
 
+import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.BookDao;
 import com.bookshop.entity.Book;
+import com.bookshop.entity.CartItem;
 import com.bookshop.service.BookService;
 import com.bookshop.util.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import javax.transaction.Transactional;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @ClassName: BookServiceImpl
- * @Description: TODO
+ * @ClassName: BookServiceImplementation
+ * @Description:
  * @Author: 曾志昊
- * @Date: 2020/3/28 2:01
+ * @Date: 2020/3/30 16:28
  */
-
-//@Service(value = "BookService")
+@Service(value = "BookService")
 public class BookServiceImpl implements BookService {
 
     BookDao bookDao;
 
-    public Book getBook(Long bookId){
-        return bookDao.getBook(bookId);
+    public responseFromServer getBook(Long bookId){
+        Book book = bookDao.getBook(bookId);
+        if(book!=null){
+            return responseFromServer.success(book);
+        }
+        return responseFromServer.error();
+
     }
 
-    public List<Book> getAllBooks(){
-        return bookDao.getAllBooks();
+    public responseFromServer getAllBooks(){
+        List<Book> allBooks = bookDao.getAllBooks();
+        return allBooks==null?
+                responseFromServer.error()
+                :
+                responseFromServer.success(allBooks);
     }
 
 
-
-    public Page<Book> getAllBooksPage(Integer startPage){
-        Map<String,Object> map = new HashMap<>();
-        map.put("startPage",startPage);
-        map.put("pageSize",configs.pageSize);
+    private Page<Book> getPage(Map<String,Object> queryMap){
         Page<Book> page = new Page<Book>(configs.pageSize);
-        page.setTotalCount(bookDao.count(map));
-        page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
-        page.setLists(bookDao.getAllBooksPage(map));
-        return page;
-    }
-
-    public Page<Book> searchBooksPage(Map<String,Object> queryMap){
-        Page<Book> page = new Page<Book>(configs.pageSize);
-        queryMap.put("pageSize",configs.pageSize);
+        Integer startPage = (Integer)queryMap.get("startPage");
+        queryMap.put("startPage",startPage-1);
+        page.setCurrPage(startPage);
         page.setTotalCount(bookDao.count(queryMap));
-        page.setCurrPage((Integer)queryMap.get("startPage"));
         page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
         page.setLists(bookDao.searchBooks(queryMap));
         return page;
     }
 
-    public Book insertBook(Book book){
+    public responseFromServer getAllBooksPage(Map<String,Object> requestMap){
+        if(requestMap.get("startPage")==null){
+            requestMap.put("startPage",1);
+        }
+        return responseFromServer.success(getPage(requestMap));
+    }
+
+    public responseFromServer searchBooksPage(Map<String,Object> requestMap){
+        if(requestMap.get("startPage")==null){
+            requestMap.put("startPage",1);
+        }
+        return responseFromServer.success(getPage(requestMap));
+    }
+
+    public responseFromServer insertBook(Book book){
         if(bookDao.insertBook(book)==1){
-            return book;
+            return responseFromServer.success(book);
         }else{
-            /*插入失败*/
-            return null;
+            return responseFromServer.error();
         }
     }
 
 
     /*TODO*/
-    public Integer insertBooks(List<Book> books){
-        int result = 0;
+    public responseFromServer insertBooks(List<Book> books){
+        if(books==null||books.size()==0)
+            return responseFromServer.error("待插入书本列表为空");
+        int rows = 0;
         for(Book book:books){
             if(bookDao.insertBook(book)==1){
-                result++;
+                rows++;
             }
         }
-        return result;
+        if(rows<books.size()){
+            return responseFromServer.error(String.format("插入了%d(/%d)",rows,books.size()));
+        }
+        return responseFromServer.success();
     }
 
-    public Boolean updateBook(Book book){
+    @Transactional
+    public responseFromServer updateBook(Book book){
+        if(book.getBookId()==null)
+            return responseFromServer.error("书本信息有误");
         if(bookDao.updateBook(book)==1){
-            return true;
+            return responseFromServer.success();
         }else{
-            return false;
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return responseFromServer.error("插入书籍失败");
         }
     }
 
-    public Integer updateBooks(List<Book> books){
-        return bookDao.updateBooks(books);
+    public responseFromServer updateBooks(List<Book> books){
+        if(books==null||books.size()==0){
+            return responseFromServer.error("待更新书本列表为空");
+        }
+        int rows = 0;
+        for(Book book:books){
+            if(updateBook(book).isSuccess()){
+                rows++;
+            }
+        }
+        if(rows<books.size()){
+            return responseFromServer.error(String.format("更新了%d(/%d)",rows,books.size()));
+        }
+        return responseFromServer.success("成功更新所有书籍");
+
+
+//        return bookDao.updateBooks(books);
     }
 
-    public Boolean deleteBookById(Long bookId){
+    public responseFromServer deleteBookById(Long bookId){
         if(bookDao.deleteBookById(bookId)==1){
-            return true;
+            return responseFromServer.success("成功删除");
         }else{
-            return false;
+            return responseFromServer.error("删除书籍失败");
         }
     }
 
 
-    public Boolean deleteBook(Book book){
+    public responseFromServer deleteBook(Book book){
         if(bookDao.deleteBook(book)==1){
-            return true;
+            return responseFromServer.success("成功删除");
         }else{
-            return false;
+            return responseFromServer.error("删除书籍失败");
         }
     }
 
-    public Integer deleteBooks(List<Book> books){
-        return bookDao.deleteBooks(books);
+    public responseFromServer deleteBooks(List<Book> books){
+        if(books==null||books.size()==0){
+            return responseFromServer.error("待更新书本列表为空");
+        }
+        int rows = 0;
+        for(Book book:books){
+            if(deleteBook(book).isSuccess()){
+                rows++;
+            }
+        }
+        if(rows<books.size()){
+            return responseFromServer.error(String.format("更新了%d(/%d)",rows,books.size()));
+        }
+        return responseFromServer.success("成功更新所有书籍");
     }
-
-
 
 
     @Autowired

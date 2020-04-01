@@ -1,5 +1,6 @@
 package com.bookshop.controller;
 
+import com.bookshop.common.responseFromServer;
 import com.bookshop.entity.Book;
 import com.bookshop.service.BookService;
 import com.bookshop.util.Page;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 /**
  * @ClassName: BookController
- * @Description: TODO
+ * @Description:
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:48
  */
@@ -28,100 +29,59 @@ public class BookController {
 
     @RequestMapping("/getBook")
     @ResponseBody
-    public Book getBook(@RequestBody Long bookId){
+    public responseFromServer getBook(@RequestBody Long bookId){
         return bookService.getBook(bookId);
     }
 
-    @RequestMapping("/getAllBooks")
-    @ResponseBody
-    public List<Book> getAllBooks(){
-        return bookService.getAllBooks();
-    }
 
     @RequestMapping("/searchBooksPage")
     @ResponseBody
-    public Page<Book> searchBooksPage(@RequestBody Map<String,Object> requestMap){
-        Book book = (Book)requestMap.get("book");
-        HashMap<String,Object> queryMap = book == null?null:book.toMap();
-        String startTime = (String) queryMap.get("startTime");
-        String endTime = (String) queryMap.get("endTime");
-        Double startPrice = (Double) queryMap.get("startPrice");
-        Double endPrice = (Double) queryMap.get("endPrice");
-        if(startTime!=null && !startTime.equals("")){
-            queryMap.put("startTime",startTime);
-        }
-        if(endTime!=null && !endTime.equals("")){
-            queryMap.put("endTime",endTime);
-        }
-        if(startPrice>0.0){
-            queryMap.put("startPrice",startPrice);
-        }
-        if(endPrice>0.0){
-            queryMap.put("endPrice",endPrice);
-        }
-        return bookService.searchBooksPage(queryMap);
-
+    public responseFromServer searchBooksPage(@RequestBody Map<String,Object> requestMap){
+        return bookService.searchBooksPage(requestMap);
     }
 
     @RequestMapping("/getAllBooksPage")
     @ResponseBody
-    public Page<Book> getAllBooksPage(@RequestBody Integer startPage){
-        return bookService.getAllBooksPage(startPage);
+    public responseFromServer getAllBooksPage(@RequestBody Map<String,Object> queryMap){
+        return bookService.getAllBooksPage(queryMap);
     }
 
 
     @RequestMapping("/insertBook")
     @ResponseBody
-    public Book insertBook(@RequestBody Book book){
+    public responseFromServer insertBook(@RequestBody Book book){
         return bookService.insertBook(book);
     }
 
     @RequestMapping("/updateBook")
     @ResponseBody
-    public String updateBook(@RequestBody Book book){
-        if(bookService.updateBook(book)){
-            return "success";
-        }else{
-            return "error";
-        }
+    public responseFromServer updateBook(@RequestBody Book book){
+        return bookService.updateBook(book);
     }
 
     @RequestMapping("/updateBooks")
     @ResponseBody
-    public Integer updateBooks(@RequestBody List<Book> books){
+    public responseFromServer updateBooks(@RequestBody List<Book> books){
         return bookService.updateBooks(books);
     }
 
 
     @RequestMapping("/deleteBookById")
     @ResponseBody
-    public String deleteBookById(@RequestBody Long bookId){
-        if(bookService.deleteBookById(bookId)){
-            return "success";
-        }else{
-            return "error";
-        }
+    public responseFromServer deleteBookById(@RequestBody Long bookId){
+        return bookService.deleteBookById(bookId);
     }
 
 
     @RequestMapping("/deleteBook")
     @ResponseBody
-    public String deteleBook(@RequestBody Book book){
-        if(bookService.deleteBook(book)){
-            return "success";
-        }else{
-            return "error";
-        }
+    public responseFromServer deteleBook(@RequestBody Book book){
+        return bookService.deleteBook(book);
     }
     @RequestMapping("/deleteBooks")
     @ResponseBody
-    public Integer deleteBooks(@RequestBody List<Book> books){
+    public responseFromServer deleteBooks(@RequestBody List<Book> books){
         return bookService.deleteBooks(books);
     }
-
-
-
-
-
 
 }
