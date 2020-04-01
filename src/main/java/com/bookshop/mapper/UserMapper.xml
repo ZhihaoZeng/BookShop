@@ -56,12 +56,10 @@
     </insert>-->
     <!--动态sql解决了没有默认值的问题-->
     <insert id="insertUser" parameterType="com.bookshop.entity.User" useGeneratedKeys="true" keyProperty="userId">
-        insert into user
-        <include refid="userInfoColumns"/>
-        values(
-        <include refid="userInfoValues"/>
-        )
+        insert into user(<include refid="userInfoColumns"/>)
+        values(<include refid="userInfoValues"/>)
     </insert>
+
     <sql id="userInfoColumns">
         <trim suffixOverrides=",">
             <if test="userId != null"> user_id,</if>

@@ -33,6 +33,9 @@
         <property name="order" value="0" />
         <property name="prefix" value="/WEB-INF/" />
         <property name="suffix" value=".html" />
+        <property name="contentType">
+            <value>text/html; charset=UTF-8</value>
+        </property>
     </bean>
 
 <!--    <bean id="htmlViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

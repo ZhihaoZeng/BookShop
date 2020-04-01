@@ -108,6 +108,7 @@ public class UserServiceImpl implements UserService {
     public responseFromServer deleteUser(User user){
         if(user!=null){
             Map<String,Object> map = new HashMap<>();
+            if(user.getUserId()==null)return responseFromServer.error("没有用户id");
             map.put("userId",user.getUserId());
             List<User> users = userDao.searchUsers(map);
             if(users!=null && users.size()==1){

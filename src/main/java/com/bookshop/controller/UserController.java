@@ -3,7 +3,6 @@ package com.bookshop.controller;
 import com.bookshop.common.responseFromServer;
 import com.bookshop.entity.User;
 import com.bookshop.service.UserService;
-import org.apache.tools.ant.taskdefs.condition.Http;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -73,7 +72,8 @@ public class UserController {
     }
 
 
-
+    /*user要带id*/
+    /*todo 删除账号密码校验*/
     @RequestMapping("/closeAccount")
     @ResponseBody
     public responseFromServer closeAccount(@RequestBody  User user) {
@@ -90,7 +90,7 @@ public class UserController {
 
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "login";
+        return "loginhtm";
     }
 
     @RequestMapping("/login")
@@ -116,17 +116,12 @@ public class UserController {
     @RequestMapping("/searchUsersPage")
     @ResponseBody
     public responseFromServer searchUsersPage(@RequestBody Map<String,Object> requestMap){
-//        User user = (User)requestMap.get("user");
-//        user.setUserPassword(null);
-//        Map<String,Object> queryMap = user.toMap();
         requestMap.put("userPassWord",null);
         Integer startPage = 1;
         if(requestMap.containsKey("startPage")){
             startPage =  (Integer) requestMap.get("startPage");
         }
         requestMap.put("startPage",startPage-1);
-        /*Page<User> users = userService.searchUsersPage(queryMap);
-        return users;*/
         return userService.searchUsersPage(requestMap);
 
     }

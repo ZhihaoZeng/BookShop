@@ -122,12 +122,6 @@ public class OrderController{
         return orderService.insertOrderItem(orderItem);
     }
 
-    @RequestMapping("/updateOrderItem")
-    @ResponseBody
-    public responseFromServer updateOrderItem(OrderItem orderItem){
-        return orderService.updateOrderItem(orderItem);
-    }
-
 
     @RequestMapping("/updateOrderItem")
     @ResponseBody

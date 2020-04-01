@@ -5,7 +5,6 @@ import com.bookshop.dao.CartDao;
 import com.bookshop.dao.CartItemDao;
 import com.bookshop.entity.Cart;
 import com.bookshop.entity.CartItem;
-import com.bookshop.service.CartService;
 import com.bookshop.util.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +17,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @ClassName: CartService
+ * @ClassName: CartServiceImplementation
  * @Description: TODO
  * @Author: 曾志昊
- * @Date: 2020/4/1 20:02
+ * @Date: 2020/4/1 20:13
  */
-
-@Service(value = "CartService")
-public class CartServiceImpl implements CartService {
+//@Service(value = "CartService")
+public class CartServiceImplementation {
 
     CartDao cartDao;
     CartItemDao cartItemDao;
@@ -197,7 +195,7 @@ public class CartServiceImpl implements CartService {
     }
 
     @Autowired
-    public CartServiceImpl(CartDao cartDao, CartItemDao cartItemDao){
+    public CartServiceImplementation(CartDao cartDao, CartItemDao cartItemDao){
         this.cartDao = cartDao;
         this.cartItemDao = cartItemDao;
     }

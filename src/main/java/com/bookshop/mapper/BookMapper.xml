@@ -75,7 +75,7 @@
                 #{item.detail},
                 #{item.bookType},
                 #{item.image},
-                #{=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d %H:%i:s')},
+                #{=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d')},
                 #{bookStatus}
             )
         </foreach>
@@ -89,7 +89,7 @@
             <if test="detail!=null">detail=#{detail}</if>
             <if test="bookType!=null">book_type=#{bookType}</if>
             <if test="image!=null">image=#{image}</if>
-            <if test="publishTime!=null">publish_time=DATE_FORMATE(#{publishTime},'%Y-%m-%d %H:%i:s')</if>
+            <if test="publishTime!=null">publish_time=DATE_FORMATE(#{publishTime},'%Y-%m-%d')</if>
             <if test="bookStatus!=null">book_status=#{bookStatus}</if>
         </set>
         where book_id=#{bookId}
@@ -104,7 +104,7 @@
                 <if test="item.detail!=null">detail=#{item.detail}</if>
                 <if test="item.bookType!=null">book_type=#{item.bookType}</if>
                 <if test="item.image!=null">image=#{item.image}</if>
-                <if test="item.publishTime!=null">publish_time=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d %H:%i:s')</if>
+                <if test="item.publishTime!=null">publish_time=DATE_FORMATE(#{item.publishTime},'%Y-%m-%d')</if>
                 <if test="bookStatus!=null">book_status=#{bookStatus}</if>
             </set>
             where book_id=#{item.bookId}
