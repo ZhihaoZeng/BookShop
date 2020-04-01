@@ -3,12 +3,14 @@ package com.bookshop.controller;
 import com.bookshop.common.responseFromServer;
 import com.bookshop.entity.User;
 import com.bookshop.service.UserService;
+import org.apache.tools.ant.taskdefs.condition.Http;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,8 +32,12 @@ public class UserController {
 
     @RequestMapping("/register")
     @ResponseBody
-    public responseFromServer register(/*@RequestBody*/ User user){
-        return userService.insertUser(user);
+    public responseFromServer register(@RequestBody User user, HttpSession session){
+        responseFromServer response = userService.insertUser(user);
+        if(response.isSuccess()){
+            session.setAttribute("user",(User)response.getData());
+        }
+        return response;
 /*        Map<String,Object> result = new HashMap<>();
 
         try{
@@ -49,7 +55,7 @@ public class UserController {
 
     @RequestMapping("/registerUsers")
     @ResponseBody
-    public responseFromServer registerUsers(/*@RequestBody*/ List<User> users){
+    public responseFromServer registerUsers(@RequestBody List<User> users){
         Map<String,Object> result = new HashMap<>();
         List<User> errorUsers = new ArrayList<>();
         for (User user:users) {
@@ -70,7 +76,7 @@ public class UserController {
 
     @RequestMapping("/closeAccount")
     @ResponseBody
-    public responseFromServer closeAccount(/*@RequestBody  */User user) {
+    public responseFromServer closeAccount(@RequestBody  User user) {
         return userService.deleteUser(user);
         /*Map<String, Object> result = new HashMap<>();
         if(userService.checkUserExistedByUserName(user.getUserName())) {
@@ -84,12 +90,12 @@ public class UserController {
 
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "pages/login";
+        return "login";
     }
 
     @RequestMapping("/login")
     @ResponseBody
-    public responseFromServer login(/*@RequestBody */User user){
+    public responseFromServer login(@RequestBody User user){
         return userService.login(user);
 
         /*Map<String,Object> result = new HashMap<>();
@@ -109,17 +115,19 @@ public class UserController {
 
     @RequestMapping("/searchUsersPage")
     @ResponseBody
-    public responseFromServer searchUsersPage(/*@RequestBody*/User user,Map<String,Object> requestMap){
+    public responseFromServer searchUsersPage(@RequestBody Map<String,Object> requestMap){
 //        User user = (User)requestMap.get("user");
-        Map<String,Object> queryMap = user.toMap();
+//        user.setUserPassword(null);
+//        Map<String,Object> queryMap = user.toMap();
+        requestMap.put("userPassWord",null);
         Integer startPage = 1;
-        if(queryMap.containsKey("startPage")){
-            startPage =  (Integer) queryMap.get("startPage");
+        if(requestMap.containsKey("startPage")){
+            startPage =  (Integer) requestMap.get("startPage");
         }
-        queryMap.put("startPage",startPage-1);
+        requestMap.put("startPage",startPage-1);
         /*Page<User> users = userService.searchUsersPage(queryMap);
         return users;*/
-        return userService.searchUsersPage(queryMap);
+        return userService.searchUsersPage(requestMap);
 
     }
 
@@ -131,13 +139,13 @@ public class UserController {
 
     @RequestMapping("/getAllUsersPage")
     @ResponseBody
-    public responseFromServer getAllUsersPage(/*@RequestBody */Integer startPage){
+    public responseFromServer getAllUsersPage(@RequestBody Integer startPage){
         return userService.getAllUsersPage(startPage);
     }
 
     @RequestMapping("/updateUser")
     @ResponseBody
-    public responseFromServer updateUser(/*@RequestBody */User user){
+    public responseFromServer updateUser(@RequestBody User user){
         return userService.updateUser(user);
         /*if(!userService.updateUser(user)){
             return "error";

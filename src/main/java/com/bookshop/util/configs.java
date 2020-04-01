@@ -8,4 +8,5 @@ package com.bookshop.util;
  */
 public class configs {
     public static final int pageSize = 15;
+
 }

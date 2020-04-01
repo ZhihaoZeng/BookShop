@@ -1,7 +1,6 @@
 package com.bookshop.entity;
 
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @ClassName: Order
@@ -14,21 +13,31 @@ public class Order {
     private Long userId;
     private String orderStatus;//订单状态
     private String orderAddress;//订单地址
+    private String purchaseTime;
+    private Double price;
     private List<OrderItem> books;
     private User user;
-    private String purchaseTime;
 
-    public Order(Long orderId, Long userId, String orderStatus, String orderAddress, List<OrderItem> books, User user, String purchaseTime) {
+    public Order(Long orderId, Long userId, String orderStatus, String orderAddress, String purchaseTime, Double price, List<OrderItem> books, User user) {
         this.orderId = orderId;
         this.userId = userId;
         this.orderStatus = orderStatus;
         this.orderAddress = orderAddress;
+        this.purchaseTime = purchaseTime;
+        this.price = price;
         this.books = books;
         this.user = user;
-        this.purchaseTime = purchaseTime;
     }
 
     public Order() {
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public Long getOrderId() {
@@ -85,5 +94,16 @@ public class Order {
 
     public void setPurchaseTime(String purchaseTime) {
         this.purchaseTime = purchaseTime;
+    }
+
+    public Double calculateTotalPrice(){
+        double price = 0.0;
+        for(OrderItem orderItem:this.books){
+            Book book = orderItem.getBook();
+            if(book == null) return -1.0;//没有book对象
+            price+=orderItem.getBook().getPrice()*orderItem.getOrderNum();
+        }
+        this.price = price;
+        return price;
     }
 }

@@ -4,6 +4,7 @@
 <!--
     created by: 曾志昊 2017302580214
 -->
+<!--todo 动态sql解决插入无默认值问题-->
 
 <mapper namespace="com.bookshop.dao.BookDao">
 

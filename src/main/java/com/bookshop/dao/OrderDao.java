@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @InterfaceName: OrderDao
- * @Description: TODO
+ * @Description: OrderDao
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:52
  */
@@ -18,13 +18,15 @@ public interface OrderDao {
 
     List<Order> searchOrders(Map map);
 
-    void insertOrder(Order order);
-    void insertOrders(List<Order> orders);
+    Integer insertOrder(Order order);
+    Integer insertOrders(List<Order> orders);
 
-    void updateOrder(Order order);
-    void updateOrders(List<Order> orders);
+    Integer updateOrder(Order order);
+    Integer updateOrders(List<Order> orders);
 
-    void deleteOrderById(Long orderId);
-    void deleteOrder(Order order);
+    Integer deleteOrderById(Long orderId);
+    Integer deleteOrder(Order order);
     void deleteOrders(List<Long> orderIds);
+
+    Integer count(Map map);
 }

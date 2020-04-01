@@ -1,8 +1,10 @@
 package com.bookshop.dao;
 
+import com.bookshop.entity.Cart;
 import com.bookshop.entity.CartItem;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @InterfaceName: CartItemDao
@@ -11,14 +13,20 @@ import java.util.List;
  * @Date: 2020/3/28 1:52
  */
 public interface CartItemDao {
-    List<CartItem> getCartItems(Long userId);
+    List<CartItem> getCartItems(Map map);
+    CartItem getCartItem(Map map);
 
-    void insertCartItem(CartItem cartItem);
+    /*根据userid bookid查询个数*/
+    CartItem getCartItemSimple(Map map);
 
-    void updateCartItem(CartItem cartItem);
-    void updateCartItems(List<CartItem> cartItems);
+    Integer insertCartItem(CartItem cartItem);
 
-    void deleteCartItem(CartItem cartItem);
-    void deleteCartItems(List<CartItem> cartItems);
+    Integer updateCartItem(CartItem cartItem);
+    Integer updateCartItems(List<CartItem> cartItems);
+
+    Integer deleteCartItem(CartItem cartItem);
+    Integer deleteCartItems(List<CartItem> cartItems);
+
+    Integer count(Map map);
 
 }

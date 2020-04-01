@@ -16,9 +16,10 @@
     </resultMap>
 
     <sql id="search_where">
-        <if test="userId != null">and book_id=#{userId}</if>
+        <if test="userId != null">and user_id=#{userId}</if>
         <if test="userName != null">and user_name=#{userName}</if>
-        <if test="gender != null">and book_name=#{gender}</if>
+        <if test="userPassword!=null">and user_password=#{userPassword}</if>
+        <if test="gender != null">and gender =#{gender}</if>
         <if test="userAddress!=null">and user_address like #{userAddress}</if>
         <if test="userStatus!=null">and user_status=#{userStatus}</if>
     </sql>

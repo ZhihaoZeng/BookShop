@@ -12,12 +12,11 @@ public class Cart {
     //购物车书本
     private List<CartItem> books;
     private Long userId;
-    private Integer totalPrice;
 
-    public Cart(List<CartItem> books, Long userId, Integer totalPrice) {
+
+    public Cart(List<CartItem> books, Long userId) {
         this.books = books;
         this.userId = userId;
-        this.totalPrice = totalPrice;
     }
 
     public Cart() {
@@ -39,11 +38,4 @@ public class Cart {
         this.userId = userId;
     }
 
-    public Integer getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(Integer totalPrice) {
-        this.totalPrice = totalPrice;
-    }
 }

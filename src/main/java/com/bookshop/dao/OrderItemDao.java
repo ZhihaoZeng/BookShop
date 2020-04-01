@@ -16,13 +16,13 @@ public interface OrderItemDao {
     List<OrderItem> getOrderItems(Long orderId);
     List<OrderItem> getOrderItemsPage(Long orderId, Map map);
 
-    void insertOrderItem(OrderItem orderItem);
-    void insertOrderItems(List<OrderItem> orderItems);
+    Integer insertOrderItem(OrderItem orderItem);
+    Integer insertOrderItems(List<OrderItem> orderItems);
 
-    void updateOrderItem(OrderItem orderItem);
-    void updateOrderItems(List<OrderItem> orderItems);
+    Integer updateOrderItem(OrderItem orderItem);
+    Integer updateOrderItems(List<OrderItem> orderItems);
 
-    void deleteOrderItem(OrderItem orderItem);
-    void deleteOrderItems(List<OrderItem> orderItems);
-
+    Integer deleteOrderItem(OrderItem orderItem);
+    Integer deleteOrderItems(List<OrderItem> orderItems);
+    Integer deleteOrderItemsByOrderId(Long orderId);
 }

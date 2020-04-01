@@ -4,6 +4,8 @@
 <!--
     created by: 曾志昊 2017302580214
 -->
+<!--todo 动态sql解决插入无默认值问题-->
+
 <mapper namespace="com.bookshop.dao.OrderItemDao">
 
     <resultMap id="orderItemResultMap" type="com.bookshop.entity.OrderItem">
@@ -78,6 +80,8 @@
         </foreach>
     </delete>
 
-
+    <delete id="deleteOrderItemsByOrderId" parameterType="Long">
+        delete from order_item where  order_id=#{item.orderId}
+    </delete>
 
 </mapper>

@@ -4,6 +4,8 @@
 <!--
     created by: 曾志昊 2017302580214
 -->
+<!--todo 动态sql解决插入无默认值问题-->
+
 <mapper namespace="com.bookshop.dao.CartItemDao">
 
     <resultMap id="cartItemResultMap" type="com.bookshop.entity.CartItem">
@@ -15,17 +17,32 @@
                     select="com.bookshop.dao.BookDao.getBook"/>
     </resultMap>
 
+    <resultMap id="cartItemResultSimpleMap" type="com.bookshop.entity.CartItem">
+        <id property="userId" column="user_id"/>
+        <id property="bookId" column="book_id"/>
+        <result property="cartNum" column="cart_num"/>
+    </resultMap>
+
     <sql id="table_column">
         (user_id,book_id,cart_num)
     </sql>
 
     <select id="getCartItem" resultMap="cartItemResultMap">
-        select *from cart where user_id=#{userId} and book_id=#{bookId}
+        select *from cart
+        where user_id=#{userId} and book_id=#{bookId}
     </select>
 
-    <select id="getCartItems" parameterType="Long" resultMap="cartItemResultMap">
-        select * from cart where user_id=#{userId}
+    <select id="getCartItemSimple" resultMap="cartItemResultSimpleMap">
+        select *from cart
+        where user_id=#{userId} and book_id=#{bookId}
     </select>
+
+    <select id="getCartItems" parameterType="map" resultMap="cartItemResultMap">
+        select * from cart where user_id=#{userId}
+        <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
+        order by time desc
+    </select>
+
 
     <insert id="insertCartItem" parameterType="com.bookshop.entity.CartItem">
         insert into cart
@@ -76,4 +93,9 @@
         </foreach>
     </delete>
 
+
+    <select id="count" parameterType="map" resultType="Integer">
+        select count(*) from cart
+        where user_id=#{userId} and book_id=#{bookId}
+    </select>
 </mapper>

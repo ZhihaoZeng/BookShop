@@ -52,7 +52,7 @@
         select * from orders where user_id=#{userId}
     </select>
 
-    <select id="getOrdersPlusByUserId" parameterType="Integer" resultMap="orderResultMap">
+    <select id="getOrdersPlusByUserId" parameterType="Integer" resultMap="orderResultMapPlus">
         select * from orders where user_id=#{userId}
         <if test="startPage!=null and pageSize != null">and LIMIT #{startPage},#{pageSize}</if>
     </select>
@@ -121,6 +121,10 @@
             #{item.}
         </foreach>
     </delete>
+    <select id="count" parameterType="map" resultType="Integer">
+        select count(*) from orders where 1-=1
+        <include refid="search_where"/>
+    </select>
 
 
 </mapper>
