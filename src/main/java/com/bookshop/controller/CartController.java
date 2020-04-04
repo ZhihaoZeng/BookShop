@@ -62,7 +62,6 @@ public class CartController {
     @ResponseBody
     public responseFromServer insertCartItem(CartItem cartItem){
         return cartService.insertCartItem(cartItem);
-
     }
 
 

@@ -71,6 +71,7 @@ public class OrderServiceImpl implements OrderService {
             Map<String,Object> queryMap = new HashMap<>();
             queryMap.put("userId",requestMap.get("userId"));
             queryMap.put("startPage",(Integer)requestMap.get("startPage"));
+            queryMap.put("pageSize",configs.pageSize);
             return responseFromServer.success(getPage(queryMap));
         }
     }

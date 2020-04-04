@@ -1,6 +1,7 @@
 package com.bookshop.entity;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static com.bookshop.util.Util.checkStringIsEmpty;
 
@@ -19,6 +20,13 @@ public class Book {
     private String image;
     private String publishTime;
     private String bookStatus;
+
+/*    public static void main(String[] args) {
+        Map<String,Object> queryMap = new HashMap<>();
+        queryMap.put("startPage","1");
+        Integer startPage = (Integer)(queryMap.get("startPage"));
+        System.out.printf(startPage+"");
+    }*/
 
     public HashMap<String,Object> toMap(){
         HashMap<String,Object> map = new HashMap<>();

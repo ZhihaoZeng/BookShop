@@ -59,11 +59,13 @@ public class OrderController{
     public responseFromServer insertOrder(@RequestBody Order order,HttpSession session){
         if(order.getUser()==null&&order.getUserId()==null){
             User tempUser = (User)session.getAttribute("user");
+
             order.setUserId(tempUser.getUserId());
         }
 
         return orderService.insertOrder(order);
     }
+
 
     @RequestMapping("/insertOrders")
     @ResponseBody

@@ -127,8 +127,8 @@ public class UserServiceImpl implements UserService {
         if(user!=null){
             Map<String,String> map = new HashMap<>();
             /*查询用户名*/
-            map.put("user_name",user.getUserName());
-            map.put("user_password",user.getUserPassword());
+            map.put("userName",user.getUserName());
+            map.put("userPassword",user.getUserPassword());
             List<User> loginUser = userDao.searchUsers(map);
             if(loginUser!=null||loginUser.size()==1){
                 User verifiedUser = loginUser.get(0);

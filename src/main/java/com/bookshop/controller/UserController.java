@@ -87,29 +87,42 @@ public class UserController {
         }*/
     }
 
+    @RequestMapping("/sessiontest")
+    @ResponseBody
+    public responseFromServer sessionTest(HttpSession session){
+        User nowUser = (User)session.getAttribute("user");
+        return null;
+    }
+
 
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "loginhtm";
+        return "login";
     }
 
     @RequestMapping("/login")
     @ResponseBody
-    public responseFromServer login(@RequestBody User user){
-        return userService.login(user);
+    public responseFromServer login(@RequestBody  User user,HttpSession session){
+        responseFromServer response = userService.login(user);
 
-        /*Map<String,Object> result = new HashMap<>();
-        try{
-            user = userService.login(user);
-        }catch(RuntimeException e){
-            user = null;
-            result.put("error",e.getMessage());
-            e.printStackTrace();
+        if(response.isSuccess()){
+            User nowUser = (User)response.getData();
+            user.setUserPassword(null);
+            session.setAttribute("user",nowUser);
         }
-        result.put("user",user);
-        return user;*/
-        /*if user is null, login fails
-         * user为空则表示登录失败*/
+        return userService.login(user);
+    }
+
+
+    @RequestMapping("/logOut")
+    @ResponseBody
+    public responseFromServer logOut(HttpSession session){
+        if((User)session.getAttribute("user")==null){
+            return responseFromServer.error("暂无登录信息");
+        }else{
+            session.removeAttribute("user");
+            return responseFromServer.success();
+        }
     }
 
 
