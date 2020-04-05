@@ -16,7 +16,7 @@
         </collection>
     </resultMap>
 
-    <select id="getCart" parameterType="Long" resultMap="cartResultMap">
+    <select id="getCart" parameterType="Integer" resultMap="cartResultMap">
         select user_id from cart where user_id=#{userId}
     </select>
 </mapper>

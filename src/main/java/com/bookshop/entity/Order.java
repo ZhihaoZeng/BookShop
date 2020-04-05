@@ -9,8 +9,8 @@ import java.util.List;
  * @Date: 2020/3/28 1:57
  */
 public class Order {
-    private Long orderId;
-    private Long userId;
+    private Integer orderId;
+    private Integer userId;
     private String orderStatus;//订单状态
     private String orderAddress;//订单地址
     private String purchaseTime;
@@ -18,7 +18,7 @@ public class Order {
     private List<OrderItem> books;
     private User user;
 
-    public Order(Long orderId, Long userId, String orderStatus, String orderAddress, String purchaseTime, Double price, List<OrderItem> books, User user) {
+    public Order(Integer orderId, Integer userId, String orderStatus, String orderAddress, String purchaseTime, Double price, List<OrderItem> books, User user) {
         this.orderId = orderId;
         this.userId = userId;
         this.orderStatus = orderStatus;
@@ -40,19 +40,19 @@ public class Order {
         this.price = price;
     }
 
-    public Long getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

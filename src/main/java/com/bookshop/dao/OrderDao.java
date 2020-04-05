@@ -12,9 +12,9 @@ import java.util.Map;
  * @Date: 2020/3/28 1:52
  */
 public interface OrderDao {
-    Order getOrder(Long orderId);
-    List<Order> getOrdersByUserId(Long userId);
-    List<Order> getOrdersPlusByUserId(Long userId);
+    Order getOrder(Integer orderId);
+    List<Order> getOrdersByUserId(Integer userId);
+    List<Order> getOrdersPlusByUserId(Integer userId);
 
     List<Order> searchOrders(Map map);
 
@@ -24,9 +24,9 @@ public interface OrderDao {
     Integer updateOrder(Order order);
     Integer updateOrders(List<Order> orders);
 
-    Integer deleteOrderById(Long orderId);
+    Integer deleteOrderById(Integer orderId);
     Integer deleteOrder(Order order);
-    void deleteOrders(List<Long> orderIds);
+    void deleteOrders(List<Integer> orderIds);
 
     Integer count(Map map);
 }

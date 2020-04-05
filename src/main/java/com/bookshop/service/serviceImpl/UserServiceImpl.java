@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-    public responseFromServer checkUserExistedByUserId(Long userId){
+    public responseFromServer checkUserExistedByUserId(Integer userId){
         User user = userDao.getUser(userId);
         if(user!=null)return responseFromServer.success(user);
         return responseFromServer.error("不存在该id用户");
@@ -159,7 +159,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public responseFromServer getUser(Long userId) {
+    public responseFromServer getUser(Integer userId) {
         return responseFromServer.success(userDao.getUser(userId));
     }
 
@@ -212,7 +212,7 @@ public class UserServiceImpl implements UserService {
 
     /*通过id删除user*/
     @Override
-    public responseFromServer deleteUserBytId(Long userId) {
+    public responseFromServer deleteUserBytId(Integer userId) {
         Map<String,Object> map = new HashMap<>();
         map.put("userId",userId);
         List<User> users = userDao.searchUsers(map);

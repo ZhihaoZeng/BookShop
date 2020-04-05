@@ -121,7 +121,7 @@
     <delete id="deleteOrder" parameterType="com.bookshop.entity.Order">
         delete from orders where order_id=#{orderId}
     </delete>
-    <delete id="deleteOrderById" parameterType="Long">
+    <delete id="deleteOrderById" parameterType="Integer">
         delete from orders where order_id=#{orderId}
     </delete>
     <delete id="deleteOrders" parameterType="java.util.List">

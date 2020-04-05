@@ -12,7 +12,7 @@ import static com.bookshop.util.Util.checkStringIsEmpty;
  * @Date: 2020/3/28 2:00
  */
 public class User {
-    private Long userId;
+    private Integer userId;
     private String userName;
     private String gender;
     private String userAddress;
@@ -31,7 +31,7 @@ public class User {
     }
 
 
-    public User(Long userId, String userName, String gender, String userAddress, String userPassword, String userStatus) {
+    public User(Integer userId, String userName, String gender, String userAddress, String userPassword, String userStatus) {
         this.userId = userId;
         this.userName = userName;
         this.gender = gender;
@@ -43,11 +43,11 @@ public class User {
     public User() {
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

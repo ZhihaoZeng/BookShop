@@ -10,7 +10,7 @@
 <body>
 
 
-
+<span id="myspan">123</span>
 <!-- 分页栏容器 end -->
 
 
@@ -32,6 +32,9 @@ start
 
     window.onload = function loadrequest() {
         alert("load");
+        alert(document.getElementById("myspan").innerText);
+        document.getElementById("myspan").innerText ="456";
+        // $("#myspan").text("456");
         $.ajax({
 
 

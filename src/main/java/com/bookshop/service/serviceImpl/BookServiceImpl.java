@@ -27,7 +27,7 @@ public class BookServiceImpl implements BookService {
 
     BookDao bookDao;
 
-    public responseFromServer getBook(Long bookId){
+    public responseFromServer getBook(Integer bookId){
         Book book = bookDao.getBook(bookId);
         if(book!=null){
             return responseFromServer.success(book);
@@ -127,7 +127,7 @@ public class BookServiceImpl implements BookService {
 //        return bookDao.updateBooks(books);
     }
 
-    public responseFromServer deleteBookById(Long bookId){
+    public responseFromServer deleteBookById(Integer bookId){
         if(bookDao.deleteBookById(bookId)==1){
             return responseFromServer.success("成功删除");
         }else{

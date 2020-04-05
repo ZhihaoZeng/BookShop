@@ -9,14 +9,14 @@
 <mapper namespace="com.bookshop.dao.BookDao">
 
     <resultMap id="bookResultMap" type="com.bookshop.entity.Book">
-        <id column="book_id" jdbcType="BIGINT" property="bookId" />
-        <result column="price" jdbcType="DECIMAL" property="price" />
-        <result column="book_name" jdbcType="VARCHAR" property="bookName" />
-        <result column="detail" jdbcType="VARCHAR" property="detail" />
-        <result column="book_type" jdbcType="VARCHAR" property="bookType" />
-        <result column="image" jdbcType="VARCHAR" property="image" />
-        <result column="publish_time" jdbcType="VARCHAR" property="publishTime" />
-        <result column="book_status" jdbcType="VARCHAR" property="bookStatus" />
+        <id column="book_id"  property="bookId" />
+        <result column="price"  property="price" />
+        <result column="book_name"  property="bookName" />
+        <result column="detail"  property="detail" />
+        <result column="book_type" property="bookType" />
+        <result column="image"  property="image" />
+        <result column="publish_time" property="publishTime" />
+        <result column="book_status" property="bookStatus" />
     </resultMap>
 
     <sql id="search_where">
@@ -46,7 +46,7 @@
         <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
-    <select id="getBook" parameterType="Long" resultMap="bookResultMap">
+    <select id="getBook" parameterType="Integer" resultMap="bookResultMap">
         select * from book where book_id = #{bookId}
     </select>
 
@@ -112,7 +112,7 @@
 
     </update>
 
-    <delete id="deleteBookById" parameterType="Long">
+    <delete id="deleteBookById" parameterType="Integer">
         delete from book where book_id=#{bookId}
     </delete>
 

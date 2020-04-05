@@ -14,7 +14,7 @@ import java.util.Map;
  * @Date: 2020/3/28 2:00
  */
 public interface BookService {
-    public responseFromServer getBook(Long bookId);//只查询一个数据，常用于修改
+    public responseFromServer getBook(Integer bookId);//只查询一个数据，常用于修改
     public responseFromServer getAllBooksPage(Map<String,Object> queryMap);
 
     public responseFromServer searchBooksPage(Map<String,Object> queryMap);//根据条件查询多个结果
@@ -25,7 +25,7 @@ public interface BookService {
     public responseFromServer updateBook(Book book);//修改，用实体作为参数
     public responseFromServer updateBooks(List<Book> books);
 
-    public responseFromServer deleteBookById(Long bookId);//按id删除 删除一条 支持整型和字符串类型id
+    public responseFromServer deleteBookById(Integer bookId);//按id删除 删除一条 支持整型和字符串类型id
     public responseFromServer deleteBook(Book book);
     public responseFromServer deleteBooks(List<Book> bookIds);//批量删除 支持整型和字符串类型id
 

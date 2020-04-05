@@ -32,13 +32,13 @@ public class OrderController{
 
     @RequestMapping("/getOrder")
     @ResponseBody
-    public responseFromServer getOrder(@RequestBody Long orderId){
+    public responseFromServer getOrder(@RequestBody Integer orderId){
         return orderService.getOrder(orderId);
     }
 
     @RequestMapping("/getOrdersByUserId")
     @ResponseBody
-    public responseFromServer getOrdersByUserId(@RequestBody Long userId){
+    public responseFromServer getOrdersByUserId(@RequestBody Integer userId){
         return orderService.getOrdersByUserId(userId);
     }
 
@@ -95,7 +95,7 @@ public class OrderController{
 
     @RequestMapping("/deleteOrderById")
     @ResponseBody
-    public responseFromServer deleteOrderById(@RequestBody Long orderId){
+    public responseFromServer deleteOrderById(@RequestBody Integer orderId){
         return orderService.deleteOrderById(orderId);
     }
 

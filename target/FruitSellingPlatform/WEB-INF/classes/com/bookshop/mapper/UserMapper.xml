@@ -37,7 +37,7 @@
         select * from user
     </select>
 
-    <select id="getUser" parameterType="Long" resultMap="userResultMap">
+    <select id="getUser" parameterType="Integer" resultMap="userResultMap">
         select * from user where user_id=#{userId}
     </select>
 
@@ -122,7 +122,7 @@
         </foreach>
     </update>
 
-    <delete id="deleteUserById" parameterType="Long">
+    <delete id="deleteUserById" parameterType="Integer">
         delete from user where user_id=#{userId}
     </delete>
 

@@ -11,10 +11,10 @@ import java.util.List;
 public class Cart {
     //购物车书本
     private List<CartItem> books;
-    private Long userId;
+    private Integer userId;
 
 
-    public Cart(List<CartItem> books, Long userId) {
+    public Cart(List<CartItem> books, Integer userId) {
         this.books = books;
         this.userId = userId;
     }
@@ -30,11 +30,11 @@ public class Cart {
         this.books = books;
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

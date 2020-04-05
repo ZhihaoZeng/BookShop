@@ -40,7 +40,7 @@ public class CartServiceImpl implements CartService {
         if(response.isSuccess()){
             Cart newCart = new Cart();
             newCart.setBooks((List<CartItem>)response.getData());
-            newCart.setUserId((Long)requestMap.get("userId"));
+            newCart.setUserId((Integer)requestMap.get("userId"));
             return responseFromServer.success(newCart);
         }else{
             return responseFromServer.error();

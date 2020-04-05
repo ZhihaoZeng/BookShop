@@ -7,13 +7,13 @@ package com.bookshop.entity;
  */
 public class CartItem {
 
-    private Long userId;
-    private Long bookId;
+    private Integer userId;
+    private Integer bookId;
     private String time;
     private Book book;
     private Integer cartNum;
 
-    public CartItem(Long userId, Long bookId, Book book, Integer cartNum,String time) {
+    public CartItem(Integer userId, Integer bookId, Book book, Integer cartNum,String time) {
         this.userId = userId;
         this.bookId = bookId;
         this.book = book;
@@ -32,19 +32,19 @@ public class CartItem {
         this.time = time;
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public Long getBookId() {
+    public Integer getBookId() {
         return bookId;
     }
 
-    public void setBookId(Long bookId) {
+    public void setBookId(Integer bookId) {
         this.bookId = bookId;
     }
 

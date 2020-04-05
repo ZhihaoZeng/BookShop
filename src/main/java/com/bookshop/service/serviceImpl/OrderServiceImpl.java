@@ -32,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
     OrderDao orderDao;
     OrderItemDao orderItemDao;
 
-    public responseFromServer getOrder(Long orderId){
+    public responseFromServer getOrder(Integer orderId){
         Order order = orderDao.getOrder(orderId);
         if(order!=null)
             return responseFromServer.success(orderDao.getOrder(orderId));
@@ -40,7 +40,7 @@ public class OrderServiceImpl implements OrderService {
             return responseFromServer.error("不存在该订单");
     }
 
-    public responseFromServer getOrdersByUserId(Long userId){
+    public responseFromServer getOrdersByUserId(Integer userId){
         if(userDao.getUser(userId)==null){
             return responseFromServer.error("不存在该用户");
         }else{
@@ -63,7 +63,7 @@ public class OrderServiceImpl implements OrderService {
 
     public responseFromServer getOrdersPlusByUserId(Map<String,Object>requestMap){
 //        TODO：完成plus
-        if(userDao.getUser((Long)requestMap.get("userId"))==null){
+        if(userDao.getUser((Integer)requestMap.get("userId"))==null){
             return responseFromServer.error("不存在该用户");
         }else{
             /*List<Order> orders = orderDao.getOrdersPlusByUserId(userId);
@@ -186,7 +186,7 @@ public class OrderServiceImpl implements OrderService {
         if(orderDao.updateOrder(order)!=1||order.getOrderId()==null){
             return responseFromServer.error("更新订单失败");
         }else{
-            Long orderId = order.getOrderId();
+            Integer orderId = order.getOrderId();
             /*首先更新order基本信息：地址 状态等*/
             /*然后更新商品数量,多的删除,少的增加 直接把整个订单item全部删除再全部添加*/
             if(!deleteOrderItemsByOrderId(orderId).isSuccess()){
@@ -228,7 +228,7 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
-    public responseFromServer deleteOrderById(Long orderId){
+    public responseFromServer deleteOrderById(Integer orderId){
         if(orderId == null || orderDao.deleteOrderById(orderId)!=1)
             return responseFromServer.error("删除订单失败");
         else
@@ -297,7 +297,7 @@ public class OrderServiceImpl implements OrderService {
         return responseFromServer.success("删除orderItem成功");
     }
 
-    public responseFromServer deleteOrderItemsByOrderId(Long orderId){
+    public responseFromServer deleteOrderItemsByOrderId(Integer orderId){
         if(orderId==null) return responseFromServer.error("要删除的orderId为空");
         Integer rows = orderItemDao.deleteOrderItemsByOrderId(orderId);
         return responseFromServer.success(rows);

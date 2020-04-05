@@ -13,7 +13,7 @@ import java.util.Map;
  */
 
 public interface BookDao{
-    Book getBook(Long bookId);//只查询一个数据，常用于修改
+    Book getBook(Integer bookId);//只查询一个数据，常用于修改
     List<Book> getAllBooksPage(Map map);
     List<Book> getAllBooks();
 
@@ -27,7 +27,7 @@ public interface BookDao{
 
     Integer count(Map map);
 
-    Integer deleteBookById(Long bookId);//按id删除 删除一条 支持整型和字符串类型id
+    Integer deleteBookById(Integer bookId);//按id删除 删除一条 支持整型和字符串类型id
     Integer deleteBook(Book book);
     Integer deleteBooks(List<Book> bookIds);//批量删除 支持整型和字符串类型id
 }

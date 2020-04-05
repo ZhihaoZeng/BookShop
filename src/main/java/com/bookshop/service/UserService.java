@@ -16,7 +16,7 @@ public interface UserService {
     responseFromServer checkUserExistedByUserName(String userName);
     responseFromServer login(User user);
 
-    responseFromServer getUser(Long userId);
+    responseFromServer getUser(Integer userId);
     responseFromServer getAllUsersPage(Integer startPage);
     responseFromServer getAllUsers();
 
@@ -28,7 +28,7 @@ public interface UserService {
     responseFromServer updateUser(User user);
     responseFromServer updateUsers(List<User> users);
 
-    responseFromServer deleteUserBytId(Long userId);
+    responseFromServer deleteUserBytId(Integer userId);
     responseFromServer deleteUser(User user);
     responseFromServer deleteUsers(List<User> users);
 
@@ -38,7 +38,7 @@ public interface UserService {
     /*boolean checkUserExistedByUserName(String userName);
     User login(User user);
 
-    User getUser(Long userId);
+    User getUser(Integer userId);
     ResponseFromServer<Page<User>> getAllUsersPage(Integer startPage);
     List<User> getAllUsers();
 
@@ -49,7 +49,7 @@ public interface UserService {
     Boolean updateUser(User user);
     Integer updateUsers(List<User> users);
 
-    Boolean deleteUserBytId(Long userId);
+    Boolean deleteUserBytId(Integer userId);
     Boolean deleteUser(User user);
     Integer deleteUsers(List<User> users);
 

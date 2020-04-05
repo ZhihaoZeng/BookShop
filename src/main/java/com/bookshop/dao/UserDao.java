@@ -12,7 +12,7 @@ import java.util.Map;
  * @Date: 2020/3/28 1:53
  */
 public interface UserDao {
-    User getUser(Long userId);
+    User getUser(Integer userId);
     List<User> getAllUsersPage(Map map);
     List<User> getAllUsers();
 
@@ -27,7 +27,7 @@ public interface UserDao {
     Integer updateUsers(List<User> users);
 
     Integer deleteUser(User user);
-    Integer deleteUserById(Long userId);
+    Integer deleteUserById(Integer userId);
     Integer deleteUsers(List<User> userIds);
 
 }

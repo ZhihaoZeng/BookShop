@@ -29,7 +29,7 @@ public class BookController {
 
     @RequestMapping("/getBook")
     @ResponseBody
-    public responseFromServer getBook(@RequestBody Long bookId){
+    public responseFromServer getBook(@RequestBody Integer bookId){
         return bookService.getBook(bookId);
     }
 
@@ -68,7 +68,7 @@ public class BookController {
 
     @RequestMapping("/deleteBookById")
     @ResponseBody
-    public responseFromServer deleteBookById(@RequestBody Long bookId){
+    public responseFromServer deleteBookById(@RequestBody Integer bookId){
         return bookService.deleteBookById(bookId);
     }
 

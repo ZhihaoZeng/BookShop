@@ -13,8 +13,8 @@ import java.util.Map;
  */
 public interface OrderItemDao {
 
-    List<OrderItem> getOrderItems(Long orderId);
-    List<OrderItem> getOrderItemsPage(Long orderId, Map map);
+    List<OrderItem> getOrderItems(Integer orderId);
+    List<OrderItem> getOrderItemsPage(Integer orderId, Map map);
 
     Integer insertOrderItem(OrderItem orderItem);
     Integer insertOrderItems(List<OrderItem> orderItems);
@@ -24,5 +24,5 @@ public interface OrderItemDao {
 
     Integer deleteOrderItem(OrderItem orderItem);
     Integer deleteOrderItems(List<OrderItem> orderItems);
-    Integer deleteOrderItemsByOrderId(Long orderId);
+    Integer deleteOrderItemsByOrderId(Integer orderId);
 }

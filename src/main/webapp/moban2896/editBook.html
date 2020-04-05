@@ -71,12 +71,35 @@
             }
             return true;
         }
+        function getParam(name) {
+            var search = document.location.search;
+            var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+            var matcher = pattern.exec(search);
+            var items = null;
+            if (null != matcher) {
+                try {
+                    items = decodeURIComponent(decodeURIComponent(matcher[1]));
+                } catch (e) {
+                    try {
+                        items = decodeURIComponent(matcher[1]);
+                    } catch (e) {
+                        items = matcher[1];
+                    }
+                }
+            }
+            return items;
+        }
+        /** update图书**/
+        function updateBook(){
+            var bookId = getParam("bookId");
+            var bookType = $("#bookTypeSearch").find("option:selected").text();
+            if (bookType == "--请选择--" || bookType == "") {
+                bookType = null;
+            }
 
-        /** 插入图书**/
-        function insertBook(){
             $.ajax({
                 async:false,
-                url: "http://localhost:8080/book/insertBook",
+                url: "http://localhost:8080/book/updateBook",
                 contentType: "application/json;charset=UTF-8", //必须有
                 dataType: "json", //表示返回值类型，不必须
                 type: "post",
@@ -87,6 +110,16 @@
                     "bookStatus": $("#bookStatus").val(),
                     "image": $("#image").val(),
                     "detail": $("#detail").val()
+
+                    "bookId": parseInt(bookId),
+                    "bookName": $("#bookName").val()==""?null:$("#bookName").val(),
+                    "bookType": bookType,
+                    "publishTime":
+                    /*todo*/
+                    "startPrice": parseInt($("#startPrice").val()),
+                    "endPrice": parseInt($("#endPrice").val()),
+                    "startTime": $("#startDate").val() == "" ? null : $("#startDate").val(),
+                    "endTime": $("#endTime").val() == "" ? null : $("#endTime").val()
                 }),
                 success: function (response) {
                     if(response.status == 0){

@@ -22,7 +22,7 @@
         (order_id,book_id,order_num,order_item_status)
     </sql>
 
-    <select id="getOrderItem" parameterType="Long" resultMap="orderItemResultMap">
+    <select id="getOrderItem" parameterType="Integer" resultMap="orderItemResultMap">
         select * from order_item where order_id=#{orderId}
     </select>
 
@@ -80,7 +80,7 @@
         </foreach>
     </delete>
 
-    <delete id="deleteOrderItemsByOrderId" parameterType="Long">
+    <delete id="deleteOrderItemsByOrderId" parameterType="Integer">
         delete from order_item where  order_id=#{item.orderId}
     </delete>
 
