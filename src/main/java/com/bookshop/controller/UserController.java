@@ -28,6 +28,17 @@ public class UserController {
         @Resource
         UserService userService;
 
+    @RequestMapping("/checkLogin")
+    @ResponseBody
+    public responseFromServer checkLogin(HttpSession session){
+        User user = (User)session.getAttribute("user");
+        if(user!=null&&user.getUserId()!=null){
+            user.setUserPassword("");
+            return responseFromServer.success(user);
+        }
+        return responseFromServer.error();
+    }
+
 
     @RequestMapping("/register")
     @ResponseBody
@@ -78,14 +89,22 @@ public class UserController {
     @ResponseBody
     public responseFromServer closeAccount(@RequestBody  User user) {
         return userService.deleteUser(user);
-        /*Map<String, Object> result = new HashMap<>();
-        if(userService.checkUserExistedByUserName(user.getUserName())) {
-            userService.deleteUser(user);
-            return user;
-        } else {
-            return null;//注销失败
-        }*/
     }
+
+    @RequestMapping("/setsession")
+    @ResponseBody
+    public responseFromServer setsession(HttpSession session) {
+        session.setAttribute("mysession","fuckyou");
+        return responseFromServer.success();
+    }
+
+    @RequestMapping("/testsession")
+    @ResponseBody
+    public responseFromServer testsession(HttpSession session) {
+        String user = (String)session.getAttribute("mysession");
+        return responseFromServer.success();
+    }
+
 
     @RequestMapping("/sessiontest")
     @ResponseBody
@@ -104,13 +123,12 @@ public class UserController {
     @ResponseBody
     public responseFromServer login(@RequestBody  User user,HttpSession session){
         responseFromServer response = userService.login(user);
-
         if(response.isSuccess()){
             User nowUser = (User)response.getData();
             user.setUserPassword(null);
             session.setAttribute("user",nowUser);
         }
-        return userService.login(user);
+        return response;
     }
 
 
@@ -125,18 +143,18 @@ public class UserController {
         }
     }
 
+    @RequestMapping("/getUser")
+    @ResponseBody
+    public responseFromServer searchUsersPage(@RequestBody User user){
+        return userService.getUser(user.getUserId());
+    }
+
+
 
     @RequestMapping("/searchUsersPage")
     @ResponseBody
     public responseFromServer searchUsersPage(@RequestBody Map<String,Object> requestMap){
-        requestMap.put("userPassWord",null);
-        Integer startPage = 1;
-        if(requestMap.containsKey("startPage")){
-            startPage =  (Integer) requestMap.get("startPage");
-        }
-        requestMap.put("startPage",startPage-1);
         return userService.searchUsersPage(requestMap);
-
     }
 
     @RequestMapping("/getAllUsers")

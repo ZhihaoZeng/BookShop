@@ -45,6 +45,16 @@ public class CartController {
        return cartService.getCartItems(requestMap);
     }
 
+    @RequestMapping("/getCartNum")
+    @ResponseBody
+    public responseFromServer getCartNum(HttpSession session){
+        User sessionUser = (User) session.getAttribute("user");
+        if(sessionUser == null||sessionUser.getUserId()==null){
+            return responseFromServer.error("用户未登录");
+        }
+        return cartService.getCartNum(sessionUser);
+    }
+
 
     @RequestMapping("/getCartItem")
     @ResponseBody

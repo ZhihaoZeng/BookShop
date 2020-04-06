@@ -2,6 +2,7 @@ package com.bookshop.service;
 
 import com.bookshop.common.responseFromServer;
 import com.bookshop.entity.CartItem;
+import com.bookshop.entity.User;
 
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,8 @@ public interface CartService {
     responseFromServer getCartItemsPage(Map<String,Object> requestMap);
     /*根据用户id和bookid获取完整item数据*/
     responseFromServer getCartItem(Map<String,Object> requestMap);
+
+    responseFromServer getCartNum(User user);
 
     responseFromServer insertCartItem(CartItem cartItem);
     responseFromServer updateCartItem(CartItem cartItem);

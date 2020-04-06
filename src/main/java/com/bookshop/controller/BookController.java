@@ -27,17 +27,29 @@ public class BookController {
     @Resource
     BookService bookService;
 
-    @RequestMapping("/getBook")
+    @RequestMapping("/getBookById")
     @ResponseBody
-    public responseFromServer getBook(@RequestBody Integer bookId){
+    public responseFromServer getBookById(@RequestBody Integer bookId){
         return bookService.getBook(bookId);
     }
 
+    @RequestMapping("/getBook")
+    @ResponseBody
+    public responseFromServer getBook(@RequestBody Book book){
+        return bookService.getBook(book.getBookId());
+    }
 
     @RequestMapping("/searchBooksPage")
     @ResponseBody
     public responseFromServer searchBooksPage(@RequestBody Map<String,Object> requestMap){
         return bookService.searchBooksPage(requestMap);
+    }
+
+    /*书本推荐暂时先返回所有的书籍*/
+    @RequestMapping("/getRecommendedBooks")
+    @ResponseBody
+    public responseFromServer getRecommendedBooks(@RequestBody Map<String,Object> requestMap){
+        return searchBooksPage(requestMap);
     }
 
     @RequestMapping("/getAllBooksPage")

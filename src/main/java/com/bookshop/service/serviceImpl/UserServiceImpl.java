@@ -2,6 +2,7 @@ package com.bookshop.service.serviceImpl;
 
 import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.UserDao;
+import com.bookshop.entity.Book;
 import com.bookshop.entity.User;
 import com.bookshop.service.UserService;
 import com.bookshop.util.Page;
@@ -133,7 +134,7 @@ public class UserServiceImpl implements UserService {
             if(loginUser!=null||loginUser.size()==1){
                 User verifiedUser = loginUser.get(0);
                 verifiedUser.setUserPassword("");
-                return responseFromServer.success("登录成功",user);
+                return responseFromServer.success("登录成功",verifiedUser);
 //                return verifiedUser;
             }else{
                 return responseFromServer.error("密码或用户名错误");
@@ -147,15 +148,24 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    public responseFromServer searchUsersPage(Map<String,Object> queryMap){
+    private Page getPage(Map<String,Object> queryMap){
         Page<User> page = new Page<User>(configs.pageSize);
+        Integer startPage = (Integer)(queryMap.get("startPage"));
+        queryMap.put("startPage",startPage-1);
         queryMap.put("pageSize",configs.pageSize);
+        page.setCurrPage(startPage);
         page.setTotalCount(userDao.count(queryMap));
-        page.setCurrPage((Integer)queryMap.get("startPage")+1);
-        page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
+        page.setTotalPage(((Double)Math.ceil((double)page.getTotalCount()/(double)configs.pageSize)).intValue());
         page.setLists(userDao.searchUsers(queryMap));
-        return responseFromServer.success(page);
-//        return page;
+        return page;
+    }
+
+
+    public responseFromServer searchUsersPage(Map<String,Object> queryMap){
+        if(queryMap.get("startPage")==null){
+            queryMap.put("startPage",1);
+        }
+        return responseFromServer.success(getPage(queryMap));
     }
 
     @Override

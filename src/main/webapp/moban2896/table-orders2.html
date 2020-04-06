@@ -15,14 +15,14 @@
         $(document).ready(function () {
             /** 新增   **/
             $("#addBtn").fancybox({
-                'href': 'house_edit.html',
+                'href': 'editOrder.html',
                 'width': 733,
                 'height': 530,
                 'type': 'iframe',
                 'hideOnOverlayClick': false,
                 'showCloseButton': false,
                 'onClosed': function () {
-                    window.location.href = 'table-users2.html';
+                    window.location.href = 'table-order2.html';
                 }
             });
 
@@ -35,7 +35,7 @@
                 'hideOnOverlayClick': false,
                 'showCloseButton': false,
                 'onClosed': function () {
-                    window.location.href = 'table-users2.html';
+                    window.location.href = 'table-order2.html';
                 }
             });
 
@@ -47,7 +47,7 @@
                 'hideOnOverlayClick': false,
                 'showCloseButton': false,
                 'onClosed': function () {
-                    window.location.href = 'table-users2.html';
+                    window.location.href = 'table-order2.html';
                 }
             });
         });
@@ -81,11 +81,31 @@
         }
 
         /** 删除 **/
-        function del(fyID) {
+        function del(orderId) {
             // 非空判断
-            if (fyID == '') return;
+            if (orderId == '') return;
             if (confirm("您确定要删除吗？")) {
-                $("#submitForm").attr("action", "/xngzf/archives/delFangyuan.action?fyID=" + fyID).submit();
+                $.ajax({
+                    url: "http://localhost:8080/order/deleteOrder",
+                    contentType: "application/json;charset=UTF-8", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    type: "post",
+                    data: JSON.stringify({
+                        "orderId": parseInt(orderId)
+                    }),
+                    success: function (response) {
+                        if (response.status == 0) {
+                            alert("删除成功");
+                            getBookData();
+                        } else {
+                            alert("删除失败" + response.msg);
+                        }
+                    },
+                    error:function () {
+                        alert("false");
+                    }
+                });
+                // $("#submitForm").attr("action", "/xngzf/archives/delFangyuan.action?fyID=" + fyID).submit();
             }
         }
 
@@ -96,22 +116,35 @@
                 return;
             }
             // 1）取出用户选中的checkbox放入字符串传给后台,form提交
-            var allIDCheck = "";
-            $("input[name='IDCheck']:checked").each(function (index, domEle) {
-                bjText = $(domEle).parent("td").parent("tr").last().children("td").last().prev().text();
-// 			alert(bjText);
-                // 用户选择的checkbox, 过滤掉“已审核”的，记住哦
-                if ($.trim(bjText) == "已审核") {
-// 				$(domEle).removeAttr("checked");
-                    $(domEle).parent("td").parent("tr").css({color: "red"});
-                    $("#resultInfo").html("已审核的是不允许您删除的，请联系管理员删除！！！");
-// 				return;
-                } else {
-                    allIDCheck += $(domEle).val() + ",";
-                }
-            });
+            // var books = [];
+            // var i = 0;
+            $("input[name='IDCheck']:checked").each(
+                function (index, domEle) {
+                    orderId = parseInt($(domEle).val());
+                    $.ajax({
+                        url: "http://localhost:8080/order/deleteOrder",
+                        contentType: "application/json;charset=UTF-8", //必须有
+                        dataType: "json", //表示返回值类型，不必须
+                        type: "post",
+                        data: JSON.stringify({
+                            "orderId": orderId
+                        }),
+                        success: function (response) {
+                            if (response.status == 0) {
+                                alert("删除成功");
+                            } else {
+                                alert("删除失败" + response.msg);
+                            }
+                        },
+                        error:function () {
+                            alert("shibai");
+                        }
+                    });
+                });
+            //全部删除完后更新页面
+            getBookData();
             // 截掉最后一个","
-            if (allIDCheck.length > 0) {
+            /*if (allIDCheck.length > 0) {
                 allIDCheck = allIDCheck.substring(0, allIDCheck.length - 1);
                 // 赋给隐藏域
                 $("#allIDCheck").val(allIDCheck);
@@ -119,8 +152,38 @@
                     // 提交form
                     $("#submitForm").attr("action", "/xngzf/archives/batchDelFangyuan.action").submit();
                 }
+            }*/
+        }
+
+        function getNextOnePage(){
+            var nowPage = parseInt(document.getElementById("startPage").innerText);
+            var totalPage = parseInt(document.getElementById("totalPage").innerText);
+            if(nowPage==totalPage){
+                alert("您现在已经在尾页");
+            }else{
+                getBookData(nowPage+1);
             }
         }
+
+        function getLastOnePage(){
+            var nowPage = parseInt(document.getElementById("startPage").innerText);
+            if(nowPage==1){
+                alert("您现在已经在首页");
+            }else{
+                getBookData(nowPage-1);
+            }
+        }
+
+        function getLastPage(){
+            var nowPage = parseInt(document.getElementById("startPage").innerText);
+            var totalPage = parseInt(document.getElementById("totalPage").innerText);
+            if(nowPage==totalPage){
+                alert("您现在已经在尾页");
+            }else{
+                getBookData(totalPage);
+            }
+        }
+
 
         /** 普通跳转 **/
         function jumpNormalPage(page) {
@@ -144,7 +207,8 @@
                     });
                     pageNum = 1;
                 }
-                $("#submitForm").attr("action", "table-users2.html?page=" + pageNum).submit();
+                getOrderData(pageNum);
+                // $("#submitForm").attr("action", "table-users2.html?page=" + pageNum).submit();
             } else {
                 // “跳转页数”为空
                 art.dialog({
@@ -155,9 +219,155 @@
                     content: '请输入合适的页数，\n自动为您跳到首页',
                     ok: true,
                 });
-                $("#submitForm").attr("action", "table-users2.html?page=" + 1).submit();
+                // $("#submitForm").attr("action", "table-users2.html?page=" + 1).submit();
             }
         }
+
+
+
+        window.onload = function init() {
+            getOrderData(1);
+        }
+
+        function getOrderData(startPage) {
+            /*请求信息*/
+            if(startPage == null||startPage == 0||startPage<0){
+                var startPage = parseInt($("#startPage").val());
+            }
+            var orderName = $("#orderNameSearch").val();
+
+            if (startPage != null && startPage >= 0) {
+                startPage = 1;
+            }
+            if (orderName == "" || orderName == null) {
+                orderName = null;
+            } else {
+                orderName = "%" + orderName + "%";
+            }
+
+            $.ajax({
+                url: "/order/searchOrderPage",
+                contentType: "application/json;charset=UTF-8", //必须有
+                dataType: "text", //表示返回值类型，不必须
+                type: "post",
+                // data:{
+                //     user:"book"
+                // },
+                /**  订单id
+                 用户id
+                 时间（起始日期）-（结束日期）     两个文本框中间加一条线
+                 订单状态
+                 private Long orderId;
+                 private Long userId;
+                 private String orderStatus;//订单状态
+                 private String orderAddress;//订单地址
+                 private String purchaseTime;
+                 private Double price;
+                 private List<OrderItem> books;
+                 private User user;**/
+                data: JSON.stringify({
+                    /*todo 框中为空 传去的参数是为空还是为？0*/
+                    "startPage": parseInt($("#startPage").val()),
+                    "orderId": parseInt($("#orderIdSearch").val()),
+                    "userId": parseInt($("#userIdSearch").val()),
+                    "purchaseTime":$("#purchaseTime").val()==""?null:$("#purchaseTime").val(),
+                    // "userAddress": $("#userAddressSearch").val()==""?null:$("#userAddressSearch").val(),
+                    "orderStatus": $("#orderStatus").val()==""?null:$("#userStateSearch").val()
+                }),
+                success: function (response) {
+                    // alert("1");
+                    if (
+                        response.status == 0
+                    ) {
+                        var page = response.data;
+                        var orders = page.lists;
+                        // var orders = JSON.parse(response);
+                        // console.log(orders);
+                        // alert(page.currPage.toString()+ "  " +page.totalPage.toString()+ "   " +page.totalCount.toString());
+                        document.getElementById("startPage").innerText = page.currPage.toString();
+                        document.getElementById("totalPage").innerText = page.totalPage.toString();
+                        document.getElementById("totalCount").innerText = page.totalCount.toString();
+                        // document.getElementById("startPage").innerText = "1";
+                        // document.getElementById("totalPage").innerText = "3";
+                        // document.getElementById("totalCount").innerText = "2";
+                        /*先清空元素*/
+                        $("#ordersTBody").empty();
+                    // <th>订单ID</th>
+                        //     <th>用户ID</th>
+                        //     <th>支付时间</th>
+                        //     <th>价格</th>
+                        //     <th>订单状态</th>
+                        //     <th>操作</th>
+                        var headstr = "<tr>\n" +
+                            "                                                <th width=\"30\"><input type=\"checkbox\" id=\"all\"\n" +
+                            "                                                                      onclick=\"selectOrClearAllCheckbox(this);\"/>\n" +
+                            "                                                </th>\n" +
+                            "                                                <th>订单ID</th>\n" +
+                            "                                                <th>用户ID</th>\n" +
+                            "                                                <th>支付时间</th>\n" +
+                            "                                                <th>价格</th>\n" +
+                            "                                                <th>订单状态</th>\n" +
+                            "                                                <th>操作</th>\n" +
+                            "                                            </tr>";
+                        $("#ordersTBody").append(headstr);
+
+                        // alert(books.length+"\n"+parseInt(books.length)+"\n");
+                        var count = orders.length;
+                        /**  private Long orderId;
+                         private Long userId;
+                         private String orderStatus;//订单状态
+                         private String orderAddress;//订单地址
+                         private String purchaseTime;
+                         private Double price;
+                         private List<OrderItem> books;
+                         private User user;;**/
+                        for (var i = 0; i <= count + 1; i++) {
+                            var orderId = orders[i].orderId;
+                            var userId = orders[i].userId;
+                            var purchaseTime = orders[i].purchaseTime;
+
+                            var price = orders[i].price;
+                            var orderStatus = orders[i].orderStatus;
+
+                            var str =
+                                " <tr>\n" +
+                                "<td><input type=\"checkbox\" name='IDCheck' value=" + parseInt(userId) + " class=\"acb\"/></td>\n" +
+                                "<td>" + orderId + "</td>\n" +
+                                "<td>" + userId + "</td>\n" +
+                                "<td>" + price + "</td>\n" +
+                                "<td>" + purchaseTime + "</td>\n" +
+                                "<td>" + orderStatus + "</td>\n" +
+                                "<td>\n" +
+                                // "<a name='edit' href=\"editBook.html\" class=\"edit\">编辑</a>\n" +
+                                "<a  href=\"editOrder.html?orderId=" + userId + "\" class='edit'>编辑</a>\n" +
+                                "<a href=\"javascript:del(" + orderId + ");\">删除</a>\n" +
+                                "</td>\n" +
+                                "</tr>";
+                            $("#ordersTBody").append(str);
+                            $("a.edit").fancybox({
+                                'width': 733,
+                                'height': 530,
+                                'type': 'iframe',
+                                'hideOnOverlayClick': false,
+                                'showCloseButton': false,
+                                'onClosed': function () {
+                                    window.location.href = 'table-orders2.html';
+                                }
+                            });
+                        }
+
+                        alert("搜索成功");
+                    } else {
+                        alert("搜索失败");
+                    }
+                },
+                error: function () {
+                    alert("请求失败22");
+                }
+            });
+        }
+
+
     </script>
     <style>
         .alt td {
@@ -344,55 +554,35 @@
                                         <div id="box_border">
                                             <div id="box_top">搜索</div>
                                             <div id="box_center">
-                                                小区
-                                                <select name="fangyuanEntity.fyXqCode" id="fyXq" class="ui_select01"
-                                                        onchange="getFyDhListByFyXqCode();">
-                                                    <option value=""
-                                                    >--请选择--
-                                                    </option>
-                                                    <option value="6">瑞景河畔</option>
-                                                    <option value="77">蔚蓝小区</option>
-                                                    <option value="83">和盛园小区</option>
-                                                </select>
-
-                                                栋号
-                                                <select name="fangyuanEntity.fyDhCode" id="fyDh" class="ui_select01">
-                                                    <option value="">--请选择--</option>
-                                                </select>
-                                                户型
-                                                <select name="fangyuanEntity.fyHxCode" id="fyHx" class="ui_select01">
-                                                    <option value="">--请选择--</option>
-                                                    <option value="76">一室一厅一卫</option>
-                                                    <option value="10">两室一厅一卫</option>
-                                                    <option value="14">三室一厅一卫</option>
-                                                    <option value="71">三室两厅一卫</option>
-                                                </select>
-                                                状态
-                                                <select name="fangyuanEntity.fyStatus" id="fyStatus"
+<!--                                                订单id
+用户id
+时间（起始日期）-（结束日期）     两个文本框中间加一条线
+订单状态-->
+                                                订单ID&nbsp;&nbsp;
+                                                <input type="text" id="orderIdSearch"
+                                                       name="fangyuanEntity.orderIdSearch"
+                                                       class="ui_input_txt02"/>
+                                                用户ID&nbsp;&nbsp;
+                                                <input type="text" id="userIdSearch"
+                                                       name="fangyuanEntity.userIdSearch"
+                                                       class="ui_input_txt02"/>
+                                                支付时间&nbsp;&nbsp;<input type="text" id="purchaseTime"
+                                                                       name="fangyuanEntity.purchaseTime"
+                                                                       class="ui_input_txt02"/>
+                                                订单状态&nbsp;&nbsp;
+                                                <select name="fangyuanEntity.orderStatus" id="orderStatus"
                                                         class="ui_select01">
                                                     <option value="">--请选择--</option>
-                                                    <option value="26">在建</option>
-                                                    <option value="25">建成待租</option>
-                                                    <option value="13">已配租</option>
-                                                    <option value="12">已租赁</option>
-                                                    <option value="24">腾退待租</option>
-                                                    <option value="23">欠费</option>
-                                                    <option value="27">其他</option>
+                                                    <option value="26">unpaid</option>
+                                                    <option value="25">delivering</option>
+                                                    <option value="13">finished</option>
                                                 </select>
 
-                                                座落&nbsp;&nbsp;<input type="text" id="fyZldz"
-                                                                     name="fangyuanEntity.fyZldz"
-                                                                     class="ui_input_txt02"/>
                                             </div>
                                             <div id="box_bottom">
-                                                <input type="button" value="查询" class="ui_input_btn0"
-                                                       onclick="search();"/>
+                                                <input type="button" value="查询" class="ui_input_btn0" onclick="getBookData();"/>
                                                 <input type="button" value="新增" class="ui_input_btn0" id="addBtn"/>
-                                                <input type="button" value="删除" class="ui_input_btn0"
-                                                       onclick="batchDel();"/>
-                                                <input type="button" value="导入" class="ui_input_btn0" id="importBtn"/>
-                                                <input type="button" value="导出" class="ui_input_btn0"
-                                                       onclick="exportExcel();"/>
+                                                <input type="button" value="删除" class="ui_input_btn0" onclick="batchDel();"/>
                                             </div>
                                         </div>
                                     </div>
@@ -401,172 +591,20 @@
                                     <div class="ui_tb">
                                         <table class="table" cellspacing="0" cellpadding="0" width="100%" align="center"
                                                border="0">
+                                            <tbody id="ordersTBody">
                                             <tr>
                                                 <th width="30"><input type="checkbox" id="all"
                                                                       onclick="selectOrClearAllCheckbox(this);"/>
                                                 </th>
-                                                <th>位置</th>
-                                                <th>房源</th>
-                                                <th>房源面积</th>
-                                                <th>计租面积</th>
-                                                <th>户型</th>
-                                                <th>建筑结构</th>
-                                                <th>租赁性质</th>
-                                                <th>状态</th>
+<!--                                                id 用户id （创建、支付）时间 价格 订单状态（unpaid delivering finished）操作栏（编辑（查看订单内容） 删除）-->
+                                                <th>订单ID</th>
+                                                <th>用户ID</th>
+                                                <th>支付时间</th>
+                                                <th>价格</th>
+                                                <th>订单状态</th>
                                                 <th>操作</th>
                                             </tr>
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458579642011"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼1-111</td>
-                                                <td>65.97㎡</td>
-                                                <td>65.97㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458579642011" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458579642011');">删除</a>
-                                                </td>
-                                            </tr>
 
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458625716623"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼1-112</td>
-                                                <td>67.47㎡</td>
-                                                <td>67.47㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>已配租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458625716623" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458625716623');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458592537463"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼2-121</td>
-                                                <td>65.97㎡</td>
-                                                <td>65.97㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458592537463" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458592537463');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458632171244"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼2-122</td>
-                                                <td>67.47㎡</td>
-                                                <td>67.47㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458632171244" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458632171244');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458599318263"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼3-131</td>
-                                                <td>65.97㎡</td>
-                                                <td>65.97㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458599318263" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458599318263');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458638753194"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼3-132</td>
-                                                <td>67.47㎡</td>
-                                                <td>67.47㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458638753194" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458638753194');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458606278350"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼4-141</td>
-                                                <td>65.97㎡</td>
-                                                <td>65.97㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458606278350" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458606278350');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458644830000"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼4-142</td>
-                                                <td>67.47㎡</td>
-                                                <td>67.47㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>已配租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458644830000" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458644830000');">删除</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><input type="checkbox" name="IDCheck" value="14458612828548"
-                                                           class="acb"/></td>
-                                                <td>城中区</td>
-                                                <td>瑞景河畔16号楼5-151</td>
-                                                <td>65.97㎡</td>
-                                                <td>65.97㎡</td>
-                                                <td>一室一厅一卫</td>
-                                                <td>混凝土</td>
-                                                <td>公租房</td>
-                                                <td>建成待租</td>
-                                                <td>
-                                                    <a href="house_edit.html?fyID=14458612828548" class="edit">编辑</a>
-                                                    <a href="javascript:del('14458612828548');">删除</a>
-                                                </td>
-                                            </tr>
 
                                             <tr>
                                                 <td><input type="checkbox" name="IDCheck" value="14458619251417"
@@ -584,35 +622,35 @@
                                                     <a href="javascript:del('14458619251417');">删除</a>
                                                 </td>
                                             </tr>
-
+                                            </tbody>
                                         </table>
                                     </div>
                                     <div >
                                         <div class="ui_flt" style="height: 30px; line-height: 30px;">
                                             共有
-                                            <span class="ui_txt_bold04">90</span>
+                                            <span class="ui_txt_bold04" id="totalCount" name="totalCount">8</span>
                                             条记录，当前第
-                                            <span class="ui_txt_bold04">1
-						/
-						9</span>
+                                            <span class="ui_txt_bold04" id="startPage" name="startPage">3</span>
+                                            <!--                                            <input type="text" id="startPage" name="startPage" value="1" class="ui_input_txt01" readonly="true"/>-->
+                                            /
+                                            <!--                                            <input type="text" id="totalPage" name="totalPage" value="" class="ui_input_txt01" readonly="true"/>-->
+                                            <span class="ui_txt_bold04" id="totalPage" name="totalPage">10</span>
                                             页
                                         </div>
                                         <div class="ui_frt">
                                             <!--    如果是第一页，则只显示下一页、尾页 -->
 
-                                            <input type="button" value="首页" class="ui_input_btn0"/>
-                                            <input type="button" value="上一页" class="ui_input_btn0"/>
-                                            <input type="button" value="下一页" class="ui_input_btn0"
-                                                   onclick="jumpNormalPage(2)"/>
-                                            <input type="button" value="尾页" class="ui_input_btn0"
-                                                   onclick="jumpNormalPage(9)"/>
+                                            <input type="button" value="首页" class="ui_input_btn0" onclick="getOrderData(1);"/>
+                                            <input type="button" value="上一页" class="ui_input_btn0" onclick="getLastOnePage();"/>
+                                            <input type="button" value="下一页" class="ui_input_btn0" onclick="getNextOnePage();"/>
+                                            <input type="button" value="尾页" class="ui_input_btn0" onclick="getLastPage();"/>
 
 
                                             <!--     如果是最后一页，则只显示首页、上一页 -->
 
                                             转到第<input type="text" id="jumpNumTxt" class="ui_input_txt01"/>页
                                             <input type="button" class="ui_input_btn0" value="跳转"
-                                                   onclick="jumpInputPage(9);"/>
+                                                   onclick="getOrderData(1);"/>
                                         </div>
                                     </div>
                                 </div>

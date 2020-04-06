@@ -14,7 +14,7 @@ import java.io.Serializable;
 @JsonSerialize(include =  JsonSerialize.Inclusion.NON_NULL)
 public class responseFromServer<T> implements Serializable {
 
-    private int status;
+    private int status;//0 成功 1 失败
     private String msg;
     private T data;
 

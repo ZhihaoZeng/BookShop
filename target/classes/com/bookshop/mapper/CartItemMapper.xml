@@ -33,7 +33,7 @@
     </select>
 
     <select id="getCartItemSimple" resultMap="cartItemResultSimpleMap">
-        select *from cart
+        select * from cart
         where user_id=#{userId} and book_id=#{bookId}
     </select>
 
@@ -96,6 +96,6 @@
 
     <select id="count" parameterType="map" resultType="Integer">
         select count(*) from cart
-        where user_id=#{userId} and book_id=#{bookId}
+        where user_id=#{userId}
     </select>
 </mapper>

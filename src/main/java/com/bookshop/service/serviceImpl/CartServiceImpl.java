@@ -5,6 +5,7 @@ import com.bookshop.dao.CartDao;
 import com.bookshop.dao.CartItemDao;
 import com.bookshop.entity.Cart;
 import com.bookshop.entity.CartItem;
+import com.bookshop.entity.User;
 import com.bookshop.service.CartService;
 import com.bookshop.util.Page;
 import com.bookshop.util.configs;
@@ -195,6 +196,12 @@ public class CartServiceImpl implements CartService {
         }else{
             return responseFromServer.success();
         }
+    }
+
+    public responseFromServer getCartNum(User user){
+        Map<String,Object> queryMap = new HashMap<>(0);
+        queryMap.put("userId",user.getUserId());
+        return responseFromServer.success(cartItemDao.count(queryMap));
     }
 
     @Autowired

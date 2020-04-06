@@ -37,101 +37,6 @@
             }
         });
 
-        /** 检测房源房号是否存在  **/
- /*       function checkFyFh() {
-            // 分别获取小区编号、栋号、层号、房号
-            var fyID = $('#fyID').val();
-            var fyXqCode = $("#fyXq").val();
-            var fyDh = $("#fyDh").val();
-            var fyCh = $("#fyCh").val();
-            var fyFh = $("#fyFh").val();
-            if (fyXqCode != "" && fyDh != "" && fyCh != "" && fyFh != "") {
-                // 给房屋坐落地址赋值
-                $("#fyZldz").val($('#fyDh option:selected').text() + fyCh + "-" + fyFh);
-                // 异步判断该房室是否存在，如果已存在，给用户已提示哦
-                $.ajax({
-                    type: "POST",
-                    url: "checkFyFhIsExists.action",
-                    data: {
-                        "fangyuanEntity.fyID": fyID,
-                        "fangyuanEntity.fyXqCode": fyXqCode,
-                        "fangyuanEntity.fyDhCode": fyDh,
-                        "fangyuanEntity.fyCh": fyCh,
-                        "fangyuanEntity.fyFh": fyFh
-                    },
-                    dataType: "text",
-                    success: function (data) {
-// 					alert(data);
-                        // 如果返回数据不为空，更改“房源信息”
-                        if (data == "1") {
-                            art.dialog({
-                                icon: 'error',
-                                title: '友情提示',
-                                drag: false,
-                                resize: false,
-                                content: '该房室在系统中已经存在哦，\n请维护其他房室数据',
-                                ok: true,
-                            });
-                            $("#fyFh").css("background", "#EEE");
-                            $("#fyFh").focus();
-                            return false;
-                        }
-                    }
-                });
-            }
-        }
-*/
-        /** 检测房源房号是否存在并提交form  **/
-      /*  function checkFyFhSubmit() {
-            // 分别获取小区编号、栋号、层号、房号
-            var fyID = $('#fyID').val();
-            var fyXqCode = $("#fyXq").val();
-            var fyDh = $("#fyDh").val();
-            var fyCh = $("#fyCh").val();
-            var fyFh = $("#fyFh").val();
-            if (fyXqCode != "" && fyDh != "" && fyCh != "" && fyFh != "") {
-                // 给房屋坐落地址赋值
-                $("#fyZldz").val($('#fyDh option:selected').text() + fyCh + "-" + fyFh);
-                // 异步判断该房室是否存在，如果已存在，给用户已提示哦
-                $.ajax({
-                    type: "POST",
-                    url: "checkFyFhIsExists.action",
-                    data: {
-                        "fangyuanEntity.fyID": fyID,
-                        "fangyuanEntity.fyXqCode": fyXqCode,
-                        "fangyuanEntity.fyDhCode": fyDh,
-                        "fangyuanEntity.fyCh": fyCh,
-                        "fangyuanEntity.fyFh": fyFh
-                    },
-                    dataType: "text",
-                    success: function (data) {
-// 					alert(data);
-                        // 如果返回数据不为空，更改“房源信息”
-                        if (data == "1") {
-                            art.dialog({
-                                icon: 'error',
-                                title: '友情提示',
-                                drag: false,
-                                resize: false,
-                                content: '该房室在系统中已经存在哦，\n请维护其他房室数据',
-                                ok: true,
-                            });
-                            $("#fyFh").css("background", "#EEE");
-                            $("#fyFh").focus();
-                            return false;
-                        } else {
-                            $("#submitForm").attr("action", "/xngzf/archives/saveOrUpdateFangyuan.action").submit();
-                        }
-                    }
-                });
-            }
-            return true;
-        }*/
-
-
-
-
-
         /** 表单验证  **/
         function validateForm() {
             if ($("#bookName").val() == "") {
@@ -150,16 +55,8 @@
                 art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '状态', ok: true,});
                 return false;
             }
-            if ($("#publishTime").val() == "") {
-                art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '出版时间', ok: true,});
-                return false;
-            }
             if ($("#image").val() == "") {
                 art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '图像', ok: true,});
-                return false;
-            }
-            if ($("#detail").val() == "") {
-                art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '介绍', ok: true,});
                 return false;
             }
             return true;
@@ -177,10 +74,11 @@
                 type: "post",
                 data: JSON.stringify({
                     "bookName": $("#bookName").val(),
-                    "price": $("#price").val(),
-                    "bookType":$("#bookType").val(),
-                    "bookStatus": $("#bookStatus").val(),
+                    "price": parseFloat($("#price").val()),
+                    "bookType":$("#bookType").val()==""?null:$("#bookType").val(),
+                    "bookStatus": $("#bookStatus").val()==""?null:$("#bookStatus").val(),
                     "image": $("#image").val(),
+                    "publishTime": $("#publishTime").val(),
                     "detail": $("#detail").val()
                 }),
                 success: function (response) {
@@ -225,33 +123,33 @@
                 <tr>
                     <td class="ui_text_rt">书名</td>
                     <td class="ui_text_lt">
-                        <input type="text" id="bookName" name="fangyuanEntity.bookName" value="1" class="ui_input_txt02"/>
+                        <input type="text" id="bookName" name="fangyuanEntity.bookName" value="" class="ui_input_txt02"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="ui_text_rt">价格</td>
                     <td class="ui_text_lt">
-                        <input type="text" id="price" name="fangyuanEntity.price" value="1" class="ui_input_txt02"/>
+                        <input type="text" id="price" name="fangyuanEntity.price" value="" class="ui_input_txt02"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="ui_text_rt">介绍</td>
                     <td class="ui_text_lt">
-                        <input type="text" id="detail" name="fangyuanEntity.detail" value="1" class="ui_input_txt02"/>
+                        <input type="text" id="detail" name="fangyuanEntity.detail" value="" class="ui_input_txt02"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="ui_text_rt">出版</td>
                     <td class="ui_text_lt">
-                        <input type="text" id="publishTime" name="fangyuanEntity.publishTime" value="1" class="ui_input_txt02"/>
+                        <input type="text" id="publishTime" name="fangyuanEntity.publishTime" value="" class="ui_input_txt02"/>
                     </td>
                 </tr>
                 <tr>
                     <td class="ui_text_rt" width="80">类别</td>
                     <td class="ui_text_lt">
                         <select name="fangyuanEntity.bookType" id="bookType" class="ui_select02">
-                            <option value="">--请选择--</option>
-                            <option value="1" selected="selected">教育考试</option>
+                            <option value="" selected="selected">--请选择--</option>
+                            <option value="1">教育考试</option>
                             <option value="2">小说</option>
                             <option value="3">童书</option>
                             <option value="4" >人文社科</option>
@@ -264,7 +162,7 @@
                 <tr>
                     <td class="ui_text_rt">图片</td>
                     <td class="ui_text_lt">
-                        <input type="text" id="image" name="fangyuanEntity.image" value="1" class="ui_input_txt02"/>
+                        <input type="text" id="image" name="fangyuanEntity.image" value="" class="ui_input_txt02"/>
                     </td>
                 </tr>
                 <tr>
@@ -273,8 +171,8 @@
                         <select name="fangyuanEntity.bookStatus" id="bookStatus"
                                 class="ui_select01">
                             <option value="">--请选择--</option>
-                            <option value="26"selected="selected">on</option>
-                            <option value="25">off</option>
+                            <option value="on"selected="selected">on</option>
+                            <option value="off">off</option>
                         </select>
                     </td>
                 </tr>

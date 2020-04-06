@@ -18,7 +18,7 @@
              */
             $("#submitbutton").click(function () {
                 if (validateForm()) {
-                    insertBook();
+                    updateBook();
                     // checkFyFhSubmit();
                 }
             });
@@ -57,20 +57,9 @@
                 art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '状态', ok: true,});
                 return false;
             }
-            if ($("#publishTime").val() == "") {
-                art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '出版时间', ok: true,});
-                return false;
-            }
-            if ($("#image").val() == "") {
-                art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '图像', ok: true,});
-                return false;
-            }
-            if ($("#detail").val() == "") {
-                art.dialog({icon: 'error', title: '友情提示', drag: false, resize: false, content: '介绍', ok: true,});
-                return false;
-            }
             return true;
         }
+
         function getParam(name) {
             var search = document.location.search;
             var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
@@ -89,10 +78,46 @@
             }
             return items;
         }
+
+        window.onload = function getBook(){
+            var bookId = getParam("bookId");
+            $.ajax({
+                async:false,
+                url: "http://localhost:8080/book/getBook",
+                contentType: "application/json;charset=UTF-8", //必须有
+                dataType: "json", //表示返回值类型，不必须
+                type: "post",
+                data: JSON.stringify({
+                    "bookId": parseInt(bookId)
+                }),
+                success: function (response) {
+                    if(response.status == 0){
+                        book = response.data;
+                        $("#bookId").val(book.bookId);
+                        $("#bookName").val(book.bookName);
+                        $("#bookType").val(book.bookType);
+                        $("#bookStatus").val(book.bookStatus);
+                        $("#image").val(book.image);
+                        $("#price").val(book.price);
+                        $("#detail").val(book.detail);
+                        $("#publishTime").val(book.publishTime);
+                        alert("查询成功");
+                    }else{
+                        alert("查询失败");
+                        return false;
+                    }
+                },
+                error:function () {
+                    alert("请求失败");
+                }
+            });
+        }
+
         /** update图书**/
         function updateBook(){
             var bookId = getParam("bookId");
-            var bookType = $("#bookTypeSearch").find("option:selected").text();
+            // var bookType = $("#bookType").find("option:selected").text();
+            var bookType = $("#bookType").find("option:selected").val();
             if (bookType == "--请选择--" || bookType == "") {
                 bookType = null;
             }
@@ -104,38 +129,19 @@
                 dataType: "json", //表示返回值类型，不必须
                 type: "post",
                 data: JSON.stringify({
-                    "bookName": $("#bookName").val(),
-                    "price": $("#price").val(),
-                    "bookType":$("#bookType").val(),
-                    "bookStatus": $("#bookStatus").val(),
-                    "image": $("#image").val(),
-                    "detail": $("#detail").val()
-
                     "bookId": parseInt(bookId),
                     "bookName": $("#bookName").val()==""?null:$("#bookName").val(),
                     "bookType": bookType,
-                    "publishTime":
-                    /*todo*/
-                    "startPrice": parseInt($("#startPrice").val()),
-                    "endPrice": parseInt($("#endPrice").val()),
-                    "startTime": $("#startDate").val() == "" ? null : $("#startDate").val(),
-                    "endTime": $("#endTime").val() == "" ? null : $("#endTime").val()
+                    "bookStatus": $("#bookStatus").val()==""?null:$("#bookStatus").val(),
+                    "image": $("#image").val()==""?null:$("#image").val(),
+                    "detail": $("#detail").val()==""?null:$("#detail").val(),
+                    "publishTime": $("#publishTime").val()==""?null:$("#publishTime").val()
                 }),
                 success: function (response) {
                     if(response.status == 0){
-                        /*登录成功*/
-                        alert("插入成功");
+                        alert("更新成功");
                     }else{
-                        art.dialog({
-                            icon: 'error',
-                            title: '友情提示',
-                            drag: false,
-                            resize: false,
-                            content: '插入失败，\n请重新编辑数据',
-                            ok: true,
-                        });
-                        $("#fyFh").css("background", "#EEE");
-                        $("#fyFh").focus();
+                        alert("更新失败");
                         return false;
                     }
                 },
@@ -194,8 +200,8 @@
                     <td class="ui_text_rt" width="80">类别</td>
                     <td class="ui_text_lt">
                         <select name="fangyuanEntity.bookType" id="bookType" class="ui_select02">
-                            <option value="">--请选择--</option>
-                            <option value="1" selected="selected">教育考试</option>
+                            <option value="" selected="selected">--请选择--</option>
+                            <option value="1">教育考试</option>
                             <option value="2">小说</option>
                             <option value="3">童书</option>
                             <option value="4" >人文社科</option>
@@ -217,8 +223,8 @@
                         <select name="fangyuanEntity.bookStatus" id="bookStatus"
                                 class="ui_select01">
                             <option value="">--请选择--</option>
-                            <option value="26"selected="selected">on</option>
-                            <option value="25">off</option>
+                            <option value="on"selected="selected">on</option>
+                            <option value="off">off</option>
                         </select>
                     </td>
                 </tr>

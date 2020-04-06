@@ -99,24 +99,24 @@
     <update id="updateUser" parameterType="com.bookshop.entity.User">
         update user
         <set>
-            <if test="userName!=null">user_name=#{userName}</if>
-            <if test="gender!=null">gender=#{gender}</if>
-            <if test="userAddress!=null">user_address=#{userAddress}</if>
-            <if test="userPassword!=null">user_password=#{userPassword}</if>
-            <if test="userStatus!=null">user_status=#{userStatus}</if>
+            <if test="userName!=null">user_name=#{userName},</if>
+            <if test="gender!=null">gender=#{gender},</if>
+            <if test="userAddress!=null">user_address=#{userAddress},</if>
+            <if test="userPassword!=null">user_password=#{userPassword},</if>
+            <if test="userStatus!=null">user_status=#{userStatus},</if>
         </set>
-        where book_id=#{item.bookId}
+        where user_id=#{userId}
     </update>
 
     <update id="updateUsers" parameterType="java.util.List">
         <foreach collection="list" item="item" index="index" separator=";">
             update user
             <set>
-                <if test="item.userName!=null">user_name=#{item.userName}</if>
-                <if test="item.gender!=null">gender=#{item.gender}</if>
-                <if test="item.userAddress!=null">user_address=#{item.userAddress}</if>
-                <if test="item.userPassword!=null">user_password=#{item.userPassword}</if>
-                <if test="item.userStatus!=null">user_status=#{item.userStatus}</if>
+                <if test="item.userName!=null">user_name=#{item.userName},</if>
+                <if test="item.gender!=null">gender=#{item.gender},</if>
+                <if test="item.userAddress!=null">user_address=#{item.userAddress},</if>
+                <if test="item.userPassword!=null">user_password=#{item.userPassword},</if>
+                <if test="item.userStatus!=null">user_status=#{item.userStatus},</if>
             </set>
             where item.user_id=#{item.userId}
         </foreach>

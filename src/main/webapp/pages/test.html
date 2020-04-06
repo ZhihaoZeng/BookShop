@@ -21,6 +21,8 @@ start
         <option value="xiaoshuo">小说</option>
         <option value="tongshu">童书</option>
     </select>
+
+    <input id="myInput"/>
 </div>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 
@@ -32,26 +34,33 @@ start
 
     window.onload = function loadrequest() {
         alert("load");
-        alert(document.getElementById("myspan").innerText);
-        document.getElementById("myspan").innerText ="456";
+        // $("#selectionid").val("tongshu");
+        // $("#selectionid").find("option:[value='tongshu']).attr("selected",true);
+        //
+
+        //
+        // var selection = document.getElementById("selectionid");
+        // selection.options.add(new Option(name, value));
+        // selection.children[0].selected=true;
+        // alert(document.getElementById("myspan").innerText);
+        // document.getElementById("myspan").innerText ="456";
+        // document.getElementById("myInput").value = "456";
         // $("#myspan").text("456");
+        // $("#myInput").val("456");
+
         $.ajax({
-
-
             async: false,
-            url: "http://localhost:8080/book/searchBooksPage",
+            url: "http://localhost:8080/user/setsession",
             contentType: "application/json;charset=UTF-8", //必须有
             dataType: "json", //表示返回值类型，不必须
             type: "post",
-            data: JSON.stringify({
-                "bookName":"%harry%",
-                "startPage":1
-            }),
 
             success: function (response) {
-                alert(response.toString());
-                alert(response.data.totalCount.toString());
-                $("#text").append(response);
+                // var sessionstr = sessionStorage.getItem("mysession");
+                // alert(sessionstr);
+                alert("setsession");
+                // alert(response.data.totalCount.toString());
+                // $("#text").append(response);
                /* if (response.status == 0) {
                     /!*登录成功*!/
                     var page = response.data;
@@ -89,6 +98,60 @@ start
                 } else {
                     alert("搜索失败");
                 }*/
+            },
+            error: function () {
+                alert("请求失败");
+            }
+        });
+        $.ajax({
+            async: false,
+            url: "http://localhost:8080/user/testsession",
+            contentType: "application/json;charset=UTF-8", //必须有
+            dataType: "json", //表示返回值类型，不必须
+            type: "post",
+
+            success: function (response) {
+                // var sessionstr = sessionStorage.getItem("mysession");
+                alert("test success");
+                // alert(response.data.totalCount.toString());
+                // $("#text").append(response);
+                /* if (response.status == 0) {
+                     /!*登录成功*!/
+                     var page = response.data;
+                     var books = page.lists;
+                     for (var i = 0; i < lists.length; i++) {
+                         var bookId = books[i].bookId;
+                         var bookName = books[i].bookName;
+                         var image = books[i].image;
+                         var price = books[i].price;
+                         var bookType = books[i].bookType;
+                         alert(bookId+"/"+bookName+"/");
+                         var str = " <div class=\"col-lg-3\">\n" +
+                             "                        <div class=\"single-product-card single-product-card-2 text-center border-0\">\n" +
+                             "                            <div class=\"thumb\">\n" +
+                             "                                <img src=\"../assets/img/product/" + image.toString() + "\ alt=\"top-product\">\n" +
+                             "                            </div>\n" +
+                             "                            <div class=\"product-card-details\">\n" +
+                             "                                <p class=\"categories\">" + bookType.toString() + "</p>\n" +
+                             "                                <h4 class=\"title\"><a href=\"#\">" + bookName.toString() + "</a></h4>\n" +
+                             "                                <div class=\"price\">\n" +
+                             "                                    <span>" + price.toString() + "</span>\n" +
+                             "                                </div>\n" +
+                             "                            </div>\n" +
+                             "                        </div>\n" +
+                             "                    </div>";
+                         $("#booksRows").append(str);
+                     }
+                     initPage(page.totalCount, page.startPage, page.totalPage);
+                     $("#hiddenStartPage").value = page.startPage;
+                     $("#hiddenTotalPage").value = page.totalPage;
+                     $("#hiddenTotalCount").value = page.totalCount;
+                     $("#hiddenPageSize").value = page.pageSize;
+
+                     alert("搜索成功");
+                 } else {
+                     alert("搜索失败");
+                 }*/
             },
             error: function () {
                 alert("请求失败");

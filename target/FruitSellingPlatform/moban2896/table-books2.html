@@ -196,7 +196,7 @@
                                                                      name="fangyuanEntity.bookNameSearch"
                                                                      class="ui_input_txt02"/>
                                                 类别&nbsp;
-                                                <select name="fangyuanEntity.bookType" id="bookType"
+                                                <select name="fangyuanEntity.bookTypeSearch" id="bookTypeSearch"
                                                         class="ui_select01">
                                                     <option value="" selected="selected">--请选择--</option>
                                                     <option value="1">教育考试</option>
@@ -220,7 +220,13 @@
                                                 ----<input type="text" id="endDate"
                                                            name="fangyuanEntity.endDate"
                                                            class="ui_input_txt01" value=""/>
-
+                                                状态&nbsp;
+                                                <select name="fangyuanEntity.bookStatusSearch" id="bookStatusSearch"
+                                                        class="ui_select01">
+                                                    <option value="" selected="selected">--请选择--</option>
+                                                    <option value="off">off</option>
+                                                    <option value="on">on</option>
+                                                </select>
                                             </div>
                                             <div id="box_bottom">
                                                 <input type="button" value="查询" class="ui_input_btn0" onclick="getBookData()"/>
@@ -296,7 +302,7 @@
 
                                             转到第<input type="text" id="jumpNumTxt" class="ui_input_txt01"/>页
                                             <input type="button" class="ui_input_btn0" value="跳转"
-                                                   onclick="jumpInputPage(9);"/>
+                                                   onclick="jumpInputPage();"/>
                                         </div>
                                     </div>
                                 </div>
@@ -333,11 +339,7 @@
 
 <script src="assets/scripts.js"></script>
 <script src="assets/DT_bootstrap.js"></script>
-<script>
-    $(function () {
 
-    });
-</script>
 <script type="text/javascript">
     $(document).ready(function () {
         /** 新增   **/
@@ -390,21 +392,7 @@
         $("#submitForm").attr("action", "/xngzf/archives/luruFangyuan.action").submit();
     }
 
-    /** Excel导出  **/
-    function exportExcel() {
-        if (confirm('您确定要导出吗？')) {
-            var fyXqCode = $("#fyXq").val();
-            var fyXqName = $('#fyXq option:selected').text();
-//	 		alert(fyXqCode);
-            if (fyXqCode == "" || fyXqCode == null) {
-                $("#fyXqName").val("");
-            } else {
-//	 			alert(fyXqCode);
-                $("#fyXqName").val(fyXqName);
-            }
-            $("#submitForm").attr("action", "/xngzf/archives/exportExcelFangyuan.action").submit();
-        }
-    }
+
 
     /** 删除 **/
     function del(bookId) {
@@ -412,7 +400,7 @@
         if (bookId == '') return;
         if (confirm("您确定要删除吗？")) {
             $.ajax({
-                url: "http://localhost:8080/book/deleteBookById",
+                url: "http://localhost:8080/book/deleteBook",
                 contentType: "application/json;charset=UTF-8", //必须有
                 dataType: "json", //表示返回值类型，不必须
                 type: "post",
@@ -448,7 +436,7 @@
             function (index, domEle) {
                 bookId = parseInt($(domEle).val());
                 $.ajax({
-                    url: "http://localhost:8080/book/deleteBooks",
+                    url: "http://localhost:8080/book/deleteBook",
                     contentType: "application/json;charset=UTF-8", //必须有
                     dataType: "json", //表示返回值类型，不必须
                     type: "post",
@@ -467,18 +455,7 @@
                     }
                 });
             });
-        //全部删除完后更新页面
         getBookData();
-        // 截掉最后一个","
-        /*if (allIDCheck.length > 0) {
-            allIDCheck = allIDCheck.substring(0, allIDCheck.length - 1);
-            // 赋给隐藏域
-            $("#allIDCheck").val(allIDCheck);
-            if (confirm("您确定要批量删除这些记录吗？")) {
-                // 提交form
-                $("#submitForm").attr("action", "/xngzf/archives/batchDelFangyuan.action").submit();
-            }
-        }*/
     }
 
     function getNextOnePage(){
@@ -525,7 +502,7 @@
             var startPage = parseInt($("#startPage").val());
         }
         var bookName = $("#bookNameSearch").val();
-        var bookType = $("#bookTypeSearch").find("option:selected").text();
+
         if (startPage != null && startPage >= 0) {
             startPage = 1;
         }
@@ -534,9 +511,7 @@
         } else {
             bookName = "%" + bookName + "%";
         }
-        if (bookType == "--请选择--" || bookType == "") {
-            bookType = null;
-        }
+
         $.ajax({
             url: "http://localhost:8080/book/searchBooksPage",
             contentType: "application/json;charset=UTF-8", //必须有
@@ -547,9 +522,10 @@
                 "startPage": parseInt($("#startPage").val()),
                 "bookName": bookName,
                 "bookId": parseInt($("#bookIdSearch").val()),
-                "bookType": bookType,
-                "startPrice": parseInt($("#startPrice").val()),
-                "endPrice": parseInt($("#endPrice").val()),
+                "bookType":$("#bookTypeSearch").val()==""?null:$("#bookTypeSearch").val(),
+                "bookStatus": $("#bookStatusSearch").val()==""?null:$("#bookStatusSearch").val(),
+                "startPrice": parseFloat($("#startPrice").val()),
+                "endPrice": parseFloat($("#endPrice").val()),
                 "startTime": $("#startDate").val() == "" ? null : $("#startDate").val(),
                 "endTime": $("#endTime").val() == "" ? null : $("#endTime").val()
             }),
@@ -579,14 +555,15 @@
                     $("#booksTBody").append(headstr);
                     // alert(books.length+"\n"+parseInt(books.length)+"\n");
                     var count = books.length;
-                    for (var i = 0; i <= count + 1; i++) {
+                    for (var i = 0; i < count; i++) {
                         var bookId = books[i].bookId;
                         var bookName = books[i].bookName;
                         var image = books[i].image;
                         var price = books[i].price;
                         var bookType = books[i].bookType;
 
-                        var str = " <tr>\n" +
+                        var str =
+                            " <tr>\n" +
                             "<td><input type=\"checkbox\" name='IDCheck' value=" + parseInt(bookId) + " class=\"acb\"/></td>\n" +
                             "<td>" + bookId + "</td>\n" +
                             "<td>" + bookName + "</td>\n" +
@@ -601,6 +578,16 @@
                             "</td>\n" +
                             "</tr>";
                         $("#booksTBody").append(str);
+                        $("a.edit").fancybox({
+                            'width': 733,
+                            'height': 530,
+                            'type': 'iframe',
+                            'hideOnOverlayClick': false,
+                            'showCloseButton': false,
+                            'onClosed': function () {
+                                window.location.href = 'table-books2.html';
+                            }
+                        });
                     }
 
                     alert("搜索成功");
@@ -613,6 +600,7 @@
             }
         });
     }
+    /*
 
     function getParam(name) {
         var search = document.location.search;
@@ -631,13 +619,14 @@
             }
         }
         return items;
-    }
+    }*/
 
     /** 输入页跳转 **/
-    function jumpInputPage(totalPage) {
+    function jumpInputPage() {
         // 如果“跳转页数”不为空
         if ($("#jumpNumTxt").val() != '') {
             var pageNum = parseInt($("#jumpNumTxt").val());
+            var totalPage = parseInt(document.getElementById("totalPage").innerText);
             // 如果跳转页数在不合理范围内，则置为1
             if (pageNum < 1 | pageNum > totalPage) {
                 art.dialog({
