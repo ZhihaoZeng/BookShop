@@ -499,13 +499,10 @@
     function getBookData(startPage) {
         /*请求信息*/
         if(startPage == null||startPage == 0||startPage<0){
-            var startPage = parseInt($("#startPage").val());
+            var startPage = document.getElementById("startPage").innerText
         }
         var bookName = $("#bookNameSearch").val();
 
-        if (startPage != null && startPage >= 0) {
-            startPage = 1;
-        }
         if (bookName == "" || bookName == null) {
             bookName = null;
         } else {
@@ -519,7 +516,7 @@
             type: "post",
             data: JSON.stringify({
                 /*todo 框中为空 传去的参数是为空还是为？0*/
-                "startPage": parseInt($("#startPage").val()),
+                "startPage": startPage,
                 "bookName": bookName,
                 "bookId": parseInt($("#bookIdSearch").val()),
                 "bookType":$("#bookTypeSearch").val()==""?null:$("#bookTypeSearch").val(),
@@ -527,7 +524,7 @@
                 "startPrice": parseFloat($("#startPrice").val()),
                 "endPrice": parseFloat($("#endPrice").val()),
                 "startTime": $("#startDate").val() == "" ? null : $("#startDate").val(),
-                "endTime": $("#endTime").val() == "" ? null : $("#endTime").val()
+                "endTime": $("#endDate").val() == "" ? null : $("#endDate").val()
             }),
             success: function (response) {
                 if (response.status == 0) {

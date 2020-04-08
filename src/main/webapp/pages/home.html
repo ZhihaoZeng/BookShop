@@ -96,7 +96,9 @@
                                 <ul id="userCart">
 
                                     <!--                                <li><span>6</span><i class="fa fa-heart-o"></i></li>-->
-                                    <li id="userCartCount" onclick="goToCart();"><i class="las la-shopping-cart" onclick="goToCart();"></i></li>
+                                    <li id="userCartCount" onclick="goToCart();">
+                                        <i class="las la-shopping-cart" onclick="goToCart();"></i>
+                                        <span id="userCartCountSpan"></span></li>
 <!--                                    <li id="userCartPrice" onclick="goToCart();">$ 155.00 .</li>&lt;!&ndash;                                todo 获取购物车价格&ndash;&gt;-->
                                 </ul>
                             </div>
@@ -148,7 +150,7 @@
                                         if (response.status == 0) {
                                             // alert("已登录");
                                             user = response.data;
-                                            alert(user.userId);
+                                            // alert(user.userId);
                                         } else {
                                             // alert("未登录");
                                             return null;
@@ -168,7 +170,7 @@
                                         "</div>";
                                     $("#myaccountdropdown").append(str);
                                 } else {
-                                    alert(user.userName);
+                                    // alert(user.userName);
                                     /*用户选项*/
                                     var str =
                                         "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
@@ -188,8 +190,9 @@
                                         // data: JSON.stringify(),/*不需要传用户数据*/
                                         success: function (response) {
                                             if(response.status==0){
-                                                str = "<span>"+response.data+"</span>";
-                                                $("#userCartCount").append(str);
+                                                document.getElementById("userCartCountSpan").innerText = response.data;
+                              /*                  str = "<span>"+response.data+"</span>";
+                                                $("#userCartCount").append(str);*/
                                             }else{
                                                 alert("获取购物车信息错误");
                                             }
@@ -224,7 +227,7 @@
                                                     "            </div>\n" +
                                                     "            <div class=\"product-card-details\">\n" +
                                                     "                <p class=\"categories\">Gadgets</p>\n" +
-                                                    "                    <h4 class=\"title\"><a href="+book.bookId+"\"shop-details.html?bookId=\">" + book.bookName.toString() + "</a></h4>\n" +
+                                                    "                    <h4 class=\"title\"><a href=\"shop-details.html?bookId="+book.bookId+"\">" + book.bookName.toString() + "</a></h4>\n" +
                                                     "                <div class=\"star-rating\">\n" +
                                                     "                    <span><i class=\"fa fa-star\"></i></span>\n" +
                                                     "                    <span><i class=\"fa fa-star\"></i></span>\n" +
@@ -355,9 +358,9 @@
 
                 </ul>
             </div>
-            <div class="nav-right-part">
+            <!--<div class="nav-right-part">
                 <a href="cart.html" class="right-part-text">购物车</a>
-            </div>
+            </div>-->
         </div>
     </nav>
 </div>

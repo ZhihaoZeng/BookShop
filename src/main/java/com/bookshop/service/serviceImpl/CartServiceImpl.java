@@ -84,7 +84,7 @@ public class CartServiceImpl implements CartService {
     Page getPage(Map<String,Object> queryMap){
         Page<CartItem> page = new Page<CartItem>(configs.pageSize);
         Integer startPage = (Integer)queryMap.get("startPage");
-        queryMap.put("startPage",startPage-1);
+        queryMap.put("startPage",(startPage-1)*configs.pageSize);
         queryMap.put("pageSize",configs.pageSize);
         page.setCurrPage(startPage);
         page.setTotalCount(cartItemDao.count(queryMap));

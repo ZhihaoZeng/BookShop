@@ -48,7 +48,7 @@ public class BookServiceImpl implements BookService {
     private Page<Book> getPage(Map<String,Object> queryMap){
         Page<Book> page = new Page<Book>(configs.pageSize);
         Integer startPage = (Integer)(queryMap.get("startPage"));
-        queryMap.put("startPage",startPage-1);
+        queryMap.put("startPage",(startPage-1)*configs.pageSize);
         queryMap.put("pageSize",configs.pageSize);
         page.setCurrPage(startPage);
         page.setTotalCount(bookDao.count(queryMap));

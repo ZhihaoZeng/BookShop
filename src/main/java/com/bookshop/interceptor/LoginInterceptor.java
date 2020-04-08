@@ -1,5 +1,6 @@
 package com.bookshop.interceptor;
 
+import com.bookshop.entity.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,7 +12,15 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        return true;
+        User u = (User) httpServletRequest.getSession().getAttribute("user");
+        if(u!=null) {
+            return true;
+        }else {
+            //为空返回到登录页面
+            httpServletResponse.sendRedirect("/index");
+        }
+
+        return false;
     }
 
     @Override

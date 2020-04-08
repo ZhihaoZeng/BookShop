@@ -6,1079 +6,93 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7271cef-5e62-43ff-9285-9410b3e4cacb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/shiro.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="c7271cef-5e62-43ff-9285-9410b3e4cacb" name="Default Changelist" comment="v2.0.2 后台页面还差order">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/common/checkSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/checkbix.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/checkbix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/table-orders-user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/editPassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/order-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/purchase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/setupOrder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/common/responseFromServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/common/responseFromServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/CartItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/CartItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/BookServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/CartServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/addBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/addBook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/addOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/addOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/addUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/addUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/editBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/editBook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/editUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/editUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/editors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/interface.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/stats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-books.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-books2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/table-books2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-orders.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-orders2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/table-orders2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-users.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/table-users2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/table-users2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/moban2896/说明.htm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/compare-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/compare-product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shipping.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shipping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shop-details-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shop-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/loginhtm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shop-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shop-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/wishlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/line-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/nice-select.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/css/vendor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/fonts/la-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/banner/bg-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/card/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/category/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/compare-product/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/compare-product/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/footer/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/gadget/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/author.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/ball.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/bar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/chair.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/gift.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/headphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/laptop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/monitor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/truck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/icon/us-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/01w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/02w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/03w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/04w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/05w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/06w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/07w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/08w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/09w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/10w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/11w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/listed/12w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/logo-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/offer/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-2/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-3/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-4/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/home-5/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/000012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/00009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/0012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/shop-details/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/product/shop/shop-details/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/subscribe/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/img/wishlist/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/countdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/assets/js/vendor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/SqlMapConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/ContextFinalizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/JdbcUnregisterListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/common/ResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/common/responseFromServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/PageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/BaseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/CartDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/CartItemDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/OrderItemDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/dao/impl/BaseDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Cart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/CartItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/OrderItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/Review.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/exception/MyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/exception/UserNameIsUsedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/interceptor/LoginInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/BookMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/CartItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/CartMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/CartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/HtmlResourceView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/util/configs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/spring-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/springmvc-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ant-1.9.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ant-launcher-1.9.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/asm-5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjrt-1.6.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjtools-1.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/aspectjweaver-1.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/cglib-3.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/classmate-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-codec-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-dbcp-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-io-2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-lang3-3.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-pool-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/fastjson-1.1.41.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/freemarker-2.3.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-annotations-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-core-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-core-asl-1.9.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-databind-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jackson-module-jaxb-annotations-2.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javaee-api-7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javax.mail-1.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/javax.mail-api-1.5.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jboss-logging-3.2.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jedis-2.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jquery-3.3.1-2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/junit-4.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-api-2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/log4j-core-2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/mysql-connector-java-8.0.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/ognl-3.1.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-aop-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-aspects-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-beans-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-context-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-context-support-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-core-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-data-redis-1.6.0.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-expression-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-instrument-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-jcl-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-jdbc-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-orm-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-oxm-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-test-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-tx-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-web-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/spring-webmvc-5.1.7.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/basic_layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/common_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/jquery.fancybox-1.3.4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/line-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/nice-select.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/css/vendor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/fonts/la-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/bg-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/bg-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/banner/bg-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/card/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/category/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/compare-product/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/compare-product/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/footer/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/footer/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/footer/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/footer/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/footer/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/gadget/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/gadget/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/gadget/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/author.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/ball.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/bar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/chair.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/gift.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/headphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/laptop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/monitor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/truck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/icon/us-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/01w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/02w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/03w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/04w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/05w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/06w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/07w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/08w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/09w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/10w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/11w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/listed/12w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/logo-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/offer/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/offer/bg-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/offer/bg-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/offer/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-2/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-3/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-4/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/home-5/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/000010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/000011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/000012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/00009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/0012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/shop-details/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/product/shop/shop-details/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/subscribe/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/wishlist/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/wishlist/02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/wishlist/03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/wishlist/04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/img/wishlist/05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/js/countdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/js/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/js/vendor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/artDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/commonAll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/fancybox/jquery.easing-1.3.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/fancybox/jquery.fancybox-1.3.4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/fancybox/jquery.fancybox-1.3.4.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/idCardValidate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/assets/scripts/jquery/jquery-1.7.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/css/01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/css/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/css/regcss.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/js/jquery-1.4.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/loginhtm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/addBook.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/addOrder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/addUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/assets/DT_bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/assets/DT_bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/assets/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/assets/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/back-index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/bootstrap/css/bootstrap-responsive.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/bootstrap/img/glyphicons-halflings-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/bootstrap/img/glyphicons-halflings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/editBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/moban2896/editOrder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/editUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/editors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/house_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/+.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/-.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/1_add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/1_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/1_open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/2_edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/3_del.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/404.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/VerifyCode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/act_btn.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/add.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/ajax-loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/arrow.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/back.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/bar9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/box_tit_bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/closed.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/del.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/edt.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_loading.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_nav_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_nav_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_shadow_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_title_left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_title_main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_title_over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancy_title_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancybox-x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancybox-y.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/fancybox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/first.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/go.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/home.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/last.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/left_tab_Selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/left_tab_Selectedno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/left_tabid_cnt_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/left_tt.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/line_conn.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/loading_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/login_6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/main_12_me.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/main_12_me2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/minus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/next.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_03.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_05.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_07.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tab_20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tableline.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tableline_bottom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tableline_top.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tablemde.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tb.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tdbj.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/tip.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/top_tt_bg.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/zTreeStandard.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/zTreeStandard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/authority/zTreeStandard1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/1_hover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/2_hover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/3_hover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/close.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/date.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/module_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/module_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/module_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/month.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_hide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_item_minus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_item_plus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_item_v.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_item_v_hover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/nav_show.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/page_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/common/user.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/login/btn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/login/btn_hover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/login/login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/xngzf/ht01.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/images/xngzf/ht02.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/interface.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/My97DatePicker.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/WdatePicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/lang/zh-tw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/WdatePicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/datePicker.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/default/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/default/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/whyGreen/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/whyGreen/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/My97DatePicker/skin/whyGreen/img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/artDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/artDialog.source.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/jquery.artDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/jquery.artDialog.source.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/plugins/iframeTools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/plugins/iframeTools.source.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/aero_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/aero_s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_title_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/aero/ie6/aui_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/bg_css3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/bg_css3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/black/ie6/w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/bg_css3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/bg_css3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/blue/ie6/w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/chrome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/chrome/border.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/chrome/chrome_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/bg_css3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/bg_css3_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/color_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/green/ie6/w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/face-sad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/face-smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/question.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/succeed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/icons/warning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/idialog_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/idialog_s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/idialog/ie6/aui_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_close.hover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/ie6/aui_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/s1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/opera/s2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/simple.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/artDialog/skins/twitter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/authority/commonAll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/authority/idCardValidate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/fancybox/jquery.easing-1.3.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/fancybox/jquery.fancybox-1.3.4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/fancybox/jquery.fancybox-1.3.4.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/jquery/jquery-1.4.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/jquery/jquery-1.7.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/jquery/jquery.alerts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.all-3.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.all-3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.core-3.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.core-3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.excheck-3.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.excheck-3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.exedit-3.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/scripts/zTree/jquery.ztree.exedit-3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/stats.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/Copy of zTreeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/basic_layout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/common_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/jquery.fancybox-1.3.4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/login_css.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/main_css.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/style/authority/zTreeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-books.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-books2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-orders.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-orders2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-users.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-users2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/chosen-sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/chosen-sprite@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/chosen.jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/chosen.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/ckeditor/adapters/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/ckeditor/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/images/sort_asc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/images/sort_asc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/images/sort_both.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/images/sort_desc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/images/sort_desc_disabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datatables/js/jquery.dataTables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/easypiechart/jquery.easy-pie-chart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/easypiechart/jquery.easy-pie-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.categories.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.pie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.stack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/flot/jquery.flot.time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/fullcalendar/fullcalendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/fullcalendar/fullcalendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/fullcalendar/gcal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jGrowl/jquery.jgrowl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jGrowl/jquery.jgrowl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jquery-1.9.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jquery-1.9.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jquery-ui-1.10.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jquery.knob.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/jquery.uniform.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/modernizr-2.6.2-respond-1.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/morris/morris.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/morris/morris.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/raphael-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/tinymce/js/tinymce/tinymce.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/uniform.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/wizard/jquery.bootstrap.wizard.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/wysiwyg/bootstrap-wysihtml5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/wysiwyg/bootstrap-wysihtml5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/vendors/wysiwyg/wysihtml5-0.3.0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/说明.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/checkout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/compare-product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/loginhtm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shipping.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop-details-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/user-order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/Category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/user-setting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/wishlist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SqlMapConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/ContextFinalizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/JdbcUnregisterListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/common/ResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/common/responseFromServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/PageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/BaseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/CartDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/CartItemDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/OrderItemDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/impl/BaseDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Cart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/CartItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/OrderItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Review.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/exception/MyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/exception/UserNameIsUsedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/interceptor/LoginInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/BookMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/CartItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/CartMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderItemMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/CartService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/HtmlResourceView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/util/configs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-redis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/common/responseFromServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/common/responseFromServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/WEB-INF/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-books2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-books2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-orders2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-orders2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-users2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/moban2896/table-users2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/FruitSellingPlatform/pages/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/common/responseFromServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/common/responseFromServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/mapper/OrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/CartServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="BookShop" />
@@ -1140,7 +154,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/moban2896" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../样例/mall-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -1153,23 +167,23 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\1Code\BookShop\src\main\webapp\moban2896" />
-      <recent name="E:\1Code\BookShop\src\main\webapp" />
-      <recent name="E:\1Code\BookShop\模板\moban2896(1)\moban2896" />
-      <recent name="E:\1Code\BookShop\src\main\webapp\assets\scripts" />
-      <recent name="E:\1Code\BookShop\src\main\webapp\assets\scripts\jquery" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bookshop.controller" />
-      <recent name="com.bookshop.interceptor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\1Code\BookShop\src\main\webapp\pages" />
       <recent name="E:\1Code\BookShop\src\main\webapp\moban2896" />
       <recent name="E:\1Code\BookShop\src\main\webapp" />
       <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF" />
       <recent name="E:\1Code\BookShop\src\main\webapp\WEB-INF\pages" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bookshop.controller" />
+      <recent name="com.bookshop.interceptor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\1Code\BookShop\src\main\webapp\assets\js" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\assets\css" />
+      <recent name="E:\1Code\BookShop\src\main\webapp\moban2896" />
+      <recent name="E:\1Code\BookShop\src\main\webapp" />
+      <recent name="E:\1Code\BookShop\模板\moban2896(1)\moban2896" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.31">
@@ -1276,11 +290,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -1317,7 +326,9 @@
       <workItem from="1586141758313" duration="30684000" />
       <workItem from="1586185226701" duration="5667000" />
       <workItem from="1586193968282" duration="93000" />
-      <workItem from="1586194182550" duration="2272000" />
+      <workItem from="1586194182550" duration="2594000" />
+      <workItem from="1586228670027" duration="31029000" />
+      <workItem from="1586325243200" duration="1114000" />
     </task>
     <task id="LOCAL-00001" summary="setup project">
       <created>1585333238366</created>
@@ -1389,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586111675588</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="v2.0.2 后台页面还差order">
+      <created>1586196725631</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1586196725631</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1421,7 +439,8 @@
     <MESSAGE value="v1.0.1 改了一些bug" />
     <MESSAGE value="v2.0.1 前后台页面大致框架完成" />
     <MESSAGE value="v2.0.2 后台页面完成书本表格，编辑插入暂未完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.0.2 后台页面完成书本表格，编辑插入暂未完成" />
+    <MESSAGE value="v2.0.2 后台页面还差order" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.0.2 后台页面还差order" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Auto_Import" timestamp="1585635690966">
@@ -1475,23 +494,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="680" y="166" width="561" height="492" key="#xdebugger.XInspectDialog/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585640721970" />
-    <state x="372" y="1085" key="CommitChangelistDialog2" timestamp="1586111666970">
-      <screen x="0" y="1080" width="1536" height="824" />
-    </state>
-    <state x="372" y="-1075" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333284000" />
-    <state x="372" y="5" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585750001079" />
-    <state x="372" y="1085" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586111666969" />
-    <state width="455" height="466" key="DebuggerActiveHint" timestamp="1586196423768">
+    <state x="372" y="5" key="CommitChangelistDialog2" timestamp="1586325719098">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="455" height="466" key="DebuggerActiveHint/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196423768" />
+    <state x="372" y="-1075" key="CommitChangelistDialog2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333284000" />
+    <state x="372" y="5" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586325719098" />
+    <state x="372" y="1085" key="CommitChangelistDialog2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586111666969" />
+    <state width="455" height="466" key="DebuggerActiveHint" timestamp="1586268044272">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="455" height="466" key="DebuggerActiveHint/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586268044272" />
     <state width="454" height="466" key="DebuggerActiveHint/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586099353492" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1586181810218">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1586280068343">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="-912" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585332713255" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585207969257" />
-    <state x="549" y="168" key="FileChooserDialogImpl/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586181810218" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280068343" />
     <state x="549" y="1248" key="FileChooserDialogImpl/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585982149198" />
     <state width="1024" height="216" key="GridCell.Tab.-1.bottom" timestamp="1585388393567">
       <screen x="0" y="0" width="1536" height="824" />
@@ -1509,89 +528,89 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="216" key="GridCell.Tab.-1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585388393567" />
-    <state width="1329" height="210" key="GridCell.Tab.0.bottom" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.0.bottom" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1329" height="210" key="GridCell.Tab.0.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.0.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.0.bottom/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.0.center" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.0.center" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1329" height="210" key="GridCell.Tab.0.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.0.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.0.center/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.0.left" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.0.left" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1329" height="210" key="GridCell.Tab.0.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.0.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.0.left/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933647" />
-    <state width="1329" height="210" key="GridCell.Tab.0.right" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.0.right" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1584540438710" />
-    <state width="1329" height="210" key="GridCell.Tab.0.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.0.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.0.right/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.1.bottom" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.1.bottom" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.1.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.1.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.1.bottom/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.1.center" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.1.center" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.1.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.1.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.1.center/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.1.left" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.1.left" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.1.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.1.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.1.left/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.1.right" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.1.right" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.1.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.1.right/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933648" />
-    <state width="1329" height="210" key="GridCell.Tab.2.bottom" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.2.bottom" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.2.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.2.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.2.bottom/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.2.center" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.2.center" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.2.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.2.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.2.center/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.2.left" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.2.left" timestamp="1586280327066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.2.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.2.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327066" />
     <state width="1236" height="266" key="GridCell.Tab.2.left/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.2.right" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.2.right" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.2.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.2.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.2.right/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.3.bottom" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.3.bottom" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.3.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.3.bottom/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.3.bottom/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933355" />
-    <state width="1329" height="210" key="GridCell.Tab.3.center" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.3.center" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.3.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.3.center/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.3.center/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.3.left" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.3.left" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.3.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.3.left/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.3.left/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933354" />
-    <state width="1329" height="210" key="GridCell.Tab.3.right" timestamp="1586196606639">
+    <state width="1329" height="244" key="GridCell.Tab.3.right" timestamp="1586280327067">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1329" height="210" key="GridCell.Tab.3.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196606639" />
+    <state width="1329" height="244" key="GridCell.Tab.3.right/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586280327067" />
     <state width="1236" height="266" key="GridCell.Tab.3.right/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586149933355" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1585657335456">
       <screen x="0" y="0" width="1536" height="824" />
@@ -1609,11 +628,11 @@
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585238224445" />
     <state width="498" height="477" key="SwitcherDM/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585739648268" />
     <state width="498" height="498" key="SwitcherDM/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585898945683" />
-    <state x="361" y="1214" key="Vcs.Push.Dialog.v2" timestamp="1586111682567">
-      <screen x="0" y="1080" width="1536" height="824" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1586196730195">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="-946" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585333341278" />
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585750018214" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586196730195" />
     <state x="361" y="1214" key="Vcs.Push.Dialog.v2/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1586111682567" />
     <state x="372" y="-1065" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585302419621">
       <screen x="0" y="-1080" width="1536" height="824" />
@@ -1623,11 +642,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585579452340" />
-    <state x="643" y="1080" width="638" height="665" maximized="true" key="dock-window-1" timestamp="1585748691943">
+    <state x="0" y="1080" width="1207" height="779" maximized="true" key="dock-window-1" timestamp="1586229219519">
       <screen x="0" y="1080" width="1536" height="824" />
     </state>
     <state x="-294" y="-805" width="1262" height="768" key="dock-window-1/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585292729198" />
-    <state x="643" y="1080" width="638" height="665" maximized="true" key="dock-window-1/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585748691943" />
+    <state x="0" y="1080" width="1207" height="779" maximized="true" key="dock-window-1/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586229219519" />
     <state x="805" y="122" width="638" height="779" key="dock-window-2" timestamp="1585592251546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -1649,11 +668,11 @@
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/0.-1080.1536.824@0.0.1536.824" timestamp="1585206957329" />
     <state x="426" y="187" key="run.anything.popup/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586007695032" />
     <state x="426" y="1267" key="run.anything.popup/0.1080.1536.824/0.0.1536.824@0.1080.1536.824" timestamp="1585982419171" />
-    <state x="802" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585656615631">
+    <state x="802" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586266997817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="802" y="-935" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/0.-1080.1536.824@0.-1080.1536.824" timestamp="1585313639921" />
-    <state x="802" y="145" width="672" height="678" key="search.everywhere.popup/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1585656615631" />
+    <state x="802" y="145" width="672" height="678" key="search.everywhere.popup/0.1080.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1586266997817" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1670,43 +689,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java</url>
-          <line>104</line>
+          <line>101</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
-          <line>135</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java</url>
-          <line>148</line>
+          <line>146</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
-          <line>172</line>
+          <line>173</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java</url>
-          <line>174</line>
+          <line>186</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/service/serviceImpl/UserServiceImpl.java</url>
-          <line>198</line>
-          <option name="timeStamp" value="80" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/CartController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bookshop/common/checkSession.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

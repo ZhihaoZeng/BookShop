@@ -96,7 +96,7 @@
                     success: function (response) {
                         if (response.status == 0) {
                             alert("删除成功");
-                            getBookData();
+                            getOrderData();
                         } else {
                             alert("删除失败" + response.msg);
                         }
@@ -142,7 +142,7 @@
                     });
                 });
             //全部删除完后更新页面
-            getBookData();
+            getOrderData();
             // 截掉最后一个","
             /*if (allIDCheck.length > 0) {
                 allIDCheck = allIDCheck.substring(0, allIDCheck.length - 1);
@@ -161,7 +161,7 @@
             if(nowPage==totalPage){
                 alert("您现在已经在尾页");
             }else{
-                getBookData(nowPage+1);
+                getOrderData(nowPage+1);
             }
         }
 
@@ -170,7 +170,7 @@
             if(nowPage==1){
                 alert("您现在已经在首页");
             }else{
-                getBookData(nowPage-1);
+                getOrderData(nowPage-1);
             }
         }
 
@@ -180,7 +180,7 @@
             if(nowPage==totalPage){
                 alert("您现在已经在尾页");
             }else{
-                getBookData(totalPage);
+                getOrderData(totalPage);
             }
         }
 
@@ -228,17 +228,34 @@
         window.onload = function init() {
             getOrderData(1);
         }
-
+        function getParam(name) {
+            var search = document.location.search;
+            var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+            var matcher = pattern.exec(search);
+            var items = null;
+            if (null != matcher) {
+                try {
+                    items = decodeURIComponent(decodeURIComponent(matcher[1]));
+                } catch (e) {
+                    try {
+                        items = decodeURIComponent(matcher[1]);
+                    } catch (e) {
+                        items = matcher[1];
+                    }
+                }
+            }
+            return items;
+        }
         function getOrderData(startPage) {
+            alert(parseInt($("#startPage").val()));
+            var userId = parseInt(getParam("userId"));
+            /*请求信息*/
             /*请求信息*/
             if(startPage == null||startPage == 0||startPage<0){
-                var startPage = parseInt($("#startPage").val());
+                var startPage = document.getElementById("startPage").innerText;
             }
             var orderName = $("#orderNameSearch").val();
 
-            if (startPage != null && startPage >= 0) {
-                startPage = 1;
-            }
             if (orderName == "" || orderName == null) {
                 orderName = null;
             } else {
@@ -246,13 +263,10 @@
             }
 
             $.ajax({
-                url: "/order/searchOrderPage",
+                url: "/order/searchOrdersPage",
                 contentType: "application/json;charset=UTF-8", //必须有
-                dataType: "text", //表示返回值类型，不必须
+                dataType: "json", //表示返回值类型，不必须
                 type: "post",
-                // data:{
-                //     user:"book"
-                // },
                 /**  订单id
                  用户id
                  时间（起始日期）-（结束日期）     两个文本框中间加一条线
@@ -267,12 +281,14 @@
                  private User user;**/
                 data: JSON.stringify({
                     /*todo 框中为空 传去的参数是为空还是为？0*/
-                    "startPage": parseInt($("#startPage").val()),
+                    "startPage": startPage,
                     "orderId": parseInt($("#orderIdSearch").val()),
-                    "userId": parseInt($("#userIdSearch").val()),
+                    "userId": userId==null?parseInt($("#userIdSearch").val()):userId,
                     "purchaseTime":$("#purchaseTime").val()==""?null:$("#purchaseTime").val(),
                     // "userAddress": $("#userAddressSearch").val()==""?null:$("#userAddressSearch").val(),
-                    "orderStatus": $("#orderStatus").val()==""?null:$("#userStateSearch").val()
+                    "orderStatus": $("#orderStatus").val()==""?null:$("#userStateSearch").val(),
+                    "startTime": $("#startTime").val() == "" ? null : $("#startTime").val(),
+                    "endTime": $("#endTime").val() == "" ? null : $("#endTime").val()
                 }),
                 success: function (response) {
                     // alert("1");
@@ -569,6 +585,12 @@
                                                 支付时间&nbsp;&nbsp;<input type="text" id="purchaseTime"
                                                                        name="fangyuanEntity.purchaseTime"
                                                                        class="ui_input_txt02"/>
+                                                支付时间<input type="text" id="startTime"
+                                                           name="fangyuanEntity.startTime"
+                                                           class="ui_input_txt01" value=""/>
+                                                ----<input type="text" id="endTime"
+                                                           name="fangyuanEntity.startTime"
+                                                           class="ui_input_txt01" value=""/>
                                                 订单状态&nbsp;&nbsp;
                                                 <select name="fangyuanEntity.orderStatus" id="orderStatus"
                                                         class="ui_select01">
@@ -580,7 +602,7 @@
 
                                             </div>
                                             <div id="box_bottom">
-                                                <input type="button" value="查询" class="ui_input_btn0" onclick="getBookData();"/>
+                                                <input type="button" value="查询" class="ui_input_btn0" onclick="getOrderData();"/>
                                                 <input type="button" value="新增" class="ui_input_btn0" id="addBtn"/>
                                                 <input type="button" value="删除" class="ui_input_btn0" onclick="batchDel();"/>
                                             </div>

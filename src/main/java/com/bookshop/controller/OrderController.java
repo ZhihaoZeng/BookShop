@@ -1,5 +1,6 @@
 package com.bookshop.controller;
 
+import com.bookshop.common.checkSession;
 import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.OrderDao;
 import com.bookshop.entity.Book;
@@ -25,29 +26,59 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/order")
-public class OrderController{
+public class OrderController {
 
     @Resource
     OrderService orderService;
 
+    @RequestMapping("/getOrderById")
+    @ResponseBody
+    public responseFromServer getOrderById(@RequestBody Integer orderId, HttpSession session) {
+        if (checkSession.check(session))
+            return orderService.getOrder(orderId);
+        return responseFromServer.needLogin();
+    }
+
     @RequestMapping("/getOrder")
     @ResponseBody
-    public responseFromServer getOrder(@RequestBody Integer orderId){
-        return orderService.getOrder(orderId);
+    public responseFromServer getOrder(@RequestBody Order order, HttpSession session) {
+        if (checkSession.check(session))
+            return orderService.getOrder(order.getOrderId());
+        return responseFromServer.needLogin();
     }
 
     @RequestMapping("/getOrdersByUserId")
     @ResponseBody
-    public responseFromServer getOrdersByUserId(@RequestBody Integer userId){
-        return orderService.getOrdersByUserId(userId);
+    public responseFromServer getOrdersByUserId(@RequestBody Integer userId, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.getOrdersByUserId(userId);
+        else if (checkSession.check(session)) {
+            if (((User) session.getAttribute("user")).getUserId().intValue() == userId.intValue()) {
+                return orderService.getOrdersByUserId(userId);
+            } else return responseFromServer.error("非法操作");
+        }
+        return responseFromServer.needLogin();
     }
 
 
     @RequestMapping("/searchOrdersPage")
     @ResponseBody
-    public responseFromServer searchOrderPage(@RequestBody Map<String,Object> requestMap){
-        return orderService.searchOrdersPage(requestMap);
+    public responseFromServer searchOrdersPage(@RequestBody Map<String, Object> requestMap, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.searchOrdersPage(requestMap);
+        else if (checkSession.check(session)) {
+            Integer userId = (Integer) requestMap.get("userId");
+            User user = (User) session.getAttribute("user");
+            if (userId != null && userId.intValue() == user.getUserId().intValue()) {
+                return orderService.searchOrdersPage(requestMap);
+            } else {
+                return responseFromServer.error("非法操作");
+            }
+        }
+        return responseFromServer.needLogin();
     }
+
+
 
 /*
     @RequestMapping("/createOrder")
@@ -56,87 +87,140 @@ public class OrderController{
 
     @RequestMapping("/insertOrder")
     @ResponseBody
-    public responseFromServer insertOrder(@RequestBody Order order,HttpSession session){
-        if(order.getUser()==null&&order.getUserId()==null){
-            User tempUser = (User)session.getAttribute("user");
-
-            order.setUserId(tempUser.getUserId());
+    public responseFromServer insertOrder(@RequestBody Order order, HttpSession session) {
+        if (checkSession.checkManager(session)) {
+            if (order != null && order.getUserId() == null) {
+                order.setUserId(((User) session.getAttribute("user")).getUserId());
+            }
+            return orderService.insertOrder(order);
+        } else if (checkSession.check(session)) {
+            if (order != null) {
+                order.setUserId(((User) session.getAttribute("user")).getUserId());
+                return orderService.insertOrder(order);
+            } else {
+                return responseFromServer.error("非法操作");
+            }
         }
+        return responseFromServer.needLogin();
 
-        return orderService.insertOrder(order);
+            /*        if (order.getUser() == null && order.getUserId() == null) {
+            User tempUser = (User) session.getAttribute("user");
+            order.setUserId(tempUser.getUserId());
+        }*/
+
     }
 
 
     @RequestMapping("/insertOrders")
     @ResponseBody
-    public responseFromServer insertOrders(@RequestBody List<Order> orders){
-        return orderService.insertOrders(orders);
+    public responseFromServer insertOrders(@RequestBody List<Order> orders, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.insertOrders(orders);
+        return responseFromServer.error("非法操作");
     }
 
 
     @RequestMapping("/getOrdersPlusByUserId")
     @ResponseBody
-    public responseFromServer getOrdersPlusByUserId(@RequestBody Map<String,Object>reqeustMap){
+    public responseFromServer getOrdersPlusByUserId(@RequestBody Map<String, Object> reqeustMap) {
         //requestMap中应包含userId
         return orderService.getOrdersPlusByUserId(reqeustMap);
     }
 
     @RequestMapping("/updateOrder")
     @ResponseBody
-    public responseFromServer updateOrder(@RequestBody Order order){
-        return orderService.updateOrder(order);
+    public responseFromServer updateOrder(@RequestBody Order order, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.updateOrder(order);
+        return responseFromServer.error("非法操作");
     }
 
     @RequestMapping("/updateOrders")
     @ResponseBody
-    public responseFromServer updateOrders(@RequestBody List<Order> orders){
-        return orderService.updateOrders(orders);
+    public responseFromServer updateOrders(@RequestBody List<Order> orders, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.updateOrders(orders);
+        return responseFromServer.error("非法操作");
     }
 
     @RequestMapping("/deleteOrderById")
     @ResponseBody
-    public responseFromServer deleteOrderById(@RequestBody Integer orderId){
-        return orderService.deleteOrderById(orderId);
+    public responseFromServer deleteOrderById(@RequestBody Integer orderId, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.deleteOrderById(orderId);
+        else if (checkSession.check(session)) {
+            User user = (User) session.getAttribute("user");
+            Order order = (Order) orderService.getOrder(orderId).getData();
+            if (order.getUserId() == null) return responseFromServer.error("查询出错");
+            if (order.getUserId().intValue() == user.getUserId().intValue()) {
+                return orderService.deleteOrderById(orderId);
+            } else {
+                return responseFromServer.error("非法操作");
+            }
+        }
+        return responseFromServer.needLogin();
     }
 
     @RequestMapping("/deleteOrder")
     @ResponseBody
-    public responseFromServer deleteOrder(@RequestBody Order order){
-        return orderService.deleteOrder(order);
+    public responseFromServer deleteOrder(@RequestBody Order order, HttpSession session) {
+        if (checkSession.checkManager(session))
+            return orderService.deleteOrder(order);
+        else if (checkSession.check(session)) {
+            User user = (User) session.getAttribute("user");
+            if (order.getUserId() == null) return responseFromServer.error("查询出错");
+            if (order.getUserId().intValue() == user.getUserId().intValue()) {
+                return orderService.deleteOrder(order);
+            } else {
+                return responseFromServer.error("非法操作");
+            }
+        }
+        return responseFromServer.needLogin();
     }
 
     @RequestMapping("/deleteOrders")
     @ResponseBody
-    public responseFromServer deleteOrders(@RequestBody List<Order> orders){
-        return orderService.deleteOrders(orders);
+    public responseFromServer deleteOrders(@RequestBody List<Order> orders, HttpSession session) {
+        if (checkSession.checkManager(session)) {
+            return orderService.deleteOrders(orders);
+        }
+        return responseFromServer.error("非法操作");
     }
 
     @RequestMapping("/showItems")
     @ResponseBody
-    public responseFromServer showItems(@RequestBody OrderItem item){
+    public responseFromServer showItems(@RequestBody OrderItem item) {
         Book book = item.getBook();
         return responseFromServer.success(book);
     }
 
     @RequestMapping("/insertOrderItem")
     @ResponseBody
-    public responseFromServer insertOrderItem(OrderItem orderItem){
-        return orderService.insertOrderItem(orderItem);
+    public responseFromServer insertOrderItem(@RequestBody OrderItem orderItem, HttpSession session) {
+        if (checkSession.checkManager(session)) {
+            return orderService.insertOrderItem(orderItem);
+        }
+        return responseFromServer.error("非法操作");
     }
 
 
     @RequestMapping("/updateOrderItem")
     @ResponseBody
-    public responseFromServer updateOrderItem(List<OrderItem> orderItems){
-        return orderService.updateOrderItem(orderItems);
+    public responseFromServer updateOrderItem(List<OrderItem> orderItems, HttpSession session) {
+        if (checkSession.checkManager(session)) {
+            return orderService.updateOrderItem(orderItems);
+        }
+        return responseFromServer.error("非法操作");
     }
-
 
 
     @RequestMapping("/deleteOrderItem")
     @ResponseBody
-    public responseFromServer deleteOrderItem(OrderItem orderItem){
-        return orderService.deleteOrderItem(orderItem);
+    public responseFromServer deleteOrderItem(OrderItem orderItem, HttpSession session) {
+        if (checkSession.checkManager(session)) {
+            return orderService.deleteOrderItem(orderItem);
+        }
+        return responseFromServer.error("非法操作");
     }
 
 }

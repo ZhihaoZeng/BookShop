@@ -58,6 +58,9 @@ public class OrderServiceImpl implements OrderService {
         page.setLists(orderDao.searchOrders(queryMap));
         return responseFromServer.success(page);
         */
+        if(queryMap.get("startPage")==null){
+            queryMap.put("startPage",1);
+        }
         return responseFromServer.success(getPage(queryMap));
     }
 
@@ -81,7 +84,7 @@ public class OrderServiceImpl implements OrderService {
         queryMap.put("pageSize",configs.pageSize);
         page.setTotalCount(orderDao.count(queryMap));
         page.setCurrPage((Integer)queryMap.get("startPage"));
-        queryMap.put("startPage",page.getCurrPage()-1);
+        queryMap.put("startPage",(page.getCurrPage()-1)*configs.pageSize);
         page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
         page.setLists(orderDao.searchOrders(queryMap));
         return page;

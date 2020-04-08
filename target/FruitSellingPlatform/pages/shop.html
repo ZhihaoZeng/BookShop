@@ -33,6 +33,17 @@
 </div>
 <!-- preloader area end -->
 
+<!-- preloader area start -->
+<div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+</div>
+<!-- preloader area end -->
+
 <!-- search Popup -->
 <div class="body-overlay" id="body-overlay"></div>
 <div class="search-popup" id="search-popup">
@@ -96,11 +107,14 @@
                     <ul class="topbar-right float-md-right">
                         <div class="align-self-center">
                             <div class="shop-cart-area">
-                                <ul>
+                                <ul id="userCart">
 
                                     <!--                                <li><span>6</span><i class="fa fa-heart-o"></i></li>-->
-                                    <li><span>5</span><i class="las la-shopping-cart"></i></li>
-                                    <li>$ 155.00 .</li><!--                                todo 获取购物车价格-->
+                                    <li id="userCartCount" onclick="goToCart();">
+                                        <i class="las la-shopping-cart" onclick="goToCart();"></i>
+                                        <span id="userCartCountSpan"></span>
+                                    </li>
+                                    <!--                                    <li id="userCartPrice" onclick="goToCart();">$ 155.00 .</li>&lt;!&ndash;                                todo 获取购物车价格&ndash;&gt;-->
                                 </ul>
                             </div>
                         </div>
@@ -109,6 +123,9 @@
                         </div>
                         <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
                         <script type="text/javascript">
+                            function checkLoginStatus(){
+
+                            }
                             function logOut() {
                                 alert("login");
                                 $.ajax({
@@ -132,8 +149,33 @@
                                 });
                             }
 
+                            function goToCart(){
+                                window.open("cart.html");
+                            }
+
                             function checkLogin() {
-                                var user = sessionStorage.getItem("user");
+                                var user;
+                                $.ajax({
+                                    async:false,
+                                    url: "http://localhost:8080/user/checkLogin",
+                                    contentType: "application/json;charset=UTF-8", //必须有
+                                    dataType: "json", //表示返回值类型，不必须
+                                    type: "post",
+                                    success: function (response) {
+                                        if (response.status == 0) {
+                                            // alert("已登录");
+                                            user = response.data;
+                                            // alert(user.userId);
+                                        } else {
+                                            // alert("未登录");
+                                            return null;
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("请求失败");
+                                        return null;
+                                    }
+                                });
                                 if (user == null || user.userId == null) {
                                     var str =
                                         "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
@@ -143,6 +185,8 @@
                                         "</div>";
                                     $("#myaccountdropdown").append(str);
                                 } else {
+                                    // alert(user.userName);
+                                    /*用户选项*/
                                     var str =
                                         "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
                                         user.userName + "</a>" +
@@ -152,21 +196,43 @@
                                         "<a class=\"dropdown-item\"target=\"_blank\" onclick=\"logOut()\">退登</a>\n" +
                                         "</div>";
                                     $("#myaccountdropdown").append(str);
+
+                                    $.ajax({
+                                        url: "http://localhost:8080/cart/getCartNum",
+                                        contentType: "application/json;charset=UTF-8", //必须有
+                                        dataType: "json", //表示返回值类型，不必须
+                                        type: "post",
+                                        // data: JSON.stringify(),/*不需要传用户数据*/
+                                        success: function (response) {
+                                            if(response.status==0){
+                                                document.getElementById("userCartCountSpan").innerText = response.data;
+                        /*                        str = "<span>"+response.data+"</span>";
+                                                $("#userCartCount").append(str);*/
+                                            }else{
+                                                alert("获取购物车信息错误");
+                                            }
+                                        },
+                                        error: function () {
+                                            alert("请求失败");
+                                        }
+                                    });
                                 }
                             }
-
 
                             window.onload = function () {
                                 checkLogin();
                                 loadrequest();
                             }
-                        </script>
 
+                        </script>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
 
     <div class="navbar-middle d-none d-lg-block">
@@ -258,13 +324,14 @@
 
                 </ul>
             </div>
-            <div class="nav-right-part">
+            <!--<div class="nav-right-part">
                 <a href="cart.html" class="right-part-text">购物车</a>
-            </div>
+            </div>-->
         </div>
     </nav>
 </div>
 <!-- navbar end -->
+
 <!-- breadcrumb-area start -->
 <nav class="breadcrumb-area" aria-label="breadcrumb">
     <div class="container">

@@ -49,7 +49,8 @@
             <img src="../assets/img/logo.png" alt="logo"/>
         </div>
         <div class="sidemenu-text">
-            <p>We believe brand interaction is key in commu- nication. Real inno vations and a positive customer experience are the heart of successful commu- nication.</p>
+            <p>We believe brand interaction is key in commu- nication. Real inno vations and a positive customer
+                experience are the heart of successful commu- nication.</p>
         </div>
         <div class="sidebar-contact">
             <h4>Contact Us</h4>
@@ -84,81 +85,134 @@
                     <ul class="topbar-left">
                         <li class="topbar-single-info"><i class="fa fa-phone"></i>+123 4567 8910</li>
                         <li class="topbar-single-info"><i class="fa fa-map-marker"></i>Store Location</li>
-                        <li class="topbar-single-info d-none d-lg-block"><i class="fa fa-crosshairs"></i>Track Your Order</li>
+                        <li class="topbar-single-info d-none d-lg-block"><i class="fa fa-crosshairs"></i>Track Your
+                            Order
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-6 text-md-right text-center">
                     <ul class="topbar-right float-md-right">
                         <div class="align-self-center">
                             <div class="shop-cart-area">
-                                <ul>
+                                <ul id="userCart">
 
                                     <!--                                <li><span>6</span><i class="fa fa-heart-o"></i></li>-->
-                                    <li><span>5</span><i class="las la-shopping-cart"></i></li>
-                                    <li>$ 155.00   . </li><!--                                todo 获取购物车价格-->
+                                    <li id="userCartCount" onclick="goToCart();">
+                                        <i class="las la-shopping-cart" onclick="goToCart();">
+                                        </i>
+                                        <span id="userCartCountSpan"></span>
+                                    </li>
+                                    <!--                                    <li id="userCartPrice" onclick="goToCart();">$ 155.00 .</li>&lt;!&ndash;                                todo 获取购物车价格&ndash;&gt;-->
                                 </ul>
                             </div>
                         </div>
-                        <div class="dropdown topbar-help">
+                        <div class="dropdown topbar-help" id="myaccountdropdown">
                             <i class="fa fa-user"></i>
-                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                My Account
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                                <a class="dropdown-item" href="user-order.html">我的订单</a>
-                                <a class="dropdown-item" href="user-setting.html">用户设置</a>
-                                <a class="dropdown-item" onclick="logOut()">退登</a>
-                            </div>
                         </div>
-
-                        <!--  <li class="dropdown">
-                              <a href="">My Account</a>
-                              <ul class="sub-menu">
-                                  <li><a href="user-order.html">我的订单</a></li>
-                                  <li><a href="user-setting.html">用户设置</a></li>
-                                  <li><a onclick="logOut()">退登</a></li>
-                              </ul>
-                              &lt;!&ndash;<ul class="sidebar-categories">
-                                  <li><a href="#"><img src="../assets/img/icon/laptop.png" alt="img">Computer &amp; Offices<i class="fa fa-angle-down"></i></a></li>
-                                  <li><a href="#"><img src="../assets/img/icon/chair.png" alt="img">Home &amp; Furniture<i class="fa fa-angle-down"></i></a></li>
-                                  <li><a href="#"><img src="../assets/img/icon/phone.png" alt="img">Mobile &amp; Tablets<i class="fa fa-angle-down"></i></a></li>
-                                  <li><a href="#"><img src="../assets/img/icon/ball.png" alt="img">Sports &amp; Outdoors<i class="fa fa-angle-down"></i></a></li>
-                                  <li><a href="#"><img src="../assets/img/icon/heart.png" alt="img">Beauty &amp; Health<i class="fa fa-angle-down"></i></a></li>
-                                  <li><a href="#"><img src="../assets/img/icon/monitor.png" alt="img">Radio &amp; TV<i class="fa fa-angle-down"></i></a></li>
-                              </ul>&ndash;&gt;
-                          </li>-->
                         <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-                        <script  type="text/javascript">
-                            function logOut(){
+                        <script type="text/javascript">
+                            function logOut() {
                                 alert("login");
                                 $.ajax({
-                                    async:false,
+                                    async: false,
                                     url: "http://localhost:8080/user/logOut",
                                     contentType: "application/json;charset=UTF-8", //必须有
                                     dataType: "json", //表示返回值类型，不必须
                                     type: "post",
                                     data: JSON.stringify({}),
                                     success: function (response) {
-                                        if(response.status == 0){
+                                        if (response.status == 0) {
                                             /*退登成功*/
-                                            window.location.href="login.html";
-                                        }else{
+                                            window.location.href = "login.html";
+                                        } else {
                                             alert("退登失败");
                                         }
                                     },
-                                    error:function () {
+                                    error: function () {
                                         alert("请求失败");
                                     }
                                 });
                             }
-                        </script>
 
+                            function goToCart() {
+                                window.open("cart.html");
+                            }
+
+                            function checkLogin() {
+                                var user;
+                                $.ajax({
+                                    async: false,
+                                    url: "http://localhost:8080/user/checkLogin",
+                                    contentType: "application/json;charset=UTF-8", //必须有
+                                    dataType: "json", //表示返回值类型，不必须
+                                    type: "post",
+                                    success: function (response) {
+                                        if (response.status == 0) {
+                                            // alert("已登录");
+                                            user = response.data;
+                                            // alert(user.userId);
+                                        } else {
+                                            // alert("未登录");
+                                            return null;
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("请求失败");
+                                        return null;
+                                    }
+                                });
+                                if (user == null || user.userId == null) {
+                                    var str =
+                                        "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
+                                        "请登录</a>" +
+                                        "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink2\" >\n" +
+                                        "<a class=\"dropdown-item\" target=\"_blank\" href=\"login.html\">登录</a> " +
+                                        "</div>";
+                                    $("#myaccountdropdown").append(str);
+                                } else {
+                                    // alert(user.userName);
+                                    /*用户选项*/
+                                    var str =
+                                        "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
+                                        user.userName + "</a>" +
+                                        "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink2\" >\n" +
+                                        "<a class=\"dropdown-item\"target=\"_blank\" href=\"user-order.html\">我的订单</a>" +
+                                        "<a class=\"dropdown-item\"target=\"_blank\"  href=\"user-setting.html\">用户设置</a> " +
+                                        "<a class=\"dropdown-item\"target=\"_blank\" onclick=\"logOut()\">退登</a>\n" +
+                                        "</div>";
+                                    $("#myaccountdropdown").append(str);
+
+                                    $.ajax({
+                                        url: "http://localhost:8080/cart/getCartNum",
+                                        contentType: "application/json;charset=UTF-8", //必须有
+                                        dataType: "json", //表示返回值类型，不必须
+                                        type: "post",
+                                        // data: JSON.stringify(),/*不需要传用户数据*/
+                                        success: function (response) {
+                                            if (response.status == 0) {
+                                                document.getElementById("userCartCountSpan").innerText = response.data;
+/*                                                str = "<span>" + response.data + "</span>";
+                                                $("#userCartCount").append(str);*/
+                                            } else {
+                                                alert("获取购物车信息错误");
+                                            }
+                                        },
+                                        error: function () {
+                                            alert("请求失败");
+                                        }
+                                    });
+                                }
+                            }
+
+
+                        </script>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+
     <div class="navbar-middle d-none d-lg-block">
         <div class="container">
             <div class="row">
@@ -185,8 +239,8 @@
                         <button onclick="shopPage()">搜索</button>
 
                         <script type="text/javascript">
-                            function shopPage(){
-                                window.location.href="shop.html?bookName="+$("#searchText").val();
+                            function shopPage() {
+                                window.location.href = "shop.html?bookName=" + $("#searchText").val();
                                 // window.location.href="shop.html?bookName="+searchText.val();
                             }
                         </script>
@@ -198,7 +252,8 @@
     <nav class="navbar navbar-area navbar-expand-lg nav-style-01">
         <div class="container nav-container">
             <div class="responsive-mobile-menu">
-                <button class="menu toggle-btn d-block d-lg-none" data-toggle="collapse" data-target="#zenax_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="menu toggle-btn d-block d-lg-none" data-toggle="collapse" data-target="#zenax_main_menu"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-left"></span>
                     <span class="icon-right"></span>
                 </button>
@@ -212,13 +267,20 @@
                     All Category
                 </div>
                 <ul class="sidebar-categories">
-                    <li><a href="shop.html?type=jiaoyukaoshi"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=xiaoshuo"><img src="../assets/img/icon/chair.png" alt="img">小说<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=tongshu"><img src="../assets/img/icon/phone.png" alt="img">童书<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=renwensheke"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=jiankang"><img src="../assets/img/icon/heart.png" alt="img">健康<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=yingwen"><img src="../assets/img/icon/monitor.png" alt="img">英文<i class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=ligong"><img src="../assets/img/icon/monitor.png" alt="img">理工<i class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=jiaoyukaoshi"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=xiaoshuo"><img src="../assets/img/icon/chair.png" alt="img">小说<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=tongshu"><img src="../assets/img/icon/phone.png" alt="img">童书<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=renwensheke"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=jiankang"><img src="../assets/img/icon/heart.png" alt="img">健康<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=yingwen"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?type=ligong"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
+                            class="fa fa-angle-down"></i></a></li>
                 </ul>
             </div>
             <div class="shop-cart-area">
@@ -240,9 +302,9 @@
 
                 </ul>
             </div>
-            <div class="nav-right-part">
+            <!--<div class="nav-right-part">
                 <a href="cart.html" class="right-part-text">购物车</a>
-            </div>
+            </div>-->
         </div>
     </nav>
 </div>
@@ -706,26 +768,27 @@
     function addToCart() {
         /*添加到购物车*/
         var bookId = parseInt(getParam("bookId"));
-        var cartNum = parseInt($("#cartNumber"));
-        var user = sessionStorage.getItem('user');
-        if(user==null){
-            window.open("login.html");
-            return;
-        }
-        var userId = parseInt(user.userId);
+        var cartNum = parseInt($("#cartNumber").val());
+
+
         $.ajax({
             url: "http://localhost:8080/cart/insertCartItem",
+            contentType: "application/json;charset=UTF-8", //必须有
             dataType: "json", //表示返回值类型，不必须
             type: "post",
             data: JSON.stringify({
                 "bookId": bookId,
-                "cartNum": cartNum,
-                "userId": userId
+                "cartNum": cartNum
             }),
             success: function (response) {
                 if (response.status == 0) {
-                    alert("添加成功");
-                } else {
+                    document.getElementById("userCartCountSpan").innerText = response.data;
+                    alert("成功加入购物车");
+                    /*todo 弹窗跳入*/
+                } else if(response.status==10){
+                    alert("请登录");
+                    window.open("login.html");
+                }else{
                     alert("添加失败");
                 }
             },
@@ -760,6 +823,7 @@
                 alert("请求失败");
             }
         });
+        checkLogin();
     }
 </script>
 

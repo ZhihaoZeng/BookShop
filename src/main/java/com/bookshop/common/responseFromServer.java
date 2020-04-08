@@ -14,7 +14,7 @@ import java.io.Serializable;
 @JsonSerialize(include =  JsonSerialize.Inclusion.NON_NULL)
 public class responseFromServer<T> implements Serializable {
 
-    private int status;//0 成功 1 失败
+    private int status;//0 成功 1 失败 10 需要登录
     private String msg;
     private T data;
 
@@ -53,6 +53,9 @@ public class responseFromServer<T> implements Serializable {
         return msg;
     }
 
+    public static <T> responseFromServer<T> needLogin(){
+        return new responseFromServer<T>(ResponseCode.NEED_LOGIN.getCode());
+    }
 
     public static <T> responseFromServer<T> success(){
         return new responseFromServer<T>(ResponseCode.SUCCESS.getCode());

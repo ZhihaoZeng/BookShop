@@ -60,14 +60,14 @@
 
     <select id="getOrdersPlusByUserId" parameterType="Integer" resultMap="orderResultMapPlus">
         select * from orders where user_id=#{userId}
-        <if test="startPage!=null and pageSize != null">and LIMIT #{startPage},#{pageSize}</if>
+        <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
 
     <select id="searchOrders" parameterType="java.util.HashMap" resultMap="orderResultMap">
         select * from orders where 1=1
         <include refid="search_where"/>
-        <if test="startPage!=null and pageSize != null">and LIMIT #{startPage},#{pageSize}</if>
+        <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
     <insert id="insertOrder" parameterType="com.bookshop.entity.Order">
@@ -131,7 +131,7 @@
         </foreach>
     </delete>
     <select id="count" parameterType="map" resultType="Integer">
-        select count(*) from orders where 1-=1
+        select count(*) from orders where 1=1
         <include refid="search_where"/>
     </select>
 

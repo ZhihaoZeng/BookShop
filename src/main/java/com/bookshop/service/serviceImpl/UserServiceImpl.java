@@ -151,7 +151,7 @@ public class UserServiceImpl implements UserService {
     private Page getPage(Map<String,Object> queryMap){
         Page<User> page = new Page<User>(configs.pageSize);
         Integer startPage = (Integer)(queryMap.get("startPage"));
-        queryMap.put("startPage",startPage-1);
+        queryMap.put("startPage",(startPage-1)*configs.pageSize);
         queryMap.put("pageSize",configs.pageSize);
         page.setCurrPage(startPage);
         page.setTotalCount(userDao.count(queryMap));
@@ -159,6 +159,7 @@ public class UserServiceImpl implements UserService {
         page.setLists(userDao.searchUsers(queryMap));
         return page;
     }
+
 
 
     public responseFromServer searchUsersPage(Map<String,Object> queryMap){
