@@ -14,6 +14,27 @@
 <!-- 分页栏容器 end -->
 
 
+<th scope="row" width="50"align="center">
+    <div align="center"style="margin-top: 20px;">
+        <span class="cbox" onclick="this.className=/checked/ig.test(this.className)?this.className.replace('checked',''):(this.className+' checked')"></span></div>
+
+    <!--                                        <input id="mycheckbox8" type="checkbox" class="checkbix" data-shape="circled" data-color="orange" data-text="Orange, circled" checked>-->
+</th>
+
+<th>
+    <input type="checkbox"  style="width:40px;heigh:40px" >
+</th>
+
+<table>
+    <tbody>
+        <tr id="fuck">
+            suck
+        </tr>
+    </tbody>
+</table>
+
+
+
 start
 <div class="topbar-cat-select">
     <select name="selection" id="selectionid">
@@ -33,6 +54,7 @@ start
     }*/
 
     window.onload = function loadrequest() {
+        document.getElementById("fuck").value = "hahahahhahaha";
         alert( document.getElementById("myspan").innerText);
         alert( $("#myspan").val());
 
@@ -51,7 +73,7 @@ start
         // document.getElementById("myInput").value = "456";
         // $("#myspan").text("456");
         // $("#myInput").val("456");
-
+/*
         $.ajax({
             async: false,
             url: "http://localhost:8080/user/setsession",
@@ -65,7 +87,7 @@ start
                 alert("setsession");
                 // alert(response.data.totalCount.toString());
                 // $("#text").append(response);
-               /* if (response.status == 0) {
+               /!* if (response.status == 0) {
                     /!*登录成功*!/
                     var page = response.data;
                     var books = page.lists;
@@ -101,7 +123,7 @@ start
                     alert("搜索成功");
                 } else {
                     alert("搜索失败");
-                }*/
+                }*!/
             },
             error: function () {
                 alert("请求失败");
@@ -119,7 +141,7 @@ start
                 alert("test success");
                 // alert(response.data.totalCount.toString());
                 // $("#text").append(response);
-                /* if (response.status == 0) {
+                /!* if (response.status == 0) {
                      /!*登录成功*!/
                      var page = response.data;
                      var books = page.lists;
@@ -155,12 +177,12 @@ start
                      alert("搜索成功");
                  } else {
                      alert("搜索失败");
-                 }*/
+                 }*!/
             },
             error: function () {
                 alert("请求失败");
             }
-        });
+        });*/
     }
 
 

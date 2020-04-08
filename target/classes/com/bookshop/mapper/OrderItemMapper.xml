@@ -41,9 +41,9 @@
     <insert id="insertOrderItems" parameterType="java.util.List">
         insert into order_item <include refid="table_column"/>
         values
-        <foreach collection="list" item="item" separator=".">
+        <foreach collection="list" item="item" separator=",">
             (
-                #{item.rderId},#{item.bookId},#{item.orderNum},#{item.orderItemStatus}
+                #{item.orderId},#{item.bookId},#{item.orderNum},#{item.orderItemStatus}
             )
         </foreach>
     </insert>

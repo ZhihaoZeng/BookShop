@@ -15,13 +15,14 @@
         <result property="orderStatus" column="order_status"/>
         <result property="orderAddress" column="order_address"/>
         <result property="purchaseTime" column="purchase_time"/>
-        <collection property="orderItems" column="order_id"
+        <result property="price" column="price"/>
+        <collection property="books" column="order_id"
                     javaType="java.util.List"
                     ofType="com.bookshop.entity.OrderItem"
-                    select="com.bookshop.dao.OrderItemDao.getOrderItems"/>
-        <collection property="user" column="user_id"
+                    select="com.bookshop.dao.OrderItemDao.getOrderItem"/>
+        <!--<collection property="user" column="user_id"
                     javaType="com.bookshop.entity.User"
-                    select="com.bookshop.dao.UserDao.getUser"/>
+                    select="com.bookshop.dao.UserDao.getUser"/>-->
     </resultMap>
 
     <resultMap id="orderResultMap" type="com.bookshop.entity.Order">
@@ -50,11 +51,11 @@
     </sql>
 
     <select id="getOrder" parameterType="Integer" resultMap="orderResultMapPlus">
-        select * from orders where user_id={userId}
+        select * from orders where order_id=#{orderId}
     </select>
 
 
-    <select id="getOrdersByUserId" parameterType="Integer" resultMap="orderResultMap">
+    <select id="getOrdersByUserId" parameterType="Integer" resultMap="orderResultMapPlus">
         select * from orders where user_id=#{userId}
     </select>
 
@@ -70,10 +71,10 @@
         <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
-    <insert id="insertOrder" parameterType="com.bookshop.entity.Order">
+    <insert id="insertOrder" parameterType="com.bookshop.entity.Order" useGeneratedKeys="true" keyProperty="orderId">
         insert into orders <include refid="table_column"/>
         values(
-            #{orderId},#{userId},#{orderStatus},#{orderAddress},#{purchaseTime}
+            #{userId},#{orderStatus},#{orderAddress},#{purchaseTime},#{price}
         )
     </insert>
 

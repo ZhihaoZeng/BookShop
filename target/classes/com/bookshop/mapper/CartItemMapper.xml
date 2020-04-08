@@ -68,7 +68,7 @@
         <set>
             <if test="cartNum!=null">cart_num=#{cartNum}</if>
         </set>
-        where user_id=#{userId} and book_id=#{book_id}
+        where user_id=#{userId} and book_id=#{bookId}
     </update>
 
     <update id="updateCartItems" parameterType="java.util.List">
@@ -77,19 +77,19 @@
             <set>
                 <if test="item.cartNum!=null">cart_num=#{item.cartNum}</if>
             </set>
-            where user_id=#{item.userId} and book_id=#{item.book_id}
+            where user_id=#{item.userId} and book_id=#{item.bookId}
         </foreach>
     </update>
 
     <delete id="deleteCartItem" parameterType="com.bookshop.entity.CartItem">
         delete from cart
-        where user_id=#{userId} and book_id=#{book_id}
+        where user_id=#{userId} and book_id=#{bookId}
     </delete>
 
     <delete id="deleteCartItems" parameterType="java.util.List">
         <foreach collection="list" item="item" index="index" separator=";">
             delete from cart
-            where user_id=#{items.userId} and book_id=#{items.book_id}
+            where user_id=#{items.userId} and book_id=#{items.bookId}
         </foreach>
     </delete>
 

@@ -115,8 +115,12 @@ public class CartController {
     @RequestMapping("/updateCartItem")
     @ResponseBody
     public responseFromServer updateCartItem(@RequestBody CartItem cartItem,HttpSession session) {
-        if(checkSession.checkManager(session))
+        if(checkSession.checkManager(session)){
+            if(cartItem.getUserId()==null){
+                cartItem.setUserId(((User)session.getAttribute("user")).getUserId().intValue());
+            }
             return cartService.updateCartItem(cartItem);
+        }
         else if(checkSession.check(session)){
             cartItem.setUserId(((User)session.getAttribute("user")).getUserId().intValue());
             return cartService.updateCartItem(cartItem);
@@ -137,8 +141,12 @@ public class CartController {
     @RequestMapping("/deleteCartItem")
     @ResponseBody
     public responseFromServer deleteCartItem(@RequestBody CartItem cartItem,HttpSession session) {
-        if(checkSession.checkManager(session))
+        if(checkSession.checkManager(session)){
+            if(cartItem.getUserId()==null){
+                cartItem.setUserId(((User)session.getAttribute("user")).getUserId().intValue());
+            }
             return cartService.updateCartItem(cartItem);
+        }
         else if(checkSession.check(session)){
             cartItem.setUserId(((User)session.getAttribute("user")).getUserId().intValue());
             return cartService.deleteCartItem(cartItem);

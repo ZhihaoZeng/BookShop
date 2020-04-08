@@ -1,12 +1,8 @@
 package com.bookshop.service.serviceImpl;
 
 import com.bookshop.common.responseFromServer;
-import com.bookshop.dao.OrderDao;
-import com.bookshop.dao.OrderItemDao;
-import com.bookshop.dao.UserDao;
-import com.bookshop.entity.Order;
-import com.bookshop.entity.OrderItem;
-import com.bookshop.entity.User;
+import com.bookshop.dao.*;
+import com.bookshop.entity.*;
 import com.bookshop.service.OrderService;
 import com.bookshop.util.Page;
 import com.bookshop.util.configs;
@@ -15,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,6 +28,8 @@ public class OrderServiceImpl implements OrderService {
     UserDao userDao;
     OrderDao orderDao;
     OrderItemDao orderItemDao;
+    BookDao bookDao;
+    CartItemDao cartItemDao;
 
     public responseFromServer getOrder(Integer orderId){
         Order order = orderDao.getOrder(orderId);
@@ -93,12 +92,12 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     public responseFromServer insertOrder(Order order){
         if(order == null
-                ||order.getOrderId()==null
                 ||order.getUserId()==null
                 ||order.getBooks()==null
                 ||order.getBooks().size()==0){
             return responseFromServer.error("创建订单失败");
-        }else if(order.getOrderAddress()==null){
+        }
+        if(order.getOrderAddress()==null){
             /*使用默认地址*/
             if(order.getUser()!=null&&order.getUser().getUserAddress()!=null){
                 order.setOrderAddress(order.getUser().getUserAddress());
@@ -112,14 +111,15 @@ public class OrderServiceImpl implements OrderService {
                 order.setUser(user);
                 order.setOrderAddress(address);
             }
-        }else if(order.getPrice()==null||order.getPrice()==0){
+        }
+        if(order.getPrice()==null||order.getPrice()==0){
             /*检查价格*/
-            order.calculateTotalPrice();
+            calculateTotalPrice(order);
         }
         if(orderDao.insertOrder(order)!=1){
             return responseFromServer.error("创建订单失败");
         }else{
-            /*插入orderItem*/
+            /*插入orderItems*/
             /*插入order后生成了orderid 将orderid更新到每个orderItem中*/
             List<OrderItem> orderItems = order.getBooks();
             for(int i =0;i<orderItems.size();i++){
@@ -133,32 +133,22 @@ public class OrderServiceImpl implements OrderService {
             }
             order.setBooks(orderItems);
             order.setOrderStatus("orderUnpaid");
+            List<CartItem> cartItems = new ArrayList<>();
+            /*删除购物车*/
+            for(OrderItem orderItem:orderItems){
+                CartItem cartItem = new CartItem();
+                cartItem.setUserId(order.getUserId());
+                cartItem.setBookId(orderItem.getBookId());
+                if(1!=cartItemDao.deleteCartItem(cartItem)){
+                    return responseFromServer.error("删除购物车错误");
+                }
+                //                cartItems.add(cartItem);
+            }
+//            cartItemDao.deleteCartItems(cartItems);
             return responseFromServer.success("创建订单成功",order);
         }
     }
 
-    /**
-     * @Description: 计算还未插入的订单的价格
-     * @Date:   2020/4/1 17:04
-     */
-    public responseFromServer calculateTotalPrice(Order order){
-        if(order==null)return responseFromServer.error("订单为空");
-        Double price = order.calculateTotalPrice();
-        if(price<0){
-            return responseFromServer.error("订单信息错误");
-            /*此时存在orderItem对象内有book对象缺失*//*
-            responseFromServer<Order> subResponse = getOrder(order.getOrderId());
-            if(subResponse.isSuccess()){
-                *//*根据传进的orderId来查询order完整信息，再*//*
-                order = (Order) subResponse.getData();
-                return responseFromServer.success(order.calculateTotalPrice());
-            }else{
-                return responseFromServer.error("订单信息错误");
-            }*/
-        }else{
-            return responseFromServer.success(price);
-        }
-    }
 
     public responseFromServer insertOrders(List<Order> orders){
         if (orders == null || orders.size()==0){
@@ -182,7 +172,7 @@ public class OrderServiceImpl implements OrderService {
     public responseFromServer updateOrder(Order order){
         if(order==null){
             return responseFromServer.error("订单信息错误");
-        }else if(order.calculateTotalPrice()<0){
+        }else if( !calculateTotalPrice(order).isSuccess()){
             /*计算价格错误*/
             return responseFromServer.error("订单商品信息不足");
         }
@@ -306,13 +296,30 @@ public class OrderServiceImpl implements OrderService {
         return responseFromServer.success(rows);
     }
 
+    public responseFromServer calculateTotalPrice(Order order){
+        double price = 0.0;
+        for(OrderItem orderItem:order.getBooks()){
+            Book book = orderItem.getBook();
+            if(orderItem.getBookId()==null)
+                return responseFromServer.error();//没有book对象
+            else{
+                book = bookDao.getBook(orderItem.getBookId());
+            }
+            orderItem.setBook(book);
+            price+=orderItem.getBook().getPrice()*orderItem.getOrderNum();
+        }
+        order.setPrice(price);
+        return responseFromServer.success(order);
+    }
 
 
     @Autowired
-    public OrderServiceImpl(OrderDao orderDao, OrderItemDao orderItemDao,UserDao userDao){
+    public OrderServiceImpl(OrderDao orderDao, OrderItemDao orderItemDao, UserDao userDao, BookDao bookDao, CartItemDao cartItemDao){
         this.userDao = userDao;
         this.orderDao = orderDao;
         this.orderItemDao = orderItemDao;
+        this.bookDao = bookDao;
+        this.cartItemDao = cartItemDao;
     }
 
 

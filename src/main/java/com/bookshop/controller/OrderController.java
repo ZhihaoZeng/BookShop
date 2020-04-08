@@ -3,11 +3,13 @@ package com.bookshop.controller;
 import com.bookshop.common.checkSession;
 import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.OrderDao;
+import com.bookshop.dao.UserDao;
 import com.bookshop.entity.Book;
 import com.bookshop.entity.Order;
 import com.bookshop.entity.OrderItem;
 import com.bookshop.entity.User;
 import com.bookshop.service.OrderService;
+import com.bookshop.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +33,50 @@ public class OrderController {
 
     @Resource
     OrderService orderService;
+    @Resource
+    UserService userService;
+
+    @RequestMapping("/purchase")
+    @ResponseBody
+    public responseFromServer purchase(@RequestBody Map<Integer,Object> map,HttpSession session){
+        if(checkSession.check(session)){
+            String userPassword = (String) map.get("userPassword");
+            Integer orderId = (Integer) map.get("orderId");
+            if(orderId==null||userPassword==null){
+                return responseFromServer.error("错误");
+            }
+            User user = (User) session.getAttribute("user");
+            user.setUserPassword(userPassword);
+            responseFromServer response = userService.login(user);
+            if(response.isSuccess()){
+                Order order = new Order();
+                order.setOrderStatus("paid");
+                return orderService.updateOrder(order);
+            }
+            return responseFromServer.error();
+        }else{
+            return responseFromServer.needLogin();
+        }
+    }
+
+
+    @RequestMapping("/purchaseOnDelivery")
+    @ResponseBody
+    public responseFromServer purchaseOnDelivery(@RequestBody Map<Integer,Object> map,HttpSession session){
+        if(checkSession.check(session)){
+            Integer orderId = (Integer) map.get("orderId");
+            if(orderId==null){
+                return responseFromServer.error("错误");
+            }
+            Order order = new Order();
+            order.setOrderStatus("unpaid-ondelivery");
+            return orderService.updateOrder(order);
+        }else{
+            return responseFromServer.needLogin();
+        }
+    }
+
+
 
     @RequestMapping("/getOrderById")
     @ResponseBody
@@ -49,16 +96,27 @@ public class OrderController {
 
     @RequestMapping("/getOrdersByUserId")
     @ResponseBody
-    public responseFromServer getOrdersByUserId(@RequestBody Integer userId, HttpSession session) {
+    public responseFromServer getOrdersByUserId(@RequestBody User user, HttpSession session) {
         if (checkSession.checkManager(session))
-            return orderService.getOrdersByUserId(userId);
+            return orderService.getOrdersByUserId(user.getUserId());
         else if (checkSession.check(session)) {
-            if (((User) session.getAttribute("user")).getUserId().intValue() == userId.intValue()) {
-                return orderService.getOrdersByUserId(userId);
+            if (((User) session.getAttribute("user")).getUserId().intValue() == user.getUserId().intValue()) {
+                return orderService.getOrdersByUserId(user.getUserId());
             } else return responseFromServer.error("非法操作");
         }
         return responseFromServer.needLogin();
     }
+
+    @RequestMapping("/getOrdersForUser")
+    @ResponseBody
+    public responseFromServer getOrdersForUser(HttpSession session) {
+        if (checkSession.check(session)){
+            User user = (User)session.getAttribute("user");
+            return orderService.getOrdersByUserId(user.getUserId());
+        }
+        return responseFromServer.needLogin();
+    }
+
 
 
     @RequestMapping("/searchOrdersPage")
@@ -130,8 +188,12 @@ public class OrderController {
     @RequestMapping("/updateOrder")
     @ResponseBody
     public responseFromServer updateOrder(@RequestBody Order order, HttpSession session) {
-        if (checkSession.checkManager(session))
+        if (checkSession.checkManager(session)){
+            if (order != null && order.getUserId() == null) {
+                order.setUserId(((User) session.getAttribute("user")).getUserId());
+            }
             return orderService.updateOrder(order);
+        }
         return responseFromServer.error("非法操作");
     }
 
@@ -164,8 +226,13 @@ public class OrderController {
     @RequestMapping("/deleteOrder")
     @ResponseBody
     public responseFromServer deleteOrder(@RequestBody Order order, HttpSession session) {
-        if (checkSession.checkManager(session))
+        if (checkSession.checkManager(session)){
+            if (order != null && order.getUserId() == null) {
+                order.setUserId(((User) session.getAttribute("user")).getUserId());
+            }
             return orderService.deleteOrder(order);
+
+        }
         else if (checkSession.check(session)) {
             User user = (User) session.getAttribute("user");
             if (order.getUserId() == null) return responseFromServer.error("查询出错");

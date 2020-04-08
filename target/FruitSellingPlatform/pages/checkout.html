@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title></title>
 
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>s
     <!-- Vendor Stylesheet -->
     <link rel="stylesheet" href="../assets/css/vendor.css">
     <!-- Main Stylesheet -->
@@ -123,7 +124,7 @@
                         <div class="logo-area">
                             <a href="../index.html"> <img src="../assets/img/logo.png" alt="logo"></a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="col-lg-7 text-center">
                         <form class="main-search d-inline-flex">
                             <input type="text" placeholder="Search product...">
@@ -146,7 +147,7 @@
                                 <li>$155.00</li>
                             </ul>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -260,6 +261,8 @@
     </nav>
     <!-- breadcrumb-area end -->
 
+
+
     <!-- shipping area start -->
     <div class="bg-gray-4 pd-100">
         <div class="container">
@@ -270,13 +273,22 @@
                         <form class="contact-form">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="payment-option">
-                                        <label>
-                                            <input type="radio" checked="checked" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <img src="../assets/img/footer/03.png" alt="#">
+                                    <div >
+                                        <div class="payment-option border-0">
+                                            <label>
+                                                <input type="radio" name="radio" id="alipay" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            支付宝
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div class="single-input-wrap">
+                                                <label>Passwrod</label>
+                                                <input type="password" class="single-input" id="userPassword">
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div class="payment-option border-0">
                                         <label>
                                             <input type="radio" checked="checked" name="radio">
@@ -336,18 +348,116 @@
                                 <div class="col-12">
                                     <div class="payment-option">
                                         <label>
-                                            <input type="radio" checked="checked" name="radio">
+                                            <input type="radio" checked="checked" name="radio" id="onDelivery">
                                             <span class="checkmark"></span>
                                         </label>
-                                       Cash on Delivery
+                                        Cash on Delivery
                                     </div>
                                 </div>
                                 <div class="col-12 text-right">
-                                    <button type="submit" class="btn bg-main">Checkout</button>
+                                    <button type="button" class="btn bg-main" onclick="purchase()">Checkout</button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                </div>
+                <div class="row">
+                   <!-- <div class="col-lg-6">
+                        <div class="shipping-area">
+                            <h3 class="title">Payment Details</h3>
+                            <form class="contact-form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="payment-option">
+                                            <label>
+                                                <input type="radio" name="radio" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            支付宝
+&lt;!&ndash;                                            <img src="../assets/img/footer/03.png" alt="#">&ndash;&gt;
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="single-input-wrap">
+                                                <label>Passwrod</label>
+                                                <input type="password" class="single-input" id="userPassword">
+                                            </div>
+                                        </div>
+                                        <div class="payment-option border-0">
+                                            <label>
+                                                <input type="radio"  name="radio" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            Credit Card
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <ul class="footer-currency currency-area">
+                                            <li><img src="../assets/img/footer/01.png" alt="img" ></li>
+                                            <li><img  src="../assets/img/footer/02.png" alt="img" ></li>
+                                            <li><img src="../assets/img/footer/04.png" alt="img"></li>
+                                            <li><img src="../assets/img/footer/05.png" alt="img"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="single-input-wrap">
+                                            <label>Full name</label>
+                                            <input type="text" class="single-input">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="single-input-wrap">
+                                            <label>Card Number</label>
+                                            <input type="password" class="single-input">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="single-input-wrap">
+                                            <label>Expire Date</label>
+                                            <select class="single-input">
+                                                <option>April</option>
+                                                <option>March</option>
+                                                <option>February</option>
+                                                <option selected="selected">January</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="single-input-wrap">
+                                            <label>Year</label>
+                                            <select class="single-input">
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2020</option>
+                                                <option selected="selected">2021</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="single-input-wrap">
+                                            <label>CCV</label>
+                                            <input type="text" class="single-input">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="payment-option">
+                                            <label>
+                                                <input type="radio"  name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            Cash on Delivery
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-right">
+                                        <button type="submit" class="btn bg-main">Checkout</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>-->
+
                 </div>
             </div>
         </div>
@@ -457,6 +567,91 @@
     </div>
     <!-- back to top area end -->
 
+    <script type="text/javascript">
+        window.onload=function(){
+            var orderId = parseInt(getParam("orderId"));
+            if(orderId == null){
+                alert("非法操作");ml
+                window.location.href("home.html");
+            }
+        }
+
+        function purchase(){
+            var orderId = parseInt(getParam("orderId"));
+            if($("#alipay").is(':checked') ){
+                var userPassword = $("#userPassword").val();
+                /*todo 支付*/
+                $.ajax({
+                    url: "http://localhost:8080/order/purchase",
+                    contentType: "application/json;charset=UTF-8", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    type: "post",
+                    data: JSON.stringify({
+                        "orderId": orderId,
+                        "userPassword":userPassword
+                    }),
+                    success: function (response) {
+                        if (response.status == 0) {
+                            alert("支付成功");
+                            window.location.href="user-order.html";
+                        } else {
+                            alert("支付失败");
+                        }
+                    },
+                    error() {
+                        alert("请求失败");
+                    }
+                });
+            }else if($("#onDelivery").is(':checked') ){
+                $.ajax({
+                    url: "http://localhost:8080/order/purchaseOnDelivery",
+                    contentType: "application/json;charset=UTF-8", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    type: "post",
+                    data: JSON.stringify({
+                        "orderId": orderId
+                    }),
+                    success: function (response) {
+                        if (response.status == 0) {
+                            alert("支付成功");
+                            window.location.href="user-order.html";
+                        } else {
+                            alert("支付失败");
+                        }
+                    },
+                    error() {
+                        alert("请求失败");
+                    }
+                });
+            }
+
+        }
+
+        function getParam(name) {
+            var search = document.location.search;
+            var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+            var matcher = pattern.exec(search);
+            var items = null;
+            if (null != matcher) {
+                try {
+                    items = decodeURIComponent(decodeURIComponent(matcher[1]));
+                } catch (e) {
+                    try {
+                        items = decodeURIComponent(matcher[1]);
+                    } catch (e) {
+                        items = matcher[1];
+                    }
+                }
+            }
+            return items;
+        }
+        function Alipay(){
+
+        }
+        function CreditCard(){
+
+        }
+    </script>
 
     <!-- all plugins here -->
     <script src="../assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

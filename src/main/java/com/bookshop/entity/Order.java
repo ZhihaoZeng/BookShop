@@ -96,14 +96,4 @@ public class Order {
         this.purchaseTime = purchaseTime;
     }
 
-    public Double calculateTotalPrice(){
-        double price = 0.0;
-        for(OrderItem orderItem:this.books){
-            Book book = orderItem.getBook();
-            if(book == null) return -1.0;//没有book对象
-            price+=orderItem.getBook().getPrice()*orderItem.getOrderNum();
-        }
-        this.price = price;
-        return price;
-    }
 }

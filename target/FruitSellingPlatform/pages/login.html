@@ -107,7 +107,7 @@
                             <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
                             <script type="text/javascript">
                                 function logOut() {
-                                    alert("login");
+                                    // alert("login");
                                     $.ajax({
                                         async: false,
                                         url: "http://localhost:8080/user/logOut",
@@ -282,7 +282,7 @@
 
     <script  type="text/javascript">
         function login(){
-            alert("login");
+            // alert("login");
             $.ajax({
                 async:false,
                 url: "http://localhost:8080/user/login",
@@ -297,7 +297,7 @@
                 success: function (response) {
                     if(response.status == 0){
                         /*登录成功*/
-                        alert("登录成功");
+                        // alert("登录成功");
                         window.location.href="home.html";
                     }else{
                         alert("登录失败");
