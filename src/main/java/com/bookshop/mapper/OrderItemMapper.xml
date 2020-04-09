@@ -11,7 +11,7 @@
     <resultMap id="orderItemResultMap" type="com.bookshop.entity.OrderItem">
         <id property="orderId" column="order_id"/>
         <result property="bookId" column="book_id"/>
-        <result property="orderNum" column="cart_num"/>
+        <result property="orderNum" column="order_num"/>
         <result property="orderItemStatus" column="order_item_status"/>
         <collection property="book" column="book_id"
                     javaType="com.bookshop.entity.Book"
@@ -52,7 +52,7 @@
         update order_item
         <set>
             <if test="orderNum!=null">order_num=#{orderNum},</if>
-            <if test="orderItemStatus1=null">order_item_status=#{orderItemStatus},</if>
+            <if test="orderItemStatus!=null">order_item_status=#{orderItemStatus},</if>
         </set>
         where order_id=#{orderId} and book_id=#{booK_id}
     </update>
@@ -62,7 +62,7 @@
             update order_item
             <set>
                 <if test="item.orderNum!=null">order_num=#{item.orderNum},</if>
-                <if test="item.orderItemStatus1=null">order_item_status=#{item.orderItemStatus},</if>
+                <if test="item.orderItemStatus!=null">order_item_status=#{item.orderItemStatus},</if>
             </set>
             where order_id=#{item.orderId} and book_id=#{item.booK_id}
         </foreach>

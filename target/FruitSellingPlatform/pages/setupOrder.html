@@ -458,7 +458,7 @@
         return items;
     }
     function getOrder() {
-        var orderId = parseInt(getParam("orderId"));
+        var orderId = getParam("orderId");
         if(orderId==null){
             alert("非法操作");
             window.location.href="home.html";
@@ -525,7 +525,6 @@
     function purchase(){
         var orderId = getParam("orderId");
         window.location.href="checkout.html?orderId="+orderId;
-
     }
 
 </script>

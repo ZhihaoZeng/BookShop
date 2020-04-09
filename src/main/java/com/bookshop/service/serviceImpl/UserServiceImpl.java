@@ -171,7 +171,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public responseFromServer getUser(Integer userId) {
-        return responseFromServer.success(userDao.getUser(userId));
+        User user = userDao.getUser(userId);
+        if(user == null){
+            return responseFromServer.error();
+        }else{
+            return responseFromServer.success(user);
+        }
     }
 
     @Override

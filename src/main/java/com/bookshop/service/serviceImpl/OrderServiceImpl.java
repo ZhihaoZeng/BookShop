@@ -169,6 +169,20 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Transactional
+    public responseFromServer purchase(Order order){
+        if(order==null){
+            return responseFromServer.error("订单信息错误");
+        }
+        if(order.getOrderId()==null||orderDao.updateOrder(order)!=1){
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return responseFromServer.error("支付失败");
+        }
+        return responseFromServer.success("支付成功",order);
+
+    }
+
+
+    @Transactional
     public responseFromServer updateOrder(Order order){
         if(order==null){
             return responseFromServer.error("订单信息错误");

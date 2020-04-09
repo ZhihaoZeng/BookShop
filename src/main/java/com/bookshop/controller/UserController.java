@@ -38,7 +38,7 @@ public class UserController {
             user.setUserPassword("");
             return responseFromServer.success(user);
         }
-        return responseFromServer.error();
+        return responseFromServer.needLogin();
     }
 
 
@@ -183,8 +183,24 @@ public class UserController {
     @RequestMapping("/updateUser")
     @ResponseBody
     public responseFromServer updateUser(@RequestBody User user, HttpSession session) {
-        if (checkSession.checkManager(session))
+        if(checkSession.checkManager(session)){
+            if(user.getUserId()==null){
+                user.setUserId(((User)session.getAttribute("user")).getUserId());
+                responseFromServer response =  userService.updateUser(user);
+                if(response.isSuccess()){
+                    session.removeAttribute("user");
+                    session.setAttribute("user",(User)userService.getUser(user.getUserId()).getData());
+                }
+                return response;
+            }
+        }else if (checkSession.checkManager(session)){
+            User loginUser =(User)session.getAttribute("user");
+            if(user.getUserId()!=null&&loginUser.getUserId()!=user.getUserId()){
+                return responseFromServer.error("非法操作");
+            }
+            user.setUserId(loginUser.getUserId());
             return userService.updateUser(user);
+        }
         return responseFromServer.needLogin();
     }
 

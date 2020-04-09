@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title></title>
 
-    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>s
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
     <!-- Vendor Stylesheet -->
     <link rel="stylesheet" href="../assets/css/vendor.css">
     <!-- Main Stylesheet -->
@@ -569,15 +569,16 @@
 
     <script type="text/javascript">
         window.onload=function(){
-            var orderId = parseInt(getParam("orderId"));
+            var orderId = getParam("orderId");
             if(orderId == null){
-                alert("非法操作");ml
+                alert("非法操作");
                 window.location.href("home.html");
             }
         }
 
         function purchase(){
             var orderId = parseInt(getParam("orderId"));
+            alert(orderId);
             if($("#alipay").is(':checked') ){
                 var userPassword = $("#userPassword").val();
                 /*todo 支付*/

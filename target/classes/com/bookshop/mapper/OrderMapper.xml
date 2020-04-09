@@ -54,7 +54,6 @@
         select * from orders where order_id=#{orderId}
     </select>
 
-
     <select id="getOrdersByUserId" parameterType="Integer" resultMap="orderResultMapPlus">
         select * from orders where user_id=#{userId}
     </select>
@@ -64,7 +63,6 @@
         <if test="startPage!=null and pageSize != null"> LIMIT #{startPage},#{pageSize}</if>
     </select>
 
-
     <select id="searchOrders" parameterType="java.util.HashMap" resultMap="orderResultMap">
         select * from orders where 1=1
         <include refid="search_where"/>
@@ -72,11 +70,35 @@
     </select>
 
     <insert id="insertOrder" parameterType="com.bookshop.entity.Order" useGeneratedKeys="true" keyProperty="orderId">
-        insert into orders <include refid="table_column"/>
+        insert into orders (<include refid="ordersInfoColumns"/>)
         values(
-            #{userId},#{orderStatus},#{orderAddress},#{purchaseTime},#{price}
+        <include refid="ordersInfoValues"/>
         )
     </insert>
+<!--#{userId},#{orderStatus},#{orderAddress},#{purchaseTime},#{price}-->
+
+    <sql id="ordersInfoColumns">
+        <trim suffixOverrides=",">
+            <if test="userId != null"> user_id,</if>
+            <if test="orderStatus != null"> order_status,</if>
+            <if test="orderAddress!=null"> order_address,</if>
+            <if test="purchaseTime != null"> purchase_time,</if>
+            <if test="price!=null"> price,</if>
+
+        </trim>
+    </sql>
+
+    <sql id="ordersInfoValues">
+        <trim suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="orderStatus != null">#{orderStatus},</if>
+            <if test="orderAddress!=null">#{orderAddress},</if>
+            <if test="purchaseTime != null">#{purchaseTime},</if>
+            <if test="price !=null"> #{price},</if>
+        </trim>
+    </sql>
+
+
 
     <insert id="insertOrders" parameterType="java.util.List">
         insert into orders <include refid="table_column"/>
@@ -97,10 +119,10 @@
         update orders
         <set>
             <if test="userId!=null">user_id=#{userId},</if>
-            <if test="orderStatus=null">order_status=#{orderStatus},</if>
-            <if test="orderAddress=null">order_addresas=#{orderAddress},</if>
-            <if test="purchaseTime=null">purchase_time=#{purchaseTime},</if>
-            <if test="price=null">price=#{price},</if>
+            <if test="orderStatus!=null">order_status=#{orderStatus},</if>
+            <if test="orderAddress!=null">order_addresas=#{orderAddress},</if>
+            <if test="purchaseTime!=null">purchase_time=#{purchaseTime},</if>
+            <if test="price!=null">price=#{price},</if>
         </set>
         where order_id=#{orderId}
     </update>
@@ -109,11 +131,11 @@
         <foreach collection="list" item="item" separator=";">
             update orders
             <set>
-                <if test="item.userId!=null">user_id=#{item.userId},</if>
-                <if test="item.orderStatus=null">order_status=#{item.orderStatus},</if>
-                <if test="item.orderAddress=null">order_addresas=#{item.orderAddress},</if>
-                <if test="item.purchaseTime=null">purchase_time=#{item.purchaseTime},</if>
-                <if test="item.price=null">price=#{item.price},</if>
+                <if test="item.userId!!=null">user_id=#{item.userId},</if>
+                <if test="item.orderStatus!=null">order_status=#{item.orderStatus},</if>
+                <if test="item.orderAddress!=null">order_addresas=#{item.orderAddress},</if>
+                <if test="item.purchaseTime!=null">purchase_time=#{item.purchaseTime},</if>
+                <if test="item.price!=null">price=#{item.price},</if>
             </set>
             where order_id=#{item.orderId}
         </foreach>

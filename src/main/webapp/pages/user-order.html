@@ -264,9 +264,8 @@
         <div class="row">
             <div class="col-12">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+                    <li class="breadcrumb-item"><a href="#">首页</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">我的订单</li>
                 </ul>
             </div>
         </div>
@@ -454,11 +453,13 @@
             success:function(response){
                 if(response.status==0){
                     var orders = response.data;
-                    for(var i =0;i<orders.length;i++){
+                    for(var i =orders.length-1;i>=0;i--){
                         var order = orders[i];
                         var orderItems = order.books;
-                        var price = order.price;
-                        var header = " <div class=\"wishlist-area table-responsive pd-bottom-83 \">\n" +
+                        var price = parseFloat(order.price);
+                        var orderStatus = order.orderStatus;
+                        var header =
+                            " <div class=\"wishlist-area table-responsive pd-bottom-83 \">\n" +
                             "                <table class=\"table\">\n" +
                             "                    <thead>\n" +
                             "                    <tr>\n" +
@@ -471,15 +472,13 @@
                             "                        <th scope=\"col\">总价</th>\n" +
                             "                        <th scope=\"col\"></th>\n" +
                             "                    </tr>\n" +
-                            "                    </thead>\n" +
-                            "                    <tbody>\n"
-                        $("#orderTable").append(header);
-
+                            "                    </thead>\n"+
+                            "                    <tbody>\n";
                         for(var j = 0;j<orderItems.length;j++){
                             var book = orderItems[j].book;
                             var orderNum = parseInt(orderItems[j].orderNum);
-                            var price = parseFloat(book.price);
-                            var middle =
+                            var bookprice = parseFloat(book.price);
+                            header = header+
                                 "                    <tr>\n" +
                                 "                        <th scope=\"row\"><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></th>\n" +
                                 "                        <td colspan=\"2\" class=\"item-name\">"+book.bookName+"</td>\n" +
@@ -491,25 +490,46 @@
                                 "                                               name=\"quantity\" value=\""+orderNum+"\"  readonly='true'>\n" +
                                 "                                 </div>\n" +
                                 "                        </td>\n" +
-                                "                            <td id='"+book.bookId+"'>"+price*orderNum+"</td>\n" +
+                                "                            <td id='"+book.bookId+"'>"+bookprice*orderNum+"</td>\n" +
                                 "                    </tr>\n" ;
-                            $("#orderTable").append(middle);
-
+                        }
+                        var statusStr = "";
+                        if(orderStatus == null){
+                            statusStr = "<span>订单状态错误</span>";
+                        }else if(orderStatus == "finished"){
+                            statusStr = "<span>订单已完成</span>";
+                        }else if(orderStatus == "unpaid"){
+                            statusStr = "<a class=\"btn btn-basic-lg\" onclick=\"purchase("+order.orderId+")\" style='width:40px;heigh:20px'>前往支付</a>"
+                        }else if(orderStatus == "cancel"){
+                            statusStr = "<span>订单已取消</span>";
+                        }else{
+                            statusStr = "<span>书本正在途中</span>";
                         }
 
-                        var tail =
-                            "                    </tbody>\n" +
-                            "                </table>\n" +
+                        header = header+
+                            "                    <tr>\n" +
+                            "                        <th scope=\"row\"><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></th>\n" +
+                            "                        <td colspan=\"2\" class=\"item-name\">"+book.bookName+"</td>\n" +
+                            "                        <td>"+price+"</td>\n" +
+                            "                        <td>"+book.bookStatus+"</td>\n" +
+                            "                        <td>"+orderNum+"</td>\n" +
+                            "                            <td id='"+book.bookId+"'>"+bookprice*orderNum+"</td>\n" +
+                            "                    </tr>\"" +
+                            "                      <tr>\n" +
+                            "                            <th></th>\n" +
+                            "                            <td></td>\n" +
+                            "                            <td></td>\n" +
+                            "                            <td></td>\n" +
+                            "                            <td></td>\n" +
+                            "                            <td class=\"total-amount\">"+statusStr+"</td>\n" +
+                            "                            <td class=\"total-amount\">总价: <span>"+price+"</span></td>\n" +
+                            "                        </tr>"+
+                        "                    </tbody>\n"+
+                        "                </table>\n" +
                             "            </div>";
-                        $("#orderTable").append(tail);
-
+                        $("#orderTable").append(header);
                     }
                     <!--class="plus" -->
-                    var tailStr =
-                        "                        <tr>\n" +
-                        "                            <th></th>\n" +
-                        "                        </tr>";
-                    $("#cartTBody").append(tailStr);
 
                 }else if(response.status==10){
                     alert("请登录");
@@ -520,6 +540,10 @@
                 alert("请求失败");
             }
         });
+    }
+
+    function purchase(orderId){
+        window.location.href="checkout.html?orderId="+orderId;
     }
 </script>
 <!-- all plugins here -->

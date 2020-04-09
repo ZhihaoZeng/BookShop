@@ -17,6 +17,7 @@ public interface OrderService {
     responseFromServer getOrder(Integer orderId);
     responseFromServer getOrdersByUserId(Integer userId);
     responseFromServer insertOrder(Order order);
+    responseFromServer purchase(Order order);
 
     responseFromServer searchOrdersPage(Map<String,Object> queryMap);
     responseFromServer getOrdersPlusByUserId(Map<String,Object>queryMap);

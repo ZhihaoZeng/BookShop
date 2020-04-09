@@ -38,10 +38,11 @@ public class OrderController {
 
     @RequestMapping("/purchase")
     @ResponseBody
-    public responseFromServer purchase(@RequestBody Map<Integer,Object> map,HttpSession session){
+    public responseFromServer purchase(@RequestBody Map<String,Object> map,HttpSession session){
         if(checkSession.check(session)){
             String userPassword = (String) map.get("userPassword");
             Integer orderId = (Integer) map.get("orderId");
+//            Integer orderId = (Integer)(map.get("order")==null?null:((Order)map.get("order")).getOrderId());
             if(orderId==null||userPassword==null){
                 return responseFromServer.error("错误");
             }
@@ -51,7 +52,8 @@ public class OrderController {
             if(response.isSuccess()){
                 Order order = new Order();
                 order.setOrderStatus("paid");
-                return orderService.updateOrder(order);
+                order.setOrderId(orderId);
+                return orderService.purchase(order);
             }
             return responseFromServer.error();
         }else{
