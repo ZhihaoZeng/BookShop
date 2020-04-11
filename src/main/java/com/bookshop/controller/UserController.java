@@ -122,8 +122,9 @@ public class UserController {
         responseFromServer response = userService.login(user);
         if (response.isSuccess()) {
             User nowUser = (User) response.getData();
-            user.setUserPassword(null);
+            nowUser.setUserPassword(null);
             session.setAttribute("user", nowUser);
+            return responseFromServer.success(nowUser);
         }
         return response;
     }

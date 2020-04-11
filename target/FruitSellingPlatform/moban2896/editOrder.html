@@ -97,7 +97,10 @@
                         $("#userId").val(order.userId);
                         $("#purchaseTime").val(order.purchaseTime);/*todo?如何把选择更新到select标签上*/
                         $("#price").val(order.price);/*todo?如何把选择更新到select标签上*/
-                        alert("查询成功");
+                        // alert("查询成功");
+                    }else if(response.status==10) {
+                        alert("请登录！");
+                        window.location.href = "login.html";
                     }else{
                         alert("查询失败");
                         return false;

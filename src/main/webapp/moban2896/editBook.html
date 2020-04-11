@@ -101,7 +101,10 @@
                         $("#price").val(book.price);
                         $("#detail").val(book.detail);
                         $("#publishTime").val(book.publishTime);
-                        alert("查询成功");
+                        // alert("查询成功");
+                    }else if(response.status==10) {
+                        alert("请登录！");
+                        window.location.href = "login.html";
                     }else{
                         alert("查询失败");
                         return false;
