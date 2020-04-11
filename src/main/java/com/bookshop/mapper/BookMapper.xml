@@ -29,7 +29,8 @@
         <if test="endTime!=null"><![CDATA[ and publish_time <= #{endTime}]]></if>
         <if test="startPrice!=null"><![CDATA[ and price>= #{startPrice}]]></if>
         <if test="endPrice!=null"><![CDATA[ and price<=  #{endPrice}]]></if>
-
+        <if test="priceOrderDESC!=null">order by price DESC</if>
+        <if test="priceOrder!=null">order by price</if>
     </sql>
 
     <!--sql代码块-->

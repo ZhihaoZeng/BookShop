@@ -281,22 +281,22 @@
                     <div class="main-search d-inline-flex">
                         <input type="text" placeholder="Search product..." name="searchText" id="searchText"/>
                         <div class="topbar-cat-select">
-                            <select>
-                                <option value="jiaoyukaoshi">教育考试</option>
-                                <option value="xiaoshuo">小说</option>
-                                <option value="tongshu">童书</option>
-                                <option value="renwensheke" selected="selected">人文社科</option>
-                                <option value="jiankang">健康</option>
-                                <option value="yingwen">英文</option>
-                                <option value="ligong">理工</option>
-                                <option value="all">全部</option>
+                            <select id="bookTypeSelection">
+                                <option value="" selected="selected">全部</option>
+                                <option value="1">教育考试</option>
+                                <option value="2">小说</option>
+                                <option value="3">童书</option>
+                                <option value="4" >人文社科</option>
+                                <option value="5">健康</option>
+                                <option value="6">英文</option>
+                                <option value="7">理工</option>
                             </select>
                         </div>
                         <button onclick="shopPage()">搜索</button>
 
                         <script type="text/javascript">
                             function shopPage() {
-                                window.location.href = "shop.html?bookName=" + $("#searchText").val();
+                                window.location.href = "shop.html?bookName=" + $("#searchText").val()+"&bookType="+$("#bookTypeSelection").val();
                                 // window.location.href="shop.html?bookName="+searchText.val();
                             }
                         </script>
@@ -323,19 +323,19 @@
                     All Category
                 </div>
                 <ul class="sidebar-categories">
-                    <li><a href="shop.html?type=jiaoyukaoshi"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
+                    <li><a href="shop.html?bookType=1"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=xiaoshuo"><img src="../assets/img/icon/chair.png" alt="img">小说<i
+                    <li><a href="shop.html?bookType=2"><img src="../assets/img/icon/chair.png" alt="img">小说<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=tongshu"><img src="../assets/img/icon/phone.png" alt="img">童书<i
+                    <li><a href="shop.html?bookType=3"><img src="../assets/img/icon/phone.png" alt="img">童书<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=renwensheke"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
+                    <li><a href="shop.html?bookType=4"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=jiankang"><img src="../assets/img/icon/heart.png" alt="img">健康<i
+                    <li><a href="shop.html?bookType=5"><img src="../assets/img/icon/heart.png" alt="img">健康<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=yingwen"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
+                    <li><a href="shop.html?bookType=6"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=ligong"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
+                    <li><a href="shop.html?bookType=7"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
                             class="fa fa-angle-down"></i></a></li>
                 </ul>
             </div>
@@ -413,9 +413,10 @@
 <!-- banner area end -->
 
 <!-- top-product area start -->
-<div class="top-product-area bg-gray-3 common-pd">
+<!--<div class="top-product-area bg-gray-3 common-pd">
     <div class="container">
         <div class="row">
+            &lt;!&ndash;左侧类别导航栏&ndash;&gt;
             <div class="col-lg-3">
                 <div class="sidebar">
                     <div class="single-widget">
@@ -423,26 +424,25 @@
                             <i class="fa fa-angle-up"></i></h4>
                         <ul class="sidebar-categories">
 
-                            <li><a href="shop.html?type=jiaoyukaoshi"><img src="../assets/img/icon/laptop.png"
+                            <li><a href="shop.html?type=1"><img src="../assets/img/icon/laptop.png"
                                                                            alt="img">教育考试<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=xiaoshuo"><img src="../assets/img/icon/light.png" alt="img">小说<i
+                            <li><a href="shop.html?type=2"><img src="../assets/img/icon/light.png" alt="img">小说<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=tongshu"><img src="../assets/img/icon/ball.png" alt="img">童书<i
+                            <li><a href="shop.html?type=3"><img src="../assets/img/icon/ball.png" alt="img">童书<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=renwensheke"><img src="../assets/img/icon/chair.png" alt="img">人文社科<i
+                            <li><a href="shop.html?type=4"><img src="../assets/img/icon/chair.png" alt="img">人文社科<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=jiankang"><img src="../assets/img/icon/heart.png" alt="img">健康<i
+                            <li><a href="shop.html?type=5"><img src="../assets/img/icon/heart.png" alt="img">健康<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=yingwen"><img src="../assets/img/icon/headphone.png" alt="img">英文<i
+                            <li><a href="shop.html?type=6"><img src="../assets/img/icon/headphone.png" alt="img">英文<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="shop.html?type=ligong"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
+                            <li><a href="shop.html?type=7"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
                                     class="fa fa-angle-down"></i></a></li>
-
                         </ul>
                     </div>
-                    <!--按照星级和价格筛选-->
-                    <!-- <div class="single-widget">
+                    &lt;!&ndash;按照星级和价格筛选&ndash;&gt;
+                    &lt;!&ndash; <div class="single-widget">
                          <h4 class="sidebar-title">Filter by Price <i class="fa fa-angle-up"></i></h4>
                          <div class="side-bar-range">
                              <div id="slider-range"></div>
@@ -505,9 +505,10 @@
                                  </div>
                              </div>
                          </div>
-                     </div>-->
+                     </div>&ndash;&gt;
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6">
                 <div class="single-product-card single-product-card-2 text-center border-0">
                     <div class="thumb">
@@ -702,7 +703,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- top-product area end -->
 
 <!-- featured-product area start -->
@@ -711,8 +712,8 @@
         <div class="row" id="homeBooks">
             <div class="col-12">
                 <div class="section-title-2">
-                    <h3 class="title">Featured Products</h3>
-                    <form class="woocommerce-ordering">
+                    <h3 class="title">好书推荐</h3>
+<!--                    <form class="woocommerce-ordering">
                         <select class="orderby">
                             <option value="popularity">Sort by popularity</option>
                             <option value="rating">Sort by average</option>
@@ -720,7 +721,7 @@
                             <option value="price-desc">Sort by price</option>
                             <option value="categories" selected="selected">All Categories</option>
                         </select>
-                    </form>
+                    </form>-->
                 </div>
             </div>
 <!--            <div class="col-lg-3 col-md-6">
@@ -901,8 +902,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h5 class="subtitle">Deal of the Weak</h5>
-                <h2 class="title">Get Upto <span>50%</span> Back on Purchase</h2>
+                <h5 class="subtitle">本周优惠</h5>
+                <h2 class="title">最高 <span>50%</span> 折扣</h2>
                 <div class="offer-wrap">
                     <div class="countdown"></div>
                 </div>
@@ -919,7 +920,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title-2">
-                    <h3 class="title">Browse by Category</h3>
+                    <h3 class="title">猜你喜欢</h3>
                     <a href="#" class="btn btn-transparent">View All</a>
                 </div>
                 <div class="category-slider square-controler owl-carousel owl-theme">
@@ -1014,7 +1015,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title-2">
-                    <h3 class="title">Last Opened Products</h3>
+                    <h3 class="title">新品上市</h3>
                     <a href="#" class="btn btn-transparent">View All</a>
                 </div>
                 <div class="recent-slider square-controler owl-carousel owl-theme">

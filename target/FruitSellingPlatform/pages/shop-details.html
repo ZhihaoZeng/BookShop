@@ -352,7 +352,7 @@
                                 <div class="slider-item" id="cenyterImageDiv">
                                     <img src="../assets/img/product/shop/shop-details/01.png" alt="item">
                                 </div>
-                                <div class="slider-item">
+                                <div class="slider-item" id="sideImageDiv">
                                     <img src="../assets/img/product/shop/shop-details/02.png" alt="item">
                                 </div>
                             </div>
@@ -812,8 +812,17 @@
             success: function (response) {
                 if (response.status == 0) {
                     book = response.data;
+                    var image = book.image;
+                    var imageStr = "<img src=\"../assets/img/"+image+"\" alt=\"item\">"
                     $("#titleDiv").append("<h4 class=\"entry-title\" >" + book.bookName + "</h4>");
                     $("#priceDiv").append("￥" + book.price);
+
+                    $("#cenyterImageDiv").empty();
+                    $("#sideImageDiv").empty();
+
+                    $("#cenyterImageDiv").append(imageStr);
+                    $("#sideImageDiv").append(imageStr);
+
                     alert("查询成功");
                 } else {
                     alert("获取书本信息失败");

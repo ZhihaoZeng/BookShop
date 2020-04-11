@@ -294,14 +294,18 @@
             success: function (response) {
                 if (response.status == 0) {
                     user = response.data;
+                    getBookData(1);
+                    return true;
                 } else if(response.status==10){
                     alert("请登录！");
                     window.location.href = "login.html";
+                    return false;
                 }
             },
             error: function () {
                 alert("请求失败");
-                return null;
+                return false;
+
             }
         });
     }
@@ -443,8 +447,9 @@
     }
 
     window.onload = function init() {
-        checkLogin();
-        getBookData(1);
+        var login = checkLogin();
+        // if(login == true)
+        //     getBookData(1);
     }
 
     function editClicked(bookId) {
@@ -472,7 +477,7 @@
             type: "post",
             data: JSON.stringify({
                 /*todo 框中为空 传去的参数是为空还是为？0*/
-                "startPage": startPage,
+                "startPage": parseInt(startPage),
                 "bookName": bookName,
                 "bookId": parseInt($("#bookIdSearch").val()),
                 "bookType":$("#bookTypeSearch").val()==""?null:$("#bookTypeSearch").val(),

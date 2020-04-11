@@ -15,18 +15,18 @@
             /*
              * 提交
              */
-            $("#submitbutton").click(function () {
-                if (validateForm()) {
-                    insertBook();
-                    // checkFyFhSubmit();
-                }
-            });
+                $("#submitbutton").click(function () {
+                    if (validateForm()) {
+                        insertBook();
+                        // checkFyFhSubmit();
+                    }
+                });
 
-            /*
-             * 取消
-             */
-            $("#cancelbutton").click(function () {
-                /**  关闭弹出iframe  **/
+                /*
+                 * 取消
+                 */
+                $("#cancelbutton").click(function () {
+                    /**  关闭弹出iframe  **/
                 window.parent.$.fancybox.close();
             });
 

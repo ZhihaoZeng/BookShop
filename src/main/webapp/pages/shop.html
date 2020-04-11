@@ -102,8 +102,7 @@
                                     <!--                                <li><span>6</span><i class="fa fa-heart-o"></i></li>-->
                                     <li id="userCartCount" onclick="goToCart();">
                                         <i class="las la-shopping-cart" onclick="goToCart();"></i>
-                                        <span id="userCartCountSpan"></span>
-                                    </li>
+                                        <span id="userCartCountSpan"></span></li>
                                     <!--                                    <li id="userCartPrice" onclick="goToCart();">$ 155.00 .</li>&lt;!&ndash;                                todo 获取购物车价格&ndash;&gt;-->
                                 </ul>
                             </div>
@@ -113,9 +112,10 @@
                         </div>
                         <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
                         <script type="text/javascript">
-                            function checkLoginStatus(){
+                            function checkLoginStatus() {
 
                             }
+
                             function logOut() {
                                 alert("login");
                                 $.ajax({
@@ -139,14 +139,14 @@
                                 });
                             }
 
-                            function goToCart(){
-                                window.open("cart.html/");
+                            function goToCart() {
+                                window.open("cart.html");
                             }
 
                             function checkLogin() {
                                 var user;
                                 $.ajax({
-                                    async:false,
+                                    async: false,
                                     url: "http://localhost:8080/user/checkLogin",
                                     contentType: "application/json;charset=UTF-8", //必须有
                                     dataType: "json", //表示返回值类型，不必须
@@ -194,11 +194,11 @@
                                         type: "post",
                                         // data: JSON.stringify(),/*不需要传用户数据*/
                                         success: function (response) {
-                                            if(response.status==0){
+                                            if (response.status == 0) {
                                                 document.getElementById("userCartCountSpan").innerText = response.data;
-                        /*                        str = "<span>"+response.data+"</span>";
-                                                $("#userCartCount").append(str);*/
-                                            }else{
+                                                /*                  str = "<span>"+response.data+"</span>";
+                                                                  $("#userCartCount").append(str);*/
+                                            } else {
                                                 alert("获取购物车信息错误");
                                             }
                                         },
@@ -209,9 +209,62 @@
                                 }
                             }
 
+
+
                             window.onload = function () {
+                                var bookName = getParam("bookName")==null?"":getParam("bookName");
+                                var bookType = getParam("bookType")==null?"": getParam("bookType");
+                                $("#searchText").val(bookName == null ? "" : bookName.toString());
+                                var select = document.getElementById("bookTypeSelection");
+                                for (var i = 0; i < select.options.length; i++) {
+                                    if (select.options[i].value.toString() == bookType.toString()) {
+                                        select.options[i].selected = true;
+                                        break;
+                                    }
+                                }
+                                var bookTypeStr = "";
+                                switch (parseInt(bookType)) {
+                                    case 1:
+                                        bookTypeStr = "教育考试";
+                                        break;
+                                    case 2:
+                                        bookTypeStr = "小说";
+                                        break;
+                                    case 3:
+                                        bookTypeStr = "童书";
+                                        break;
+                                    case 4:
+                                        bookTypeStr = "人文社科";
+                                        break;
+                                    case 5:
+                                        bookTypeStr = "健康";
+                                        break;
+                                    case 6:
+                                        bookTypeStr = "英文";
+                                        break;
+                                    case 7:
+                                        bookTypeStr = "理工";
+                                        break;
+                                    default:
+                                        bookTypeStr = "";
+                                        break;
+                                }
+                                if(bookTypeStr!=""){
+                                    var str = "<div class=\"container\">\n" +
+                                        "                                            <div class=\"row\">\n" +
+                                        "                                                <div class=\"col-12\">\n" +
+                                        "                                                    <h3>"+bookTypeStr+"</h3>\n" +
+                                        "                                            </div>\n" +
+                                        "                                        </div>\n" +
+                                        "                                    </div>"
+                                    $("#bookTypeHeader").empty();
+                                    $("#bookTypeHeader").append(str);
+                                }else{
+                                    $("#bookTypeHeader").remove();
+
+                                }
+                                getBooksData(1);
                                 checkLogin();
-                                loadrequest();
                             }
 
                         </script>
@@ -220,9 +273,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
     <div class="navbar-middle d-none d-lg-block">
@@ -237,22 +287,22 @@
                     <div class="main-search d-inline-flex">
                         <input type="text" placeholder="Search product..." name="searchText" id="searchText"/>
                         <div class="topbar-cat-select">
-                            <select>
-                                <option value="jiaoyukaoshi">教育考试</option>
-                                <option value="xiaoshuo">小说</option>
-                                <option value="tongshu">童书</option>
-                                <option value="renwensheke" selected="selected">人文社科</option>
-                                <option value="jiankang">健康</option>
-                                <option value="yingwen">英文</option>
-                                <option value="ligong">理工</option>
-                                <option value="all">全部</option>
+                            <select id="bookTypeSelection">
+                                <option value="" selected="selected">全部</option>
+                                <option value="1">教育考试</option>
+                                <option value="2">小说</option>
+                                <option value="3">童书</option>
+                                <option value="4">人文社科</option>
+                                <option value="5">健康</option>
+                                <option value="6">英文</option>
+                                <option value="7">理工</option>
                             </select>
                         </div>
                         <button onclick="shopPage()">搜索</button>
 
                         <script type="text/javascript">
                             function shopPage() {
-                                window.location.href = "shop.html?bookName=" + $("#searchText").val();
+                                window.location.href = "shop.html?bookName=" + $("#searchText").val() + "&bookType=" + $("#bookTypeSelection").val();
                                 // window.location.href="shop.html?bookName="+searchText.val();
                             }
                         </script>
@@ -279,19 +329,19 @@
                     All Category
                 </div>
                 <ul class="sidebar-categories">
-                    <li><a href="shop.html?type=jiaoyukaoshi"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
+                    <li><a href="shop.html?bookType=1"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=xiaoshuo"><img src="../assets/img/icon/chair.png" alt="img">小说<i
+                    <li><a href="shop.html?bookType=2"><img src="../assets/img/icon/chair.png" alt="img">小说<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=tongshu"><img src="../assets/img/icon/phone.png" alt="img">童书<i
+                    <li><a href="shop.html?bookType=3"><img src="../assets/img/icon/phone.png" alt="img">童书<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=renwensheke"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
+                    <li><a href="shop.html?bookType=4"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=jiankang"><img src="../assets/img/icon/heart.png" alt="img">健康<i
+                    <li><a href="shop.html?bookType=5"><img src="../assets/img/icon/heart.png" alt="img">健康<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=yingwen"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
+                    <li><a href="shop.html?bookType=6"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="shop.html?type=ligong"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
+                    <li><a href="shop.html?bookType=7"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
                             class="fa fa-angle-down"></i></a></li>
                 </ul>
             </div>
@@ -328,9 +378,8 @@
         <div class="row">
             <div class="col-12">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Categories</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Watch</li>
+                    <li class="breadcrumb-item"><a href="home.html">首页</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">浏览</li>
                 </ul>
             </div>
         </div>
@@ -339,14 +388,14 @@
 <!-- breadcrumb-area end -->
 
 <!-- Page-title-area start -->
-<div class="page-title-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3>Classic & Smart Watches</h3>
-            </div>
-        </div>
-    </div>
+<div class="page-title-area" id="bookTypeHeader">
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-12">-->
+    <!--                <h3>Classic & Smart Watches</h3>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 </div>
 <!-- Page-title-area end -->
 
@@ -360,28 +409,32 @@
             <div class="col-lg-3">
                 <!--侧边分类栏-->
                 <div class="sidebar">
+                    <!--类别-->
                     <div class="single-widget">
-                        <h4 class="sidebar-title sidebar-title-cat"><img src="../assets/img/icon/bar.png" alt="img">All
-                            Categories <i class="fa fa-angle-up"></i></h4>
+                        <h4 class="sidebar-title sidebar-title-cat"><img src="../assets/img/icon/bar.png" alt="img">分类
+                            <i class="fa fa-angle-up"></i></h4>
                         <ul class="sidebar-categories">
-                            <li><a href="#"><img src="../assets/img/icon/laptop.png" alt="img">Computer & Offices<i
+
+                            <li><a href="shop.html?bookType=1"><img src="../assets/img/icon/laptop.png"
+                                                                alt="img">教育考试<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/chair.png" alt="img">Home & Furniture<i
+                            <li><a href="shop.html?bookType=2"><img src="../assets/img/icon/light.png" alt="img">小说<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/phone.png" alt="img">Mobile & Tablets<i
+                            <li><a href="shop.html?bookType=3"><img src="../assets/img/icon/ball.png" alt="img">童书<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/headphone.png" alt="img">Device Accressories<i
+                            <li><a href="shop.html?bookType=4"><img src="../assets/img/icon/chair.png" alt="img">人文社科<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/light.png" alt="img">Consumer Electronics<i
+                            <li><a href="shop.html?bookType=5"><img src="../assets/img/icon/heart.png" alt="img">健康<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/ball.png" alt="img">Sports & Outdoors<i
+                            <li><a href="shop.html?bookType=6"><img src="../assets/img/icon/headphone.png" alt="img">英文<i
                                     class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/heart.png" alt="img">Beauty & Health<i
-                                    class="fa fa-angle-down"></i></a></li>
-                            <li><a href="#"><img src="../assets/img/icon/monitor.png" alt="img">Radio & TV<i
+                            <li><a href="shop.html?bookType=7"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
                                     class="fa fa-angle-down"></i></a></li>
                         </ul>
                     </div>
+
+                    <!--按照品牌筛选-->
+                    <!--
                     <div class="single-widget">
                         <h4 class="sidebar-title">Filter by Brand <i class="fa fa-angle-up"></i></h4>
                         <div class="sidebar-rating">
@@ -458,8 +511,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="single-widget">
+                    </div>-->
+
+                    <!--按照价格筛选-->
+                    <!--<div class="single-widget">
                         <h4 class="sidebar-title">Filter by Price <i class="fa fa-angle-up"></i></h4>
                         <div class="side-bar-range">
                             <div id="slider-range"></div>
@@ -467,8 +522,10 @@
                                 <input type="text" id="amount" readonly>
                             </p>
                         </div>
-                    </div>
-                    <div class="single-widget">
+                    </div>-->
+
+                    <!--按照星级筛选-->
+                    <!--<div class="single-widget">
                         <h4 class="sidebar-title">Filter by Rating <i class="fa fa-angle-up"></i></h4>
                         <div class="sidebar-rating">
                             <div class="sidebar-single-rating">
@@ -522,7 +579,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <!--商品部分-->
@@ -547,8 +604,66 @@
                 }
 
 
-                function loadrequest() {
-                    alert("load");
+                function formatPage(startPage, totalPage, totalCount) {
+                    if (startPage == null || totalPage == null || totalCount == null) {
+                        alert("分页错误");
+                    }
+                    var str = "";
+                    var header = "<li class=\"page-item\">\n" +
+                        "                                    <a class=\"page-link\" href=\"javascript:getBooksData(1)\" aria-label=\"Previous\">\n" +
+                        "                                        <span aria-hidden=\"true\">首页</span>\n" +
+                        "                                    </a>\n" +
+                        "                                </li>\n" +
+                        "                                <li class=\"page-item\">\n" +
+                        "                                    <a class=\"page-link\" href=\"javascript:getLastOnePage()\" aria-label=\"Previous\">\n" +
+                        "                                        <span aria-hidden=\"true\"><i class=\"fa fa-angle-left\"></i></span>\n" +
+                        "                                    </a>\n" +
+                        "                                </li>\n";
+                    var tail = "                                <li class=\"page-item\">\n" +
+                        "                                    <a class=\"page-link\" href=\"javascript:getNextOnePage()\"aria-label=\"Next\">\n" +
+                        "                                        <span aria-hidden=\"true\"><i class=\"fa fa-angle-right\"></i></span>\n" +
+                        "                                    </a>\n" +
+                        "                                </li>\n" +
+                        "                                <li class=\"page-item\">\n" +
+                        "                                    <a class=\"page-link\" href=\"javascript:getLastPage()\" aria-label=\"Previous\">\n" +
+                        "                                        <span aria-hidden=\"true\">尾页</span>\n" +
+                        "                                    </a>\n" +
+                        "                                </li>"
+                    if (totalPage <= 11) {
+                        str = str + header;
+                        for (var i = 1; i <= totalPage; i++) {
+                            str = str + "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:getBooksData(" + parseInt(i) + ")\">i</a></li>\n";
+                        }
+                        str = str + tail;
+                        $("#pageId").empty();
+                        $("#pageId").append(str);
+                    } else {
+                        var left = startPage;
+                        var right = startPage;
+                        while (right - left < 10) {
+                            if (left > 1) left--;
+                            if (right < totalPage) right++;
+                        }
+                        str = str + header;
+                        for (var i = left; i <= right; i++) {
+                            str = str + "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:getBooksData(" + i + ")\">1</a></li>\n";
+                        }
+                        str = str + tail;
+                        $("#pageId").empty();
+                        $("#pageId").append(str);
+                    }
+
+                }
+
+                function getBooksData(startPage) {
+                    // alert("load");
+                    if (startPage == null || startPage <= 0) {
+                        let startPage = document.getElementById("startPage").innerText;
+                    }
+                    //                            "startPage": parseInt($("#hiddenStartPage").val()),
+                    var bookName = getParam("bookName")==null?"":getParam("bookName");
+                    var bookType = getParam("bookType")==null?"": getParam("bookType");
+                    // alert(bookType);
                     $.ajax({
                         async: false,
                         url: "http://localhost:8080/book/searchBooksPage",
@@ -556,15 +671,22 @@
                         dataType: "json", //表示返回值类型，不必须
                         type: "post",
                         data: JSON.stringify({
-                            "startPage": parseInt($("#hiddenStartPage").val()),
-                            "bookName": "%" + getParam("bookName").toString() + "%"
+                            "startPage": startPage,
+                            "bookName": "%" + bookName + "%",
+                            "bookType": parseInt(bookType)
                         }),
                         success: function (response) {
-                            alert("success");
+                            // alert("success");
                             if (response.status == 0) {
                                 var page = response.data;
                                 var books = page.lists;
+                                document.getElementById("startPage").innerText = page.currPage.toString();
+                                document.getElementById("totalPage").innerText = page.totalPage.toString();
+                                document.getElementById("totalCount").innerText = page.totalCount.toString();
+                                formatPage(parseInt(page.currPage), parseInt(page.totalPage), parseInt(page.totalCount));
+
                                 // alert(books.length+"\n"+parseInt(books.length)+"\n");
+                                $("#booksRows").empty();
                                 for (var i = 0; i < parseInt(books.length); i++) {
                                     var bookId = books[i].bookId;
                                     var bookName = books[i].bookName;
@@ -572,6 +694,18 @@
                                     var price = books[i].price;
                                     var bookType = books[i].bookType;
 
+                                    // var str = "<div class=\"single-product-card media border-0\">\n" +
+                                    //     "                        <div class=\"single-product-card single-product-card-2 text-center border-0\">\n" +
+                                    //     "                            <img src=\"../assets/img/product/" + image.toString() + "\" alt=\"top-product\">\n" +
+                                    //     "                        </div>\n" +
+                                    //     "                        <div class=\"product-card-details\">\n" +
+                                    //     "                            <p class=\"categories\">" + bookType.toString() + "</p>\n" +
+                                    //     "                            <h4 class=\"title\"><a href=\"shop-details.html?bookId="+bookId+">" + bookName.toString() + "</a></h4>\n" +
+                                    //     "                            <div class=\"price\">\n" +
+                                    //     "                                <span>" + price.toString() + "</span>\n" +
+                                    //     "                            </div>\n" +
+                                    //     "                        </div>\n" +
+                                    //     "                    </div>";
 
                                     var str = " <div class=\"col-lg-3\">\n" +
                                         "                        <div class=\"single-product-card single-product-card-2 text-center border-0\">\n" +
@@ -580,23 +714,24 @@
                                         "                            </div>\n" +
                                         "                            <div class=\"product-card-details\">\n" +
                                         "                                <p class=\"categories\">" + bookType.toString() + "</p>\n" +
-                                        "                                <h4 class=\"title\"><a href=" + bookId + "\"shop-details.html?bookId=\">" + bookName.toString() + "</a></h4>\n" +
-                                        "                                <div class=\"price\">\n" +
-                                        "                                    <span>" + price.toString() + "</span>\n" +
+                                        "                                <h4 class=\"title\"><a href=\"shop-details.html?bookId="+bookId+"\">"+bookName.toString()+"</a></h4>\n"+
+                                        // "                                <h4 class=\"title\"><a href=\"shop-details.html?bookId="+bookId+"\">" + bookName.toString() + "</a></h4>"+
+                                        "                            </div>\n" +
+                                        "                            <div class=\"price\">\n" +
+                                        "                                    <span>" + parseFloat(price) + "</span>\n" +
                                         "                                </div>\n" +
                                         "                            </div>\n" +
                                         "                        </div>\n" +
                                         "                    </div>";
                                     $("#booksRows").append(str);
                                 }
+                                // // initPage(page.totalCount, page.startPage, page.totalPage);
+                                // $("#hiddenStartPage").value = page.currPage;
+                                // $("#hiddenTotalPage").value = page.totalPage;
+                                // $("#hiddenTotalCount").value = page.totalCount;
+                                // $("#hiddenPageSize").value = page.pageSize;
 
-                                initPage(page.totalCount, page.startPage, page.totalPage);
-                                $("#hiddenStartPage").value = page.startPage;
-                                $("#hiddenTotalPage").value = page.totalPage;
-                                $("#hiddenTotalCount").value = page.totalCount;
-                                $("#hiddenPageSize").value = page.pageSize;
-
-                                alert("搜索成功");
+                                // alert("搜索成功");
                             } else {
                                 alert("搜索失败");
                             }
@@ -742,6 +877,57 @@
                     $('.g-pagerwp .g-pager').css('visibility', 'visible').pageBar(pageOptions);
                 }
 
+                function getNextOnePage() {
+                    var nowPage = parseInt(document.getElementById("startPage").innerText);
+                    var totalPage = parseInt(document.getElementById("totalPage").innerText);
+                    if (nowPage == totalPage) {
+                        alert("您现在已经在尾页");
+                    } else {
+                        getBooksData(nowPage + 1);
+                    }
+                }
+
+
+                function getLastOnePage() {
+                    var nowPage = parseInt(document.getElementById("startPage").innerText);
+                    if (nowPage == 1) {
+                        alert("您现在已经在首页");
+                    } else {
+                        getBooksData(nowPage - 1);
+                    }
+                }
+
+
+                function getFirstPage() {
+                    var nowPage = parseInt(document.getElementById("startPage").innerText);
+                    c
+                    if (nowPage == 1) {
+                        alert("您现在已经在首页");
+                    } else {
+                        getBooksData(1);
+                    }
+                }
+
+
+                function getLastPage() {
+                    var nowPage = parseInt(document.getElementById("startPage").innerText);
+                    var totalPage = parseInt(document.getElementById("totalPage").innerText);
+                    if (nowPage == totalPage) {
+                        alert("您现在已经在尾页");
+                    } else {
+                        getBooksData(totalPage);
+                    }
+                }
+
+                function jumpInputPage(){
+                    if($("#jumpNumTxt").val()==""){
+                        alert("请输入正确的页面");
+                    }else if(parseInt($("#jumpNumTxt").val())>parseInt($("#totalPage").val())||parseInt($("#jumpNumTxt").val())<1){
+                        alert("请输入正确的页面");
+                    }else{
+                        getBooksData(parseInt($("#jumpNumTxt").val()));
+                    }
+                }
 
             </script>
             <div class="col-lg-9">
@@ -752,22 +938,184 @@
                 <!--分页栏-->
                 <div class="col-12">
                     <nav class="text-center">
+                        <div>
+
+
+                            <ul class="pagination" id="pageId">
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:getFirstPage()" aria-label="Previous">
+                                        <span aria-hidden="true">首页</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:getLastOnePage()" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                    </a>
+                                </li>
+
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:getNextOnePage()" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="javascript:getLastPage()" aria-label="Previous">
+                                        <span aria-hidden="true">尾页</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                         <ul class="pagination">
                             <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
-                                </a>
+                                转到第<input type="text" id="jumpNumTxt" style="width: 50px;"/>页
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                <a class="page-link" href="javascript:jumpInputPage()" aria-label="Previous">
+                                    <span aria-hidden="true">跳转</span>
                                 </a>
                             </li>
                         </ul>
+                        <div class="ui_flt" style="height: 30px; line-height: 30px;">
+                            共有
+                            <span class="ui_txt_bold04" id="totalCount" name="totalCount">0</span>
+                            条记录，当前第
+                            <span class="ui_txt_bold04" id="startPage" name="startPage">1</span>
+                            /
+                            <span class="ui_txt_bold04" id="totalPage" name="totalPage">1</span>
+                            页
+                        </div>
+
+
+                        <!-- <ul class="pagination">
+                             <li class="page-item">
+                                 <a class="page-link" href="javascript:getLastPage()" aria-label="Previous">
+                                     <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                 </a>
+                             </li>
+                             <dev id="inter">
+                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
+                             </dev>
+
+                             <li class="page-item">
+                                 <a class="page-link" href="javascript:getNextPage()"aria-label="Next">
+                                     <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                                 </a>
+                             </li>
+                         </ul>-->
                     </nav>
+                </div>
+
+
+
+                <!--猜你喜欢-->
+                <div class="browse-by-category-area common-pd">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title-2">
+                                    <h3 class="title">猜你喜欢</h3>
+<!--                                    <a href="#" class="btn btn-transparent">View All</a>-->
+                                </div>
+                                <div class="category-slider square-controler owl-carousel owl-theme">
+                                    <!--<div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Mobile & Computers</a></h4>
+                                                <p class="price">Start from <span> $49</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/01.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Smart Home & Assistant</a></h4>
+                                                <p class="price">Start from <span> $12.99</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+<!--                                                <img src="../assets/img/category/02.png" alt="img">-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Smart Home & Assistant</a></h4>
+                                                <p class="price">Start from <span> $12.99</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/02.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Classic & Smart Watch</a></h4>
+                                                <p class="price">Start from <span> $75.00</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/03.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Mobile & Computers</a></h4>
+                                                <p class="price">Start from <span> $49</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/01.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Smart Home & Assistant</a></h4>
+                                                <p class="price">Start from <span> $12.99</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/02.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="single-gadget media">
+                                            <div class="gadget-details media-left w-50 align-self-center">
+                                                <span>Gadgets</span>
+                                                <h4><a href="#">Classic & Smart Watch</a></h4>
+                                                <p class="price">Start from <span> $75.00</span></p>
+                                                <a class="btn btn-black" href="#">View all</a>
+                                            </div>
+                                            <div class="thumb w-50">
+                                                <img src="../assets/img/category/03.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
