@@ -287,7 +287,7 @@
 
 
     $(document).ready(function () {
-        /** 新增   **/
+        /**   新增   **/
         $("#addBtn").fancybox({
             'href': 'addBook.html',
             'width': 733,
@@ -296,7 +296,7 @@
             'hideOnOverlayClick': false,
             'showCloseButton': false,
             'onClosed': function () {
-                window.location.href = 'table-books2.html';
+                window.location.href = 'table-users2.html';
             }
         });
 
@@ -308,7 +308,7 @@
             'hideOnOverlayClick': false,
             'showCloseButton': false,
             'onClosed': function () {
-                window.location.href = 'table-books2.html';
+                window.location.href = 'table-users2.html';
             }
         });
 
@@ -430,7 +430,7 @@
 
     function getUserData(startPage) {
         /*请求信息*/
-        alert(startPage);
+        // alert(startPage);
         if (startPage == null || startPage == 0 || startPage < 0) {
             startPage = document.getElementById("startPage").innerText;
         }
@@ -513,7 +513,7 @@
                             'hideOnOverlayClick': false,
                             'showCloseButton': false,
                             'onClosed': function () {
-                                window.location.href = 'table-books2.html';
+                                window.location.href = 'table-users2.html';
                             }
                         });
                     }

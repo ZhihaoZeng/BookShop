@@ -4875,6 +4875,32 @@ form .quantity input:focus {
   .footer-widget {
     margin-bottom: 40px;
   }
+
+
+  .slider-item-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 536px;
+    height: 536px;
+  }
+
+  .slider-item-left
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+  }
+
+  .sliderIMG{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
 }
 @media screen and (max-width: 376px) {
   .shop-product-area-2 .single-product-card .product-card-details .product-cart {

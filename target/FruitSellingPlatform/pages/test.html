@@ -13,7 +13,10 @@
 <span id="myspan">123</span>
 <!-- 分页栏容器 end -->
 
+<div id="fuckImg">
 
+</div>
+<img src="https://img3.doubanio.com/view/subject/s/public/s1507610.jpg"/>
 <th scope="row" width="50"align="center">
     <div align="center"style="margin-top: 20px;">
         <span class="cbox" onclick="this.className=/checked/ig.test(this.className)?this.className.replace('checked',''):(this.className+' checked')"></span></div>
@@ -54,6 +57,7 @@ start
     }*/
 
     window.onload = function loadrequest() {
+        $("#fuckImg").append("<img src='https://img3.doubanio.com/view/subject/s/public/s1507610.jpg'/>");
         document.getElementById("fuck").value = "hahahahhahaha";
         alert( document.getElementById("myspan").innerText);
         alert( $("#myspan").val());

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="referrer" content="no-referrer" />
     <title></title>
 
     <!-- Vendor Stylesheet -->
@@ -223,7 +224,8 @@
                                                     "    <div class=\"col-lg-3 col-md-6\">\n" +
                                                     "        <div class=\"single-product-card single-product-card-2 text-center\">\n" +
                                                     "            <div class=\"thumb\">\n" +
-                                                    "                 <img src=\"../assets/img/product/" + book.image.toString() + "\" alt=\"top-product\">\n" +
+                                                    "<img src=\""+book.image.toString()+"\" alt=\"top-product\"/>"+
+                                                    // "                 <img src=\"../assets/img/product/" + book.image.toString() + "\" alt=\"top-product\">\n" +
                                                     "            </div>\n" +
                                                     "            <div class=\"product-card-details\">\n" +
                                                     "                <p class=\"categories\">Gadgets</p>\n" +
@@ -1212,7 +1214,8 @@
                                 <p>45 Grand Central Terminal New York <br> NY 1245, United State USA</p>
                             </li>
                             <li class="single-info-item">
-                                <h4>Email:</h4>
+                                <h4>Email:</h4>            "<img src=\""+image+"\" alt=\"item\"/>"+
+
                                 <p>supports@zenax.com</p>
                             </li>
                             <li class="single-info-item">

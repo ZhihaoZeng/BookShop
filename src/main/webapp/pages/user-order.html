@@ -478,8 +478,15 @@
                             var book = orderItems[j].book;
                             var orderNum = parseInt(orderItems[j].orderNum);
                             var bookprice = parseFloat(book.price);
-                            header = header+
-                                "                    <tr>\n" +
+                            header = header+"                    <tr>\n" +
+                                "                        <th scope=\"row\"><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></th>\n" +
+                                "                        <td colspan=\"2\" class=\"item-name\"><a href=\"shop-details.html?bookId="+book.bookId+"\">"+book.bookName+"</a></td>\n" +
+                                "                        <td>"+price+"</td>\n" +
+                                "                        <td>"+book.bookStatus+"</td>\n" +
+                                "                        <td>"+orderNum+"</td>\n" +
+                                "                            <td id='"+book.bookId+"'>"+bookprice*orderNum+"</td>\n" +
+                                "                    </tr>" ;
+                                /*"                    <tr>\n" +
                                 "                        <th scope=\"row\"><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></th>\n" +
                                 "                        <td colspan=\"2\" class=\"item-name\">"+book.bookName+"</td>\n" +
                                 "                        <td>"+price+"</td>\n" +
@@ -491,7 +498,7 @@
                                 "                                 </div>\n" +
                                 "                        </td>\n" +
                                 "                            <td id='"+book.bookId+"'>"+bookprice*orderNum+"</td>\n" +
-                                "                    </tr>\n" ;
+                                "                    </tr>\n" ;*/
                         }
                         var statusStr = "";
                         if(orderStatus == null){
@@ -507,14 +514,7 @@
                         }
 
                         header = header+
-                            "                    <tr>\n" +
-                            "                        <th scope=\"row\"><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></th>\n" +
-                            "                        <td colspan=\"2\" class=\"item-name\">"+book.bookName+"</td>\n" +
-                            "                        <td>"+price+"</td>\n" +
-                            "                        <td>"+book.bookStatus+"</td>\n" +
-                            "                        <td>"+orderNum+"</td>\n" +
-                            "                            <td id='"+book.bookId+"'>"+bookprice*orderNum+"</td>\n" +
-                            "                    </tr>\"" +
+
                             "                      <tr>\n" +
                             "                            <th></th>\n" +
                             "                            <td></td>\n" +

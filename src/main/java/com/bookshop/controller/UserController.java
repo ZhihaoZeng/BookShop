@@ -187,13 +187,13 @@ public class UserController {
         if(checkSession.checkManager(session)){
             if(user.getUserId()==null){
                 user.setUserId(((User)session.getAttribute("user")).getUserId());
-                responseFromServer response =  userService.updateUser(user);
-                if(response.isSuccess()){
-                    session.removeAttribute("user");
-                    session.setAttribute("user",(User)userService.getUser(user.getUserId()).getData());
-                }
-                return response;
             }
+            responseFromServer response =  userService.updateUser(user);
+            if(response.isSuccess()){
+                session.removeAttribute("user");
+                session.setAttribute("user",(User)userService.getUser(user.getUserId()).getData());
+            }
+            return response;
         }else if (checkSession.checkManager(session)){
             User loginUser =(User)session.getAttribute("user");
             if(user.getUserId()!=null&&loginUser.getUserId()!=user.getUserId()){

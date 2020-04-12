@@ -61,7 +61,7 @@
         insert into book <include refid="table_column"/>
         values
         (
-            #{bookId},#{price},#{bookName},#{detail},#{bookType},#{image},#{publishTime},#{bookStatus}
+        #{bookId},#{price},#{bookName},#{detail},#{bookType},#{image},#{publishTime},#{bookStatus}
         )
     </insert>
 
@@ -70,14 +70,14 @@
         values
         <foreach collection="list" item="item" index="index" separator=",">
             (
-                #{item.bookId},
-                #{item.price},
-                #{item.bookName},
-                #{item.detail},
-                #{item.bookType},
-                #{item.image},
-                #{=DATE_FORMAT(#{item.publishTime},'%Y-%m-%d')},
-                #{bookStatus}
+            #{item.bookId},
+            #{item.price},
+            #{item.bookName},
+            #{item.detail},
+            #{item.bookType},
+            #{item.image},
+            #{=DATE_FORMAT(#{item.publishTime},'%Y-%m-%d')},
+            #{bookStatus}
             )
         </foreach>
     </insert>

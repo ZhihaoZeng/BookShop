@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="referrer" content="no-referrer" />
+
     <title></title>
 
 
@@ -333,9 +335,9 @@
             <div class="col-md-7">
                 <div class="product-thumbnail-wrapper">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-3" id="leftImageDiv">
                             <!--左侧-->
-                            <div class="product-thumbnail-carousel2" id="leftImageDiv">
+                            <div class="product-thumbnail-carousel2 pro" >
                                 <div class="single-thumbnail-item">
                                     <img src="../assets/img/product/shop/shop-details/01.png" alt="item">
                                 </div>
@@ -346,14 +348,14 @@
                             </div>
                         </div>
 
-                        <div class="col-9 pl-0">
+                        <div class="col-9 pl-0" id="centerImageDiv">
                             <!--中间-->
-                            <div class="single-thumbnail-slider2">
-                                <div class="slider-item" id="cenyterImageDiv">
-                                    <img src="../assets/img/product/shop/shop-details/01.png" alt="item">
+                            <div class="single-thumbnail-slider2" >
+                                <div class="slider-item" >
+                                    <img src="../assets/img/product/01.png" alt="item">
                                 </div>
-                                <div class="slider-item" id="sideImageDiv">
-                                    <img src="../assets/img/product/shop/shop-details/02.png" alt="item">
+                                <div class="slider-item">
+                                    <img src="../assets/img/product/02.png" alt="item">
                                 </div>
                             </div>
                         </div>
@@ -401,10 +403,6 @@
                 <div class="shop-tabs">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                               aria-controls="home" aria-selected="true">Specifications</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                                aria-controls="profile" aria-selected="false">Description</a>
                         </li>
@@ -414,52 +412,11 @@
                         </li>
                     </ul>
                     <div class="tab-content specific-tab" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <table class="table table-bordered">
-                                <tbody>
-                                <tr>
-                                    <th>Brand</th>
-                                    <td>Brand Name</td>
-                                </tr>
-                                <tr>
-                                    <th>Model</th>
-                                    <td>2019</td>
-                                </tr>
-                                <tr>
-                                    <th>RAM</th>
-                                    <td>8 GB</td>
-                                </tr>
-                                <tr>
-                                    <th>Storage</th>
-                                    <td>SSD - 512 GB</td>
-                                </tr>
-                                <tr>
-                                    <th>Graphic</th>
-                                    <td>AMD 1 GB</td>
-                                </tr>
-                                <tr>
-                                    <th>Processor</th>
-                                    <td>Intel i5</td>
-                                </tr>
-                                <tr>
-                                    <th>Backup</th>
-                                    <td>Upto 10h</td>
-                                </tr>
-                                <tr>
-                                    <th>Display</th>
-                                    <td>Retina 4k</td>
-                                </tr>
-                                <tr>
-                                    <th>Warranty</th>
-                                    <td>1 Year (Global)</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
                         <div class="tab-pane fade describe-tab" id="profile" role="tabpanel"
                              aria-labelledby="profile-tab">
-                            <h3 class="title">About Product</h3>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            <h3 class="title">相关信息</h3>
+                            <p class="mb-0" id="details">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                 unknown printer took a galley of type and scrambled it to make a type specimen book. It
                                 has survived not only five centu but also the leap into electronic typesetting,
@@ -811,19 +768,7 @@
             }),
             success: function (response) {
                 if (response.status == 0) {
-                    book = response.data;
-                    var image = book.image;
-                    var imageStr = "<img src=\"../assets/img/"+image+"\" alt=\"item\">"
-                    $("#titleDiv").append("<h4 class=\"entry-title\" >" + book.bookName + "</h4>");
-                    $("#priceDiv").append("￥" + book.price);
-
-                    $("#cenyterImageDiv").empty();
-                    $("#sideImageDiv").empty();
-
-                    $("#cenyterImageDiv").append(imageStr);
-                    $("#sideImageDiv").append(imageStr);
-
-                    alert("查询成功");
+                    fillInData(response);
                 } else {
                     alert("获取书本信息失败");
                 }
@@ -833,6 +778,130 @@
             }
         });
         checkLogin();
+    }
+
+    function fillInData(response){
+        book = response.data;
+        var image = book.image;
+
+        var leftImageStr =
+            "<div class=\"product-thumbnail-carousel2 pro\" >\n" +
+            "                                <div class=\"single-thumbnail-item\">\n" +
+            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                </div>\n" +
+            "                                <div class=\"single-thumbnail-item\">\n" +
+            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                </div>\n" +
+            "                            </div>";
+
+            // "<div class=\"product-thumbnail-carousel2\" >\n" +
+            // "<div class=\"single-thumbnail-item\" >\n" +
+            // "<img src=\""+image+"\" alt=\"item\" />"+
+            // "</div>" +
+            // "<div class=\"single-thumbnail-item\" >\n" +
+            // "<img src=\""+image+"\" alt=\"item\" />"+
+            // "</div>" +
+            // "</div>";
+        var centerImageStr =
+            "<div class=\"single-thumbnail-slider2\" >\n" +
+            "                                <div class=\"slider-item\" >\n" +
+            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                </div>\n" +
+            "                                <div class=\"slider-item\">\n" +
+            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                </div>\n" +
+            "                            </div>";
+
+
+            // "<div class=\"single-thumbnail-slider2\" >\n" +
+            // "<div class=\"slider-item\" style='align-items:center;'>\n" +
+            // "<img src=\""+image+"\" alt=\"item\" style='width: auto;height: 100%;'/>"+
+            // "</div>" +
+            // "<div class=\"slider-item\" tyle='align-items:center;'>\n" +
+            // "<img src=\""+image+"\" alt=\"item\" style='width: auto;height: 100%;'/>"+
+            // // "<img src=\""+image+"\" alt=\"item\" style='width: auto;height: 100%;max-width: 100%; max-height: 100%;'/>"+
+            // "</div>"+
+            // "</div>\n";
+        // "<div class=\"single-thumbnail-slider2\" >\n" +
+        //     "<div class=\"slider-item\" >\n" +
+        //     "<img src=\"../assets/img/product/"+image+"\" alt=\"item\">"+
+        //     "</div>"+
+        //     "<div class=\"slider-item\" >\n" +
+        //     "<img src=\"../assets/img/product/"+image+"\" alt=\"item\">"+
+        //     "</div>"+
+        //     "</div>\n";
+
+        $("#titleDiv").append("<h4 class=\"entry-title\" >" + book.bookName + "</h4>");
+        $("#priceDiv").append("￥" + book.price);
+
+        $("#centerImageDiv").empty();
+        $("#leftImageDiv").empty();
+        $("#details").empty();
+
+
+        $("#centerImageDiv").append(centerImageStr);
+        $("#leftImageDiv").append(leftImageStr);
+        $("#details").append(book.detail);
+
+        /*---------------------------------------
+            Thumbnail Slider
+        ---------------------------------------*/
+        var productDetailSlider = $('.single-thumbnail-slider');
+        var pThumbanilSlider = $('.product-thumbnail-carousel');
+
+        if (productDetailSlider.length) {
+            productDetailSlider.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                speed: 2500,
+                asNavFor: '.product-thumbnail-carousel'
+            });
+        }
+        if (pThumbanilSlider.length) {
+            pThumbanilSlider.slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.single-thumbnail-slider',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                arrows:false,
+                prevArrow: '<div class="slick-prev"><i class="fa fa-angle-up"></i></div>',
+                nextArrow: '<div class="slick-next"><i class="fa fa-angle-down"></i></div>',
+            });
+        }
+
+        var productDetailSlider = $('.single-thumbnail-slider2');
+        var pThumbanilSlider = $('.product-thumbnail-carousel2');
+
+        if (productDetailSlider.length) {
+            productDetailSlider.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                asNavFor: '.product-thumbnail-carousel2'
+            });
+        }
+        if (pThumbanilSlider.length) {
+            pThumbanilSlider.slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.single-thumbnail-slider2',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                vertical: true,
+                arrows:false,
+                prevArrow: '<div class="slick-prev"><i class="fa fa-angle-double-up"></i></div>',
+                nextArrow: '<div class="slick-next"><i class="fa fa-angle-double-down"></i></div>',
+            });
+        }
+
+
+
+
+        // alert("查询成功");
     }
 </script>
 
