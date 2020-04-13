@@ -466,7 +466,7 @@
             dataType: "json", //表示返回值类型，不必须
             type: "post",
             data: JSON.stringify({
-                "startPage": startPage,
+                "startPage": parseInt(startPage),
                 "orderId": parseInt($("#orderIdSearch").val()),
                 "userId": userId==null?parseInt($("#userIdSearch").val()):userId,
                 "purchaseTime":$("#purchaseTime").val()==""?null:$("#purchaseTime").val(),
@@ -492,8 +492,8 @@
                         "                                                </th>\n" +
                         "                                                <th>订单ID</th>\n" +
                         "                                                <th>用户ID</th>\n" +
-                        "                                                <th>支付时间</th>\n" +
                         "                                                <th>价格</th>\n" +
+                        "                                                <th>支付时间</th>\n" +
                         "                                                <th>订单状态</th>\n" +
                         "                                                <th>操作</th>\n" +
                         "                                            </tr>";
@@ -510,7 +510,7 @@
 
                         var str =
                             " <tr>\n" +
-                            "<td><input type=\"checkbox\" name='IDCheck' value=" + parseInt(userId) + " class=\"acb\"/></td>\n" +
+                            "<td><input type=\"checkbox\" name='IDCheck' value=" + parseInt(orderId) + " class=\"acb\"/></td>\n" +
                             "<td>" + orderId + "</td>\n" +
                             "<td>" + userId + "</td>\n" +
                             "<td>" + price + "</td>\n" +

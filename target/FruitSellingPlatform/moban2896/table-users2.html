@@ -279,7 +279,7 @@
                 }
             },
             error: function () {
-                alert("请求失败");
+                alert("checklogin请求失败");
                 return false;
             }
         });
@@ -375,7 +375,7 @@
                 }),
                 success: function (response) {
                     if (response.status == 0) {
-                        alert("删除成功");
+                        // alert("删除成功");
                     } else {
                         alert("删除失败" + response.msg);
                     }
@@ -385,7 +385,7 @@
                 }
             });
         });
-        getUserData();
+        getUserData(1);
     }
 
     function getNextOnePage() {
@@ -450,7 +450,7 @@
             type: "post",
             data: JSON.stringify({
                 /*todo 框中为空 传去的参数是为空还是为？0*/
-                "startPage": startPage,
+                "startPage": parseInt(startPage),
                 "userName": userName,
                 "userId": parseInt($("#userIdSearch").val()),
                 "gender": $("#userSexSearch").val() == "" ? null : $("#userSexSearch").val(),
@@ -517,13 +517,12 @@
                             }
                         });
                     }
-                    // alert("搜索成功");
                 } else {
                     alert("搜索失败");
                 }
             },
             error: function () {
-                alert("请求失败");
+                alert("getUserData请求失败");
             }
         });
     }

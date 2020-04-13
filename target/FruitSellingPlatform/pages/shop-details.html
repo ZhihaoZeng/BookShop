@@ -242,8 +242,8 @@
 
                         <script type="text/javascript">
                             function shopPage() {
-                                window.location.href = "shop.html?bookName=" + $("#searchText").val();
-                                // window.location.href="shop.html?bookName="+searchText.val();
+                                window.location.href = "shop.html?bookName=" + $("#searchText").val()+"&bookType="+$("#bookTypeSelection").val();
+                                // window.location.href = "shop.html?bookName=" + $("#searchText").val();// window.location.href="shop.html?bookName="+searchText.val();
                             }
                         </script>
                     </div>
@@ -337,27 +337,27 @@
                     <div class="row">
                         <div class="col-3" id="leftImageDiv">
                             <!--左侧-->
-                            <div class="product-thumbnail-carousel2 pro" >
-                                <div class="single-thumbnail-item">
-                                    <img src="../assets/img/product/shop/shop-details/01.png" alt="item">
-                                </div>
-                                <div class="single-thumbnail-item">
-                                    <img src="../assets/img/product/shop/shop-details/02.png" alt="item">
-                                </div>
+<!--                            <div class="product-thumbnail-carousel2 pro" >-->
+<!--                                <div class="single-thumbnail-item">-->
+<!--                                    <img src="../assets/img/product/shop/shop-details/01.png" alt="item">-->
+<!--                                </div>-->
+<!--                                <div class="single-thumbnail-item">-->
+<!--                                    <img src="../assets/img/product/shop/shop-details/02.png" alt="item">-->
+<!--                                </div>-->
 
-                            </div>
+<!--                            </div>-->
                         </div>
 
                         <div class="col-9 pl-0" id="centerImageDiv">
                             <!--中间-->
-                            <div class="single-thumbnail-slider2" >
-                                <div class="slider-item" >
-                                    <img src="../assets/img/product/01.png" alt="item">
-                                </div>
-                                <div class="slider-item">
-                                    <img src="../assets/img/product/02.png" alt="item">
-                                </div>
-                            </div>
+<!--                            <div class="single-thumbnail-slider2" >-->
+<!--                                <div class="slider-item" >-->
+<!--                                    <img src="../assets/img/product/01.png" alt="item">-->
+<!--                                </div>-->
+<!--                                <div class="slider-item">-->
+<!--                                    <img src="../assets/img/product/02.png" alt="item">-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -374,9 +374,9 @@
                         <span><i class="fa fa-star"></i></span>
                         <span><i class="fa fa-star"></i></span>
                     </div>
-                    <a class="review-counter" href="#">(19 Review)</a>
+<!--                    <a class="review-counter" href="#">(19 Review)</a>-->
                     <div class="price" id="priceDiv"><!--$99.00<del>$115.90</del>--></div>
-                    <div class="stock"><i class="fa fa-check"></i>In Stock</div>
+                    <div class="stock"><i class="fa fa-check"></i>库存充足</div>
                     <form>
                         <div class="quantity buttons_added">
                             <input type="button" value="-" class="minus">
@@ -396,7 +396,7 @@
                             <li><a class="color-5" href="#"></a></li>
                         </ul>
                     </div> -->
-                    <button type="submit" class="btn btn-black" onclick="addToCart()">Add to Cart</button>
+                    <button type="submit" class="btn btn-black" onclick="addToCart()">加入购物车</button>
                 </div>
             </div>
             <div class="col-12 mg-top-120">
@@ -404,7 +404,7 @@
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                               aria-controls="profile" aria-selected="false">Description</a>
+                               aria-controls="profile" aria-selected="true">Description</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab"
@@ -421,24 +421,21 @@
                                 unknown printer took a galley of type and scrambled it to make a type specimen book. It
                                 has survived not only five centu but also the leap into electronic typesetting,
                                 remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including versions of lorem Ipsum.</p>
-                            <div class="quick-view">
-                                <h3 class="title">Quick View</h3>
-                                <ul>
-                                    <li>Lorem Ipsum is simply dummy text of the printing.</li>
-                                    <li>Contrary to popular belief, Lorem Ipsum is not simply.</li>
-                                    <li>There are many variations of passages.</li>
-                                    <li>It is a long established fact that a reader will be distracted.</li>
-                                    <li>The standard chunk of Lorem Ipsum used since the 1500s.</li>
-                                </ul>
-                            </div>
-                            <h3 class="title">Warranty Policy</h3>
-                            <p>It has survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions.</p>
+<!--                            <div class="quick-view">-->
+<!--                                <h3 class="title">Quick View</h3>-->
+<!--                                <ul>-->
+<!--                                    <li>Lorem Ipsum is simply dummy text of the printing.</li>-->
+<!--                                    <li>Contrary to popular belief, Lorem Ipsum is not simply.</li>-->
+<!--                                    <li>There are many variations of passages.</li>-->
+<!--                                    <li>It is a long established fact that a reader will be distracted.</li>-->
+<!--                                    <li>The standard chunk of Lorem Ipsum used since the 1500s.</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <h3 class="title">Warranty Policy</h3>-->
+<!--                            <p>It has survived not only five centuries, but also the leap into electronic typesetting,-->
+<!--                                remaining essentially unchanged. It was popularised in the 1960s with the release of-->
+<!--                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop-->
+<!--                                publishing software like Aldus PageMaker including versions.</p>-->
                         </div>
                         <div class="tab-pane review-tab fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                             <p class="woocommerce-noreviews">There are no reviews yet.</p>
@@ -786,11 +783,11 @@
 
         var leftImageStr =
             "<div class=\"product-thumbnail-carousel2 pro\" >\n" +
-            "                                <div class=\"single-thumbnail-item\">\n" +
-            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                <div class=\"single-thumbnail-item\" align='center'  style='width: 140px;height: 140px;align-items: center;justify-content:center;display:flex;'>\n" +
+            "                                     <img src=\""+image+"\" alt=\"item\" style='height: 100%;width: auto;align-items: center;justify-content:center;display:flex;'/>"+
             "                                </div>\n" +
-            "                                <div class=\"single-thumbnail-item\">\n" +
-            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                <div class=\"single-thumbnail-item\" align='center'  style='width: 140px;height: 140px;align-items: center;justify-content:center;display:flex;'>\n" +
+            "                                     <img src=\""+image+"\" alt=\"item\" style='height: 100%;width: auto;align-items: center;justify-content:center;display:flex;'/>"+
             "                                </div>\n" +
             "                            </div>";
 
@@ -804,11 +801,11 @@
             // "</div>";
         var centerImageStr =
             "<div class=\"single-thumbnail-slider2\" >\n" +
-            "                                <div class=\"slider-item\" >\n" +
-            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                <div class=\"slider-item\" align='center'  style='width: 536px;height: 536px;align-items: center;justify-content:center;display:flex;'>\n" +
+            "                                     <img src=\""+image+"\" alt=\"item\" style='height: 100%;width: auto;align-items: center;justify-content:center;display:flex;'/>"+
             "                                </div>\n" +
-            "                                <div class=\"slider-item\">\n" +
-            "<img src=\""+image+"\" alt=\"item\" />"+
+            "                                <div class=\"slider-item\" align='center'  style='width: 536px;height: 536px;align-items: center;justify-content:center;display:flex;'>\n" +
+            "                                     <img src=\""+image+"\" alt=\"item\" style='height: 100%;width: auto;align-items: center;justify-content:center;display:flex;'/>"+
             "                                </div>\n" +
             "                            </div>";
 

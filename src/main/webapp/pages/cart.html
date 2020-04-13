@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="referrer" content="no-referrer" />
+
     <title></title>
 
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
@@ -19,6 +21,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 <body>
+
 
 <!-- preloader area start -->
 <div class="preloader" id="preloader">
@@ -92,37 +95,132 @@
                 </div>
                 <div class="col-md-6 text-md-right text-center">
                     <ul class="topbar-right float-md-right">
-                        <li class="topbar-single-info">
-                            <i class="fa fa-user"></i>
-                            <span class="d-none d-lg-inline-block">My Account</span>
-                        </li>
-                        <li>
-                            <select class="topbar-select topbar-currency">
-                                <option value="rating">Taka</option>
-                                <option value="date">Rupee</option>
-                                <option value="price-desc">Riyal</option>
-                                <option value="categories" selected="selected">USD</option>
-                            </select>
-                        </li>
-                        <li>
-                            <div class="dropdown topbar-help">
-                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Help
-                                </a>
+                        <div class="align-self-center">
+                            <div class="shop-cart-area">
+                                <ul id="userCart">
 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Help 1</a>
-                                    <a class="dropdown-item" href="#">Help 2</a>
-                                    <a class="dropdown-item" href="#">Help 3</a>
-                                </div>
+                                    <!--                                <li><span>6</span><i class="fa fa-heart-o"></i></li>-->
+                                    <li id="userCartCount" onclick="goToCart();">
+                                        <i class="las la-shopping-cart" onclick="goToCart();"></i>
+                                        <span id="userCartCountSpan"></span></li>
+                                    <!--                                    <li id="userCartPrice" onclick="goToCart();">$ 155.00 .</li>&lt;!&ndash;                                todo 获取购物车价格&ndash;&gt;-->
+                                </ul>
                             </div>
-                        </li>
+                        </div>
+                        <div class="dropdown topbar-help" id="myaccountdropdown">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+                        <script type="text/javascript">
+                            function checkLoginStatus(){
+
+                            }
+                            function logOut() {
+                                alert("login");
+                                $.ajax({
+                                    async: false,
+                                    url: "http://localhost:8080/user/logOut",
+                                    contentType: "application/json;charset=UTF-8", //必须有
+                                    dataType: "json", //表示返回值类型，不必须
+                                    type: "post",
+                                    data: JSON.stringify({}),
+                                    success: function (response) {
+                                        if (response.status == 0) {
+                                            /*退登成功*/
+                                            window.location.href = "login.html";
+                                        } else {
+                                            alert("退登失败");
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("请求失败");
+                                    }
+                                });
+                            }
+
+                            function goToCart(){
+                                window.open("cart.html");
+                            }
+
+                            function checkLogin() {
+                                var user;
+                                $.ajax({
+                                    async:false,
+                                    url: "http://localhost:8080/user/checkLogin",
+                                    contentType: "application/json;charset=UTF-8", //必须有
+                                    dataType: "json", //表示返回值类型，不必须
+                                    type: "post",
+                                    success: function (response) {
+                                        if (response.status == 0) {
+                                            // alert("已登录");
+                                            user = response.data;
+                                            // alert(user.userId);
+                                        } else {
+                                            // alert("未登录");
+                                            return null;
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("请求失败");
+                                        return null;
+                                    }
+                                });
+                                if (user == null || user.userId == null) {
+                                    var str =
+                                        "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
+                                        "请登录</a>" +
+                                        "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink2\" >\n" +
+                                        "<a class=\"dropdown-item\" target=\"_blank\" href=\"login.html\">登录</a> " +
+                                        "</div>";
+                                    $("#myaccountdropdown").append(str);
+                                } else {
+                                    // alert(user.userName);
+                                    /*用户选项*/
+                                    var str =
+                                        "<a class=\"btn dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink2\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n" +
+                                        user.userName + "</a>" +
+                                        "<div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink2\" >\n" +
+                                        "<a class=\"dropdown-item\"target=\"_blank\" href=\"user-order.html\">我的订单</a>" +
+                                        "<a class=\"dropdown-item\"target=\"_blank\"  href=\"user-setting.html\">用户设置</a> " +
+                                        "<a class=\"dropdown-item\"target=\"_blank\" onclick=\"logOut()\">退登</a>\n" +
+                                        "</div>";
+                                    $("#myaccountdropdown").append(str);
+
+                                    $.ajax({
+                                        url: "http://localhost:8080/cart/getCartNum",
+                                        contentType: "application/json;charset=UTF-8", //必须有
+                                        dataType: "json", //表示返回值类型，不必须
+                                        type: "post",
+                                        // data: JSON.stringify(),/*不需要传用户数据*/
+                                        success: function (response) {
+                                            if(response.status==0){
+                                                document.getElementById("userCartCountSpan").innerText = response.data;
+                                                /*                  str = "<span>"+response.data+"</span>";
+                                                                  $("#userCartCount").append(str);*/
+                                            }else{
+                                                alert("获取购物车信息错误");
+                                            }
+                                        },
+                                        error: function () {
+                                            alert("请求失败");
+                                        }
+                                    });
+                                }
+                            }
+
+
+
+                        </script>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     <div class="navbar-middle d-none d-lg-block">
         <div class="container">
             <div class="row">
@@ -132,26 +230,28 @@
                     </div>
                 </div>
                 <div class="col-lg-7 text-center">
-                    <form class="main-search d-inline-flex">
-                        <input type="text" placeholder="Search product...">
+                    <div class="main-search d-inline-flex">
+                        <input type="text" placeholder="Search product..." name="searchText" id="searchText"/>
                         <div class="topbar-cat-select">
-                            <select>
-                                <option value="rating">Product Category</option>
-                                <option value="date">Featured Category</option>
-                                <option value="price-desc">Price categories</option>
-                                <option value="categories" selected="selected">All categories</option>
+                            <select id="bookTypeSelection">
+                                <option value="" selected="selected">全部</option>
+                                <option value="1">教育考试</option>
+                                <option value="2">小说</option>
+                                <option value="3">童书</option>
+                                <option value="4" >人文社科</option>
+                                <option value="5">健康</option>
+                                <option value="6">英文</option>
+                                <option value="7">理工</option>
                             </select>
                         </div>
-                        <button>Search</button>
-                    </form>
-                </div>
-                <div class="col-lg-3 align-self-center">
-                    <div class="shop-cart-area">
-                        <ul>
-                            <li><span>6</span><i class="fa fa-heart-o"></i></li>
-                            <li><span>5</span><i class="las la-shopping-cart"></i></li>
-                            <li>$155.00</li>
-                        </ul>
+                        <button onclick="shopPage()">搜索</button>
+
+                        <script type="text/javascript">
+                            function shopPage() {
+                                window.location.href = "shop.html?bookName=" + $("#searchText").val()+"&bookType="+$("#bookTypeSelection").val();
+                                // window.location.href="shop.html?bookName="+searchText.val();
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -175,17 +275,19 @@
                     All Category
                 </div>
                 <ul class="sidebar-categories">
-                    <li><a href="#"><img src="../assets/img/icon/laptop.png" alt="img">Computer &amp; Offices<i
+                    <li><a href="shop.html?bookType=1"><img src="../assets/img/icon/laptop.png" alt="img">教育考试<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#"><img src="../assets/img/icon/chair.png" alt="img">Home &amp; Furniture<i
+                    <li><a href="shop.html?bookType=2"><img src="../assets/img/icon/chair.png" alt="img">小说<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#"><img src="../assets/img/icon/phone.png" alt="img">Mobile &amp; Tablets<i
+                    <li><a href="shop.html?bookType=3"><img src="../assets/img/icon/phone.png" alt="img">童书<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#"><img src="../assets/img/icon/ball.png" alt="img">Sports &amp; Outdoors<i
+                    <li><a href="shop.html?bookType=4"><img src="../assets/img/icon/ball.png" alt="img">人文社科<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#"><img src="../assets/img/icon/heart.png" alt="img">Beauty &amp; Health<i
+                    <li><a href="shop.html?bookType=5"><img src="../assets/img/icon/heart.png" alt="img">健康<i
                             class="fa fa-angle-down"></i></a></li>
-                    <li><a href="#"><img src="../assets/img/icon/monitor.png" alt="img">Radio &amp; TV<i
+                    <li><a href="shop.html?bookType=6"><img src="../assets/img/icon/monitor.png" alt="img">英文<i
+                            class="fa fa-angle-down"></i></a></li>
+                    <li><a href="shop.html?bookType=7"><img src="../assets/img/icon/monitor.png" alt="img">理工<i
                             class="fa fa-angle-down"></i></a></li>
                 </ul>
             </div>
@@ -205,57 +307,12 @@
             </div>
             <div class="collapse navbar-collapse" id="zenax_main_menu">
                 <ul class="navbar-nav menu-open">
-                    <li class="menu-item-has-children current-menu-item">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="../index.html"><i class="fa fa-long-arrow-right"></i>Home 01</a></li>
-                            <li><a href="home-2.html"><i class="fa fa-long-arrow-right"></i>Home 02</a></li>
-                            <li><a href="home-3.html"><i class="fa fa-long-arrow-right"></i>Home 03</a></li>
-                            <li><a href="home-4.html"><i class="fa fa-long-arrow-right"></i>Home 04</a></li>
-                            <li><a href="home-5.html"><i class="fa fa-long-arrow-right"></i>Home 05</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Shop</a>
-                        <ul class="sub-menu">
-                            <li><a href="shop.html"><i class="fa fa-long-arrow-right"></i>Shop 01</a></li>
-                            <li><a href="shop-2.html"><i class="fa fa-long-arrow-right"></i>Shop 02</a></li>
-                            <li><a href="shop-3.html"><i class="fa fa-long-arrow-right"></i>Shop 03</a></li>
-                            <li><a href="shop-4.html"><i class="fa fa-long-arrow-right"></i>Shop 04</a></li>
-                            <li><a href="shop-5.html"><i class="fa fa-long-arrow-right"></i>Shop 05</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Product</a>
-                        <ul class="sub-menu">
-                            <li><a href="shop-details.html"><i class="fa fa-long-arrow-right"></i>Product Details 01</a>
-                            </li>
-                            <li><a href="shop-details-2.shop-details.html"><i class="fa fa-long-arrow-right"></i>Product
-                                Details 02</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="checkout.html"><i class="fa fa-long-arrow-right"></i>Checkout</a></li>
-                            <li><a href="compare-product.html"><i class="fa fa-long-arrow-right"></i>Compare Product</a>
-                            </li>
-                            <li><a href="wishlist.html"><i class="fa fa-long-arrow-right"></i>Wistlist</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Card</a>
-                        <ul class="sub-menu">
-                            <li><a href="card.html"><i class="fa fa-long-arrow-right"></i>Card 01</a></li>
-                            <li><a href="card-2.html"><i class="fa fa-long-arrow-right"></i>Card 02</a></li>
-                            <li><a href="card-3.html"><i class="fa fa-long-arrow-right"></i>Card 03</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
             </div>
-            <div class="nav-right-part">
-                <a href="shipping.html" class="right-part-text">Free Shipping on Orders $30+</a>
-            </div>
+            <!--<div class="nav-right-part">
+                <a href="cart.html" class="right-part-text">购物车</a>
+            </div>-->
         </div>
     </nav>
 </div>
@@ -287,13 +344,13 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col" width="50">Iteams</th>
-                            <th scope="col">Iteams</th>
+                            <th scope="col" width="70"></th>
+                            <th scope="col">书籍</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th colspan="2">Total Price</th>
+                            <th scope="col">价格</th>
+                            <th scope="col">数量</th>
+                            <th colspan="2">计价</th>
                         </tr>
                         </thead>
                         <tbody id="cartTBody">
@@ -337,12 +394,12 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td class="total-amount">Total: <span>$484.85</span></td>
+<!--                            <td class="total-amount">Total: <span>$484.85</span></td>-->
                             <td></td>
                         </tr>
                     </table>
                     <div class="checkout-btn text-right">
-                        <a class="btn btn-basic-lg" onclick="setUpOrder()">Process to Checkout</a>
+                        <a class="btn btn-basic-lg" onclick="setUpOrder()">购买</a>
                     </div>
                 </div>
             </div>
@@ -469,6 +526,7 @@
 
 <script type="text/javascript">
     window.onload = function () {
+        checkLogin();
         getCart();
     }
 
@@ -497,7 +555,16 @@
                             "                                <!--                                        <input id=\"mycheckbox8\" type=\"checkbox\" class=\"checkbix\" data-shape=\"circled\" data-color=\"orange\" data-text=\"Orange, circled\" checked>-->\n" +
                             "                            </th>\n" +
                             "                            <!--                                    <th scope=\"row\"><img src=\"../assets/img/card/5.png\" alt=\"img\"></th>-->\n" +
-                            "                            <td><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></td>\n" +
+                            // "                            <td><img src=\"../assets/img/"+book.image+"\" alt=\"img\" style='width:40px;heigh:40px'></td>\n" +
+                            "                            <td>"+
+                            "                 <div  align='center'  style='width: 100px;height: 100px;align-items: center;justify-content:center;display:flex;'>\n" +
+                            "                       <a href=\"shop-details.html?bookId="+book.bookId+"\"  style='width: 100px;height: 100px;align-items: center;justify-content:center;display:flex;'>"+
+                            "                                     <img src=\""+book.image.toString()+"\" alt=\"item\" style='height: 100%;width: auto;align-items: center;justify-content:center;display:flex;'/>"+
+
+                            // "                                 <img src=\""+book.image.toString()+"\" alt=\"top-product\" style='width: 283px;height: 432px;'/>"+
+                            "                       </a>"+
+                            "                  </div>\n" +
+                            "</td>\n" +
                             "                            <td colspan=\"2\" class=\"item-name\"><a href=\"shop-details.html?bookId="+book.bookId+"\">"+book.bookName+"</a></td>\n" +
                             "                            <td>"+price+"</td>\n" +
                             "                            <td class=\"table-quantity\">\n" +

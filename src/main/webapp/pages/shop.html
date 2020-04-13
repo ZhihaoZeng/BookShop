@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="referrer" content="no-referrer" />
     <title></title>
 
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
@@ -58,7 +59,7 @@
         <div class="sidebar-contact">
             <h4>Contact Us</h4>
             <ul>
-                <li><i class="fa fa-map-marker"></i>Lavaca Street, Suite 2000</li>
+                <li><i class="fa fa-map-marker"></i>Lavaca Street, Suite 2000</li>R
                 <li><i class="fa fa-envelope"></i>email@evha.com</li>
                 <li><i class="fa fa-phone"></i>(+880) 172570051</li>
             </ul>
@@ -632,7 +633,7 @@
                     if (totalPage <= 11) {
                         str = str + header;
                         for (var i = 1; i <= totalPage; i++) {
-                            str = str + "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:getBooksData(" + parseInt(i) + ")\">i</a></li>\n";
+                            str = str + "<li class=\"page-item\"><a class=\"page-link\" href=\"javascript:getBooksData(" + parseInt(i) + ")\">"+parseInt(i)+"</a></li>\n";
                         }
                         str = str + tail;
                         $("#pageId").empty();
@@ -672,7 +673,7 @@
                         type: "post",
                         data: JSON.stringify({
                             "startPage": startPage,
-                            "bookName": "%" + bookName + "%",
+                            "searchStr": "%" + bookName + "%",
                             "bookType": parseInt(bookType)
                         }),
                         success: function (response) {
@@ -709,18 +710,30 @@
 
                                     var str = " <div class=\"col-lg-3\">\n" +
                                         "                        <div class=\"single-product-card single-product-card-2 text-center border-0\">\n" +
-                                        "                            <div class=\"thumb\">\n" +
-                                        "                                <img src=\"../assets/img/product/" + image.toString() + "\" alt=\"top-product\">\n" +
-                                        "                            </div>\n" +
+                                        "<a href=\"shop-details.html?bookId="+bookId+"\">"+
+                                        "                                <img src=\""+ image.toString() + " alt=\"top-product\" style='height: 305px;width:200px'>\n" +
+                                        "</a>"+
+                                        // "                                <img src=\""+ image.toString() + " alt=\"top-product\" style='height: 305px;width:200px'>\n" +
+                                        // "                            <div class=\"thumb\">\n" +
+                                        // "                                <img src=\"../assets/img/product/" + image.toString() + "\" alt=\"top-product\">\n" +
+                                        // "                            </div>\n" +
                                         "                            <div class=\"product-card-details\">\n" +
-                                        "                                <p class=\"categories\">" + bookType.toString() + "</p>\n" +
+                                        // "                                <p class=\"categories\">" + bookType.toString() + "</p>\n" +
                                         "                                <h4 class=\"title\"><a href=\"shop-details.html?bookId="+bookId+"\">"+bookName.toString()+"</a></h4>\n"+
                                         // "                                <h4 class=\"title\"><a href=\"shop-details.html?bookId="+bookId+"\">" + bookName.toString() + "</a></h4>"+
-                                        "                            </div>\n" +
+                                        "<div class=\"star-rating\">\n" +
+                                        "                                    <span><i class=\"fa fa-star\"></i></span>\n" +
+                                        "                                    <span><i class=\"fa fa-star\"></i></span>\n" +
+                                        "                                    <span><i class=\"fa fa-star\"></i></span>\n" +
+                                        "                                    <span><i class=\"fa fa-star\"></i></span>\n" +
+                                        "                                    <span><i class=\"fa fa-star\"></i></span>\n" +
+                                        "                                </div>"+
                                         "                            <div class=\"price\">\n" +
-                                        "                                    <span>" + parseFloat(price) + "</span>\n" +
+                                        "                                    <span>￥" + parseFloat(price) + "</span>\n" +
                                         "                                </div>\n" +
                                         "                            </div>\n" +
+                                        "                            </div>\n" +
+
                                         "                        </div>\n" +
                                         "                    </div>";
                                     $("#booksRows").append(str);

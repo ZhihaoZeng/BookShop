@@ -20,6 +20,8 @@ public class Book {
     private String image;
     private String publishTime;
     private String bookStatus;
+    private String author;
+    private String publisher;
 
 /*    public static void main(String[] args) {
         Map<String,Object> queryMap = new HashMap<>();
@@ -41,14 +43,33 @@ public class Book {
         return map;
     }
 
-    public Book(Integer bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime, String bookStatus) {
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public Book(Integer bookId, Double price, String bookName, String detail, String bookType, String image, String publishTime, String bookStatus, String author, String publisher) {
         this.bookId = bookId;
         this.price = price;
         this.bookName = bookName;
         this.detail = detail;
         this.bookType = bookType;
         this.image = image;
+        this.publishTime = publishTime;
         this.bookStatus = bookStatus;
+        this.author = author;
+        this.publisher = publisher;
     }
 
     public Book() {

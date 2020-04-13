@@ -223,10 +223,13 @@
                                                 var str =
                                                     "    <div class=\"col-lg-3 col-md-6\">\n" +
                                                     "        <div class=\"single-product-card single-product-card-2 text-center\">\n" +
-                                                    "            <div class=\"thumb\">\n" +
-                                                    "<img src=\""+book.image.toString()+"\" alt=\"top-product\"/>"+
-                                                    // "                 <img src=\"../assets/img/product/" + book.image.toString() + "\" alt=\"top-product\">\n" +
-                                                    "            </div>\n" +
+                                                    "<a href=\"shop-details.html?bookId="+book.bookId+"\">"+
+                                                    "<img src=\""+book.image.toString()+"\" alt=\"top-product\" style='width: 283px;height: 432px;'/>"+
+                                                    "</a>"+
+                                                    // "            <div class=\"thumb\">\n" +
+                                                    //
+                                                    // // "                 <img src=\"../assets/img/product/" + book.image.toString() + "\" alt=\"top-product\">\n" +
+                                                    // "            </div>\n" +
                                                     "            <div class=\"product-card-details\">\n" +
                                                     "                <p class=\"categories\">Gadgets</p>\n" +
                                                     "                    <h4 class=\"title\"><a href=\"shop-details.html?bookId="+book.bookId+"\">" + book.bookName.toString() + "</a></h4>\n" +
@@ -909,7 +912,7 @@
                 <div class="offer-wrap">
                     <div class="countdown"></div>
                 </div>
-                <a href="#" class="btn btn-basic-lg">Shop Now</a>
+                <a href="shop.html" class="btn btn-basic-lg">现在抢购</a>
             </div>
         </div>
     </div>
