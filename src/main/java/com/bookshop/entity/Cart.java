@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @ClassName: Cart
- * @Description:
+ * @Description: 购物车实体类 包含了所有的购物车项
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:55
  */

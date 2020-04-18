@@ -194,13 +194,18 @@ public class UserController {
                 session.setAttribute("user",(User)userService.getUser(user.getUserId()).getData());
             }
             return response;
-        }else if (checkSession.checkManager(session)){
+        }else if (checkSession.check(session)){
             User loginUser =(User)session.getAttribute("user");
             if(user.getUserId()!=null&&loginUser.getUserId()!=user.getUserId()){
                 return responseFromServer.error("非法操作");
             }
             user.setUserId(loginUser.getUserId());
-            return userService.updateUser(user);
+            responseFromServer response =  userService.updateUser(user);
+            if(response.isSuccess()){
+                session.removeAttribute("user");
+                session.setAttribute("user",(User)userService.getUser(user.getUserId()).getData());
+            }
+            return response;
         }
         return responseFromServer.needLogin();
     }

@@ -4,7 +4,6 @@ import com.bookshop.common.checkSession;
 import com.bookshop.common.responseFromServer;
 import com.bookshop.entity.Book;
 import com.bookshop.service.BookService;
-import com.bookshop.util.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -88,7 +86,6 @@ public class BookController {
         } else {
             return responseFromServer.needLogin();
         }
-
     }
 
 

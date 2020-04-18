@@ -4,7 +4,7 @@ import com.bookshop.entity.Cart;
 
 /**
  * @InterfaceName: CartDao
- * @Description: TODO
+ * @Description: 没用的接口
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:50
  */

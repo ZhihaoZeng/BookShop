@@ -5,10 +5,9 @@ import com.bookshop.dao.CartDao;
 import com.bookshop.dao.CartItemDao;
 import com.bookshop.entity.Cart;
 import com.bookshop.entity.CartItem;
-import com.bookshop.util.Page;
+import com.bookshop.entity.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import javax.transaction.Transactional;

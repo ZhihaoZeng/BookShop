@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @ClassName: Order
- * @Description:
+ * @Description: 订单实体类
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:57
  */

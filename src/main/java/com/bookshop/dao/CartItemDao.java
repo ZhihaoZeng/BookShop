@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @InterfaceName: CartItemDao
- * @Description:
+ * @Description: 购物车条目
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:52
  */

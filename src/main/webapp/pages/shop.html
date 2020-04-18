@@ -604,7 +604,7 @@
                     return items;
                 }
 
-
+                /*调整分页标签*/
                 function formatPage(startPage, totalPage, totalCount) {
                     if (startPage == null || totalPage == null || totalCount == null) {
                         alert("分页错误");
@@ -1031,100 +1031,62 @@
                             <div class="col-12">
                                 <div class="section-title-2">
                                     <h3 class="title">猜你喜欢</h3>
-<!--                                    <a href="#" class="btn btn-transparent">View All</a>-->
+                                    <!--                    <a href="#" class="btn btn-transparent">View All</a>-->
                                 </div>
                                 <div class="category-slider square-controler owl-carousel owl-theme">
-                                    <!--<div class="item">
-                                        <div class="single-gadget media">
-                                            <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Mobile & Computers</a></h4>
-                                                <p class="price">Start from <span> $49</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
-                                            </div>
-                                            <div class="thumb w-50">
-                                                <img src="../assets/img/category/01.png" alt="img">
-                                            </div>
-                                        </div>
-                                    </div>-->
                                     <div class="item">
                                         <div class="single-gadget media">
                                             <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Smart Home & Assistant</a></h4>
-                                                <p class="price">Start from <span> $12.99</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
+                                                <span>健康</span>
+                                                <h4><a href="#">关注您的健康</a></h4>
+                                                <p class="price"><span> ￥15</span>起</p>
+                                                <a class="btn btn-black" href="shop.html?bookType=5">看一看！</a>
                                             </div>
                                             <div class="thumb w-50">
-<!--                                                <img src="../assets/img/category/02.png" alt="img">-->
+                                                <img src="https://img1.doubanio.com/view/subject/s/public/s29710377.jpg" alt="img">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="single-gadget media">
                                             <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Smart Home & Assistant</a></h4>
-                                                <p class="price">Start from <span> $12.99</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
+                                                <span>小说</span>
+                                                <h4><a href="#">新故事，新世界</a></h4>
+                                                <p class="price"><span> ￥15</span>起</p>
+                                                <a class="btn btn-black" href="shop.html?bookType=2">看一看！</a>
                                             </div>
                                             <div class="thumb w-50">
-                                                <img src="../assets/img/category/02.png" alt="img">
+                                                <img src="https://img1.doubanio.com/view/subject/s/public/s24514468.jpg" alt="img">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="single-gadget media">
                                             <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Classic & Smart Watch</a></h4>
-                                                <p class="price">Start from <span> $75.00</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
+                                                <span>童书</span>
+                                                <h4><a href="#">童趣童真</a></h4>
+                                                <p class="price"><span> ￥15</span>起</p>
+                                                <a class="btn btn-black" href="shop.html?bookType=3">看一看！</a>
                                             </div>
                                             <div class="thumb w-50">
-                                                <img src="../assets/img/category/03.png" alt="img">
+                                                <img src="https://img3.doubanio.com/view/subject/s/public/s3109561.jpg" alt="img">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="single-gadget media">
                                             <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Mobile & Computers</a></h4>
-                                                <p class="price">Start from <span> $49</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
+                                                <span>英文</span>
+                                                <h4><a href="#">Find the New Land</a></h4>
+                                                <p class="price"> <span> ￥15</span>起</p>
+                                                <a class="btn btn-black" href="shop.html?bookType=6">看一看！</a>
                                             </div>
                                             <div class="thumb w-50">
-                                                <img src="../assets/img/category/01.png" alt="img">
+                                                <img src="https://img1.doubanio.com/view/subject/s/public/s1078958.jpg" alt="img">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="single-gadget media">
-                                            <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Smart Home & Assistant</a></h4>
-                                                <p class="price">Start from <span> $12.99</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
-                                            </div>
-                                            <div class="thumb w-50">
-                                                <img src="../assets/img/category/02.png" alt="img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="single-gadget media">
-                                            <div class="gadget-details media-left w-50 align-self-center">
-                                                <span>Gadgets</span>
-                                                <h4><a href="#">Classic & Smart Watch</a></h4>
-                                                <p class="price">Start from <span> $75.00</span></p>
-                                                <a class="btn btn-black" href="#">View all</a>
-                                            </div>
-                                            <div class="thumb w-50">
-                                                <img src="../assets/img/category/03.png" alt="img">
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

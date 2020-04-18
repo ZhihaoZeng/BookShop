@@ -1,7 +1,7 @@
 package com.bookshop.entity;
 /**
  * @ClassName: CartItem
- * @Description:
+ * @Description: 购物车项实体类 包含了书籍和对应的数量
  * @Author: 曾志昊
  * @Date: 2020/3/28 1:55
  */

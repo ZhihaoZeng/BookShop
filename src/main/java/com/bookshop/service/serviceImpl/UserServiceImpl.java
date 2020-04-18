@@ -2,10 +2,9 @@ package com.bookshop.service.serviceImpl;
 
 import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.UserDao;
-import com.bookshop.entity.Book;
 import com.bookshop.entity.User;
 import com.bookshop.service.UserService;
-import com.bookshop.util.Page;
+import com.bookshop.entity.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

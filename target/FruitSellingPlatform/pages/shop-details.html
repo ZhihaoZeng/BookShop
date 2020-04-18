@@ -415,12 +415,17 @@
 
                         <div class="tab-pane fade describe-tab" id="profile" role="tabpanel"
                              aria-labelledby="profile-tab">
+                            <h3 class="title">作者</h3>
+                            <p class="mb-0" id="author"></p>
+                            <h3 class="title">---------------</h3>
+                            <h3 class="title">出版社</h3>
+                            <p class="mb-0" id="publisher"></p>
+                            <h3 class="title">---------------</h3>
+                            <h3 class="title">出版日期</h3>
+                            <p class="mb-0" id="publishTime"></p>
+                            <h3 class="title">---------------</h3>
                             <h3 class="title">相关信息</h3>
-                            <p class="mb-0" id="details">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                unknown printer took a galley of type and scrambled it to make a type specimen book. It
-                                has survived not only five centu but also the leap into electronic typesetting,
-                                remaining essentially unchanged.</p>
+                            <p class="mb-0" id="details"></p>
 <!--                            <div class="quick-view">-->
 <!--                                <h3 class="title">Quick View</h3>-->
 <!--                                <ul>-->
@@ -834,11 +839,14 @@
         $("#centerImageDiv").empty();
         $("#leftImageDiv").empty();
         $("#details").empty();
-
+        $("#publishTime").empty();
 
         $("#centerImageDiv").append(centerImageStr);
         $("#leftImageDiv").append(leftImageStr);
         $("#details").append(book.detail);
+        $("#author").append(book.author);
+        $("#publisher").append(book.publisher);
+        $("#publishTime").append(book.publishTime);
 
         /*---------------------------------------
             Thumbnail Slider

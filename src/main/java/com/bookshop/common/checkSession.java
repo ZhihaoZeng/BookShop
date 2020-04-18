@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @ClassName: checkSession
- * @Description: TODO
+ * @Description: 权限检查，检查当前登录用户为普通用户还是管理员
  * @Author: 曾志昊
  * @Date: 2020/4/7 17:27
  */

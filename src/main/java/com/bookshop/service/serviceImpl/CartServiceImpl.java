@@ -7,7 +7,7 @@ import com.bookshop.entity.Cart;
 import com.bookshop.entity.CartItem;
 import com.bookshop.entity.User;
 import com.bookshop.service.CartService;
-import com.bookshop.util.Page;
+import com.bookshop.entity.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -144,12 +144,22 @@ public class CartServiceImpl implements CartService {
 
     @Transactional
     public responseFromServer updateCartItem(CartItem cartItem){
-        if (cartItemDao.updateCartItem(cartItem) != 1) {
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            return responseFromServer.error("更新失败");
+        if(cartItem!=null){
+            if(cartItem.getCartNum()>0){
+                if (cartItemDao.updateCartItem(cartItem) != 1) {
+                    TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+                    return responseFromServer.error("更新失败");
+                }else{
+                    return responseFromServer.success();
+                }
+            }else{
+                /*删除*/
+                return deleteCartItem(cartItem);
+            }
         }else{
-            return responseFromServer.success();
+            return responseFromServer.error();
         }
+
     }
 
     public responseFromServer updateCartItems(List<CartItem> cartItems){

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--
-    created by: 曾志昊 2017302580214
+    Description: book mapper
+    Author: 曾志昊 2017302580214
 -->
-<!--todo 动态sql解决插入无默认值问题-->
 
 <mapper namespace="com.bookshop.dao.BookDao">
 
@@ -60,6 +60,7 @@
         <if test="startPage!=null and pageSize != null">LIMIT #{startPage},#{pageSize}</if>
     </select>
 
+    <!--动态sql解决插入无默认值问题-->
     <sql id="bookInfoColumns">
         <trim suffixOverrides=",">
             <if test="bookId != null"> book_id,</if>

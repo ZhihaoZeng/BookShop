@@ -4,10 +4,9 @@ import java.util.HashMap;
 
 import static com.bookshop.util.Util.checkStringIsEmpty;
 
-/*用户*/
 /**
  * @ClassName: OrderItem
- * @Description:
+ * @Description: 用户实体类
  * @Author: 曾志昊
  * @Date: 2020/3/28 2:00
  */

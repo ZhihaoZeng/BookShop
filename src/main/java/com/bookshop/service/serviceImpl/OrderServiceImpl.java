@@ -4,7 +4,7 @@ import com.bookshop.common.responseFromServer;
 import com.bookshop.dao.*;
 import com.bookshop.entity.*;
 import com.bookshop.service.OrderService;
-import com.bookshop.util.Page;
+import com.bookshop.entity.Page;
 import com.bookshop.util.configs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -84,7 +84,8 @@ public class OrderServiceImpl implements OrderService {
         page.setTotalCount(orderDao.count(queryMap));
         page.setCurrPage((Integer)queryMap.get("startPage"));
         queryMap.put("startPage",(page.getCurrPage()-1)*configs.pageSize);
-        page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
+//        page.setTotalPage(((Double)Math.ceil(page.getTotalCount()/configs.pageSize)).intValue());
+        page.setTotalPage(((Double)Math.ceil((double)page.getTotalCount()/(double)configs.pageSize)).intValue());
         page.setLists(orderDao.searchOrders(queryMap));
         return page;
     }
